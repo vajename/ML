@@ -5,8 +5,10 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getAll();
   });
 
+  eleventyConfig.addPassthroughCopy({'_css': 'css'});
 
 
-
-
+  return {
+    passthroughFileCopy: true
+  }
 };
