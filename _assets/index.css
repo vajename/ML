@@ -5,6 +5,10 @@ body {
   scroll-behavior: smooth;
 }
 
+*, *::before, *::after {
+  font-family: Vazir;
+}
+
 body {
   display: grid;
   grid-template-columns: auto 10vw;
