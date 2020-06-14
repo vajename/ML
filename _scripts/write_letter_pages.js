@@ -5,7 +5,7 @@ letters = letters.substring(1);
 
 for (letter of letters) {
   const content = `
-  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/assets/index.css" />
 
 {%- for word in collections.${letter} -%}
   <details>

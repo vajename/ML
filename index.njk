@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/assets/index.css">
   </head>
   <body>
 
@@ -17,10 +17,10 @@
       </div>
       <div id="words">
         {%- for C in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" -%}
-          <div class="wordy" id="{{C}}">
+          <div class="letter-section" id="{{C}}">
             <a href="/{{C }}">{{C}}</a>
             {%- for word in collections[C] -%}
-              <details class="defy">
+              <details class="word">
                 <summary>
                   <a href="{{word.url}}">{{ word.data.word }}</a>
                   <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
@@ -46,5 +46,7 @@
         {%- endfor -%}
       </ul>
     </aside>
+
+    <script src="/assets/index.js"></script>
   </body>
 </html>

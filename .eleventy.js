@@ -5,7 +5,7 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getAll();
   });
 
-  eleventyConfig.addPassthroughCopy({'_css': 'css'});
+  eleventyConfig.addPassthroughCopy({'_assets': 'assets'});
 
 
   return {
