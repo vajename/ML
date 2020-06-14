@@ -1,10 +1,7 @@
----
-tags:
-  - AA
----
 
+  <link rel="stylesheet" href="/css/index.css" />
 
-{%- for word in collections.A -%}
+{%- for word in collections.N -%}
   <details>
     <summary><a href="{{word.url}}">{{ word.data.word }}</a></summary>
     {{word.templateContent | safe}}

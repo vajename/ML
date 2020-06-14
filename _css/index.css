@@ -1,6 +1,21 @@
-@import 'https://unpkg.com/modern-normalize@0.6.0/modern-normalize.css';
+@import "https://unpkg.com/modern-normalize@0.6.0/modern-normalize.css";
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto 10vw;
+  grid-template-rows: 400px auto;
+  grid-template-areas:
+    "header header"
+    "main aside";
+}
 
 header {
+  grid-area: header;
   height: 400px;
   width: 100%;
   background-color: #f9fafb;
@@ -21,13 +36,40 @@ a:visited {
   border: 1px solid #ccc;
   padding: 1rem;
   margin: 1rem;
+  scroll-margin: 1em;
+}
+
+main {
+  grid-area: main;
+}
+
+#search {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#search span {
+  display: block;
+  width: 80%;
+  direction: rtl;
+  margin-bottom: 0.4em;
+}
+
+#search input#query {
+  width: 80%;
+  height: 40%;
+  border-radius: 5px;
 }
 
 details {
   border: 1px solid #d2d6dc;
   box-sizing: border-box;
   border-radius: 4px;
-  padding: .5em .5em 0;
+  padding: 0.5em 0.5em 0;
   margin: 10px;
   direction: rtl;
 }
@@ -35,8 +77,8 @@ details {
 details > summary {
   list-style: none;
   font-weight: bold;
-  margin: -.5em -.5em 0;
-  padding: .5em;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
   direction: ltr;
   color: #3f83f8;
 
@@ -57,15 +99,33 @@ details > summary::-webkit-details-marker {
 }
 
 details[open] {
-  padding: .5em;
+  padding: 0.5em;
 }
 
 details[open] > summary {
   border-bottom: 1px solid #aaa;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 details[open] > summary > svg {
   transform: rotate(90deg);
   transition: transform 0.1s ease-in;
+}
+
+aside {
+  grid-area: aside;
+}
+
+aside > ul {
+  list-style: none;
+  border-left: 6px solid #ccc;
+  padding: 0;
+  height: max-content;
+  position: sticky;
+  top: 1em;
+}
+
+aside > ul > li {
+  padding-left: 1em;
+  margin-bottom: 5px;
 }
