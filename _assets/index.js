@@ -5,8 +5,11 @@ const onLoad = () => {
   const words = document.querySelectorAll(".word");
 
   searchbar.addEventListener("input", (event) => {
-    const query = event.target.value;
+    const query = event.target.value.trim();
     const letter = query[0];
+
+    if (!query.length)
+      letterSections.forEach((ls) => (ls.style.display = "block"));
 
     if (query.length < 3) {
       letterSections.forEach(
