@@ -14,7 +14,7 @@
     <main>
       <div id="search">
         <span>جستجو</span>
-        <input type="text" name="query" id="query" />
+        <input type="text" name="query" id="query"/>
       </div>
       <div id="words">
         {%- for C in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" -%}
@@ -29,8 +29,6 @@
                   </svg>
                 </summary>
                 {{word.templateContent | safe}}
-
-                <!-- <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p> -->
               </details>
             {%- endfor -%}
           </div>

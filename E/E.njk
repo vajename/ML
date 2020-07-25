@@ -1,11 +1,11 @@
-
-  <link rel="stylesheet" href="/assets/index.css" />
+<link rel="stylesheet" href="/assets/words.css"/>
 
 {%- for word in collections.E -%}
   <details>
-    <summary><a href="{{word.url}}">{{ word.data.word }}</a></summary>
+    <summary>
+      <a href="{{word.url}}">{{ word.data.word }}</a>
+    </summary>
     {{word.templateContent | safe}}
     <!-- <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p> -->
   </details>
 {%- endfor -%}
-    
