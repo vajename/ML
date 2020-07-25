@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/assets/index.css">
+    <link rel="stylesheet" href="/assets/index2.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v26.0.2/dist/font-face.css">
   </head>
   <body>
@@ -21,18 +21,14 @@
           <div class="letter-section" id="{{C}}">
             <a href="/{{C }}">{{C}}</a>
             {%- for word in collections[C] -%}
-              <details class="word">
-                <summary>
-                  <a href="{{word.url}}">{{word.data.word}}</a>
-                  <span>
-                    <span class="translation">{{word.data.translation}}</span>
-                    <svg fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                  </span>
-                </summary>
-                {{word.templateContent | safe}}
-              </details>
+              <div id="word" data-word="{{word.data.word}}">
+                <div id="header">
+                  <h2>{{word.data.translation}}</h2>
+                  <h3>{{word.data.word}}</h3>
+                </div>
+                <div id='content'>{{word.templateContent | safe}}</div>
+                <div id='footer'></div>
+              </div>
             {%- endfor -%}
           </div>
         {%- endfor -%}

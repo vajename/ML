@@ -64,7 +64,20 @@ p {
   text-align: start;
   background: white;
   line-height: 1.4;
+  text-align: justify;
 }
+
+p a {
+  color: #2f2f2f;
+  text-decoration: wavy;
+  text-decoration-color: #ccc;
+  text-decoration-line: underline;
+  /* text-decoration-color: currentcolor; */
+}
+
+/* p a:visited {
+  text-decoration-color: inherit;
+} */
 
 #footer {
   width: 100%;
