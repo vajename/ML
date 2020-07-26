@@ -1,7 +1,7 @@
 ---
 layout: word
 word: checkpoint
-translation: نقظه وارسی
+translation: نقطه وارسی
 tags:
   - word
   - C
