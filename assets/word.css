@@ -75,6 +75,10 @@ p a {
   /* text-decoration-color: currentcolor; */
 }
 
+img {
+  width: 100%;
+}
+
 /* p a:visited {
   text-decoration-color: inherit;
 } */
