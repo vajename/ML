@@ -1,6 +1,6 @@
 ---
 layout: word
-word: accuracy
+word: Accuracy
 translation: کارایی
 tags:
   - A

@@ -1,8 +1,7 @@
 ---
 layout: word
-word: ar
+word: AR
 tags:
-  - word
   - A
 ---
     
