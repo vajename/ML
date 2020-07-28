@@ -6,6 +6,16 @@
   "commit": false,
   "contributors": [
     {
+      "login": "ElmiraGhorbani",
+      "name": "Elmira Ghorbani",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/23237541?v=4",
+      "profile": "https://github.com/ElmiraGhorbani",
+      "contributions": [
+        "content",
+        "translation"
+      ]
+    },
+    {
       "login": "bahar3474",
       "name": "Bahar Baradaran Eftekhari",
       "avatar_url": "https://avatars1.githubusercontent.com/u/48449058?v=4",

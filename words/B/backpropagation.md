@@ -1,8 +1,9 @@
 ---
 layout: word
-word: backpropagation
+word: Backpropagation
+translation: انتشار معکوس
 tags:
   - word
   - B
 ---
-    
+**الگوریتمی برای [شبکه‌های عصبی](https://fa.wikipedia.org/wiki/%D8%B4%D8%A8%DA%A9%D9%87_%D8%B9%D8%B5%D8%A8%DB%8C_%D9%85%D8%B5%D9%86%D9%88%D8%B9%DB%8C) با بیش از یک لایه پنهان است، که برای محاسبه دقیق‌تر [گرادیان](https://fa.wikipedia.org/wiki/%DA%AF%D8%B1%D8%A7%D8%AF%DB%8C%D8%A7%D9%86) وزن مورد استفاده قرار می‌گیرد. ابتدا مقادیر خروجی هر گره رو به جلو محاسبه می‌شود. سپس مشتقات جزئی خطا با توجه به هر پارامتر با بازگشت به عقب از طریق نمودار محاسبه می شود.**
