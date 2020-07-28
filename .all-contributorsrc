@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "ElmiraGhorbani",
+      "name": "Elmira Ghorbani",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/23237541?v=4",
+      "profile": "https://github.com/ElmiraGhorbani",
+      "contributions": [
+        "content",
+        "translation"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "ML-Glossary",
+  "projectOwner": "mhsattarian",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
