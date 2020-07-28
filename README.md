@@ -1,5 +1,7 @@
 # ML Glossary
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ee566a27-d773-46db-9433-d9c654312215/deploy-status)](https://app.netlify.com/sites/ml-glossary-fa/deploys)
+
 *Machine Learning Glossary* is a community-driven attempt at explaining the loads of buzzwords (Jargons) making the current Machine-learning/Deep-learning ecosystem in a few simple words. The idea is not to replace individual documentations, but to act as some kind of glossary that can be easily referenced.
 
 If you are willing to contribute, open a pull request to complete, update or fill in a section. Thank you for doing so!
