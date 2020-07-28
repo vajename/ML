@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "mhsattarian",
+      "name": "Mohammad H. Sattarian",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/29674767?v=4",
+      "profile": "http://mhsattarian.com",
+      "contributions": [
+        "code",
+        "content"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "ML-Glossary",
+  "projectOwner": "mhsattarian",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
