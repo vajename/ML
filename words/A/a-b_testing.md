@@ -3,7 +3,6 @@ layout: word
 word: A/B Testing
 translation: آزمایش A/B
 tags:
-  - word
   - A
 ---
 

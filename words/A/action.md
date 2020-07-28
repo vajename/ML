@@ -1,6 +1,6 @@
 ---
 layout: word
-word: action
+word: Action
 translation: عمل
 tags:
   - A
