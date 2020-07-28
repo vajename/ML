@@ -1,8 +1,10 @@
 ---
 layout: word
-word: true_negative_(tn)
+word: True Negative (TN)
+translation: منفی واقعی
 tags:
   - word
   - T
 ---
-    
+
+مثالی که در آن مدل [کلاس منفی](/N/negative_class.md) را به درستی پیش‌بینی کرده است. به عنوان مثال، این مدل استنباط می‌کند که یک پیام الکترونیکی خاص اسپم نیست و آن پیام واقعا اسپم نبوده است.
