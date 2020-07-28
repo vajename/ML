@@ -1,8 +1,9 @@
 ---
 layout: word
-word: activation_function
+word: Activation Function
+translation: تابع فعال‌ساز
 tags:
   - word
   - A
 ---
-    
+تابعی که مجموع وزنی کلیه ورودی‌های لایه قبلی را می‌گیرد و سپس مقدار خروجی (به طور معمول غیرخطی است) را به لایه بعدی منتقل می‌کند. به عنوان مثال [ReLU](/R/rectified_linear_unit_(relu)/) یا [سیگموئید](/S/sigmoid_function/).
