@@ -41,6 +41,13 @@ If you are willing to contribute, open a pull request to complete, update or fil
 
 ## run local
 
+```
+npm i
+```
+```
+npm start
+```
+
 ## export as JSON
 
 ## Special thanks

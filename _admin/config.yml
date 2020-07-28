@@ -1,0 +1,45 @@
+backend:
+  name: git-gateway
+  branch: develop # Branch to update (optional; defaults to master)
+
+# Uncomment below to enable drafts
+# publish_mode: editorial_workflow
+
+media_folder: "_assets/img" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/assets/img" # The src attribute for uploaded media will begin with /images/uploads
+
+collections:
+  # Our blog posts
+  - name: "word" # Used in routes, e.g., /admin/collections/blog
+    label: "Word" # Used in the UI
+    folder: "/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: "_layout",
+          name: "layout",
+          widget: "string",
+          default: "word",
+          required: false,
+        }
+      - { label: "Word", name: "word", widget: "string", hint: "e.g. accuracy" }
+      - {
+          label: "Translation",
+          name: "translation",
+          widget: "string",
+          hint: "مثلا، کارایی",
+        }
+      - label: "Tags"
+        name: "tags"
+        widget: "select"
+        options: ["A", "B", "C", "D"]
+
+      # - label: "Tags"
+      #   name: "tags"
+      #   widget: "relation"
+      #   collection: "authors"
+      #   searchFields: ["name", "github"]
+      #   valueField: "name"
+
+      - { label: "Body", name: "body", widget: "markdown" }
