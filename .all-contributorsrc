@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "bahar3474",
+      "name": "Bahar Baradaran Eftekhari",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/48449058?v=4",
+      "profile": "https://github.com/bahar3474",
+      "contributions": [
+        "content",
+        "translation"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "ML-Glossary",
+  "projectOwner": "mhsattarian",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
