@@ -3,10 +3,14 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getAll();
   });
 
-  eleventyConfig.addPassthroughCopy({ _assets: "assets" });
-  eleventyConfig.addPassthroughCopy({ _admin: "admin" });
+  eleventyConfig.addPassthroughCopy({ assets: "assets" });
+  eleventyConfig.addPassthroughCopy({ admin: "admin" });
 
   return {
     passthroughFileCopy: true,
+    dir: {
+      input: "words",
+      output: "public",
+    },
   };
 };
