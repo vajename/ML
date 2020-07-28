@@ -1,4 +1,5 @@
 backend:
+  # name: test-repo
   name: git-gateway
   branch: develop # Branch to update (optional; defaults to master)
 
@@ -14,7 +15,8 @@ collections:
     label: "Word" # Used in the UI
     folder: "/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{word}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: word
     fields: # The fields for each document, usually in front matter
       - {
           label: "_layout",
@@ -33,7 +35,35 @@ collections:
       - label: "Tags"
         name: "tags"
         widget: "select"
-        options: ["A", "B", "C", "D"]
+        options:
+          [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z",
+          ]
 
       # - label: "Tags"
       #   name: "tags"
@@ -43,3 +73,34 @@ collections:
       #   valueField: "name"
 
       - { label: "Body", name: "body", widget: "markdown" }
+    view_filters:
+      - label: "Alice's and Bob's Posts"
+        field: author
+        pattern: "Alice|Bob"
+      - label: "Posts published in 2020"
+        field: date
+        pattern: "2020"
+      - label: Drafts
+        field: draft
+        pattern: true
+
+  - name: pages
+    label: Pages
+    label_singular: "Page"
+    folder: words
+    create: true
+    # adding a nested object will show the collection folder structure
+    nested:
+      depth: 2 # max depth to show in the collection tree
+      summary: "{{title}}" # optional summary for a tree node, defaults to the inferred title field
+    identifier_field: word
+    fields:
+      - label: Title
+        name: word
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown
+    # adding a meta object with a path property allows editing the path of entries
+    # moving an existing entry will move the entire sub tree of the entry to the new location
+    meta: { path: { widget: string, label: "Path", index_file: "index" } }
