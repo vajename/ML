@@ -66,6 +66,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
+    <td align="center"><a href="https://github.com/bahar3474"><img src="https://avatars1.githubusercontent.com/u/48449058?v=4" width="100px;" alt=""/><br /><sub><b>Bahar Baradaran Eftekhari</b></sub></a><br /><a href="#content-bahar3474" title="Content">🖋</a> <a href="#translation-bahar3474" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/ElmiraGhorbani"><img src="https://avatars2.githubusercontent.com/u/23237541?v=4" width="100px;" alt=""/><br /><sub><b>Elmira Ghorbani</b></sub></a><br /><a href="#content-ElmiraGhorbani" title="Content">🖋</a> <a href="#translation-ElmiraGhorbani" title="Translation">🌍</a></td>
   </tr>
 </table>
