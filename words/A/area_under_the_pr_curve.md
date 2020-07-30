@@ -1,7 +1,8 @@
 ---
 layout: word
-word: area_under_the_pr_curve
+word: Area under the PR curve
+translation: منطقه زیر منحنی PR
 tags:
   - A
 ---
-    
+[PR AUC (ناحیه زیر منحنی PR) را ببینید](/p/pr_auc_(area_under_the_pr_curve)/).
