@@ -1,7 +1,8 @@
 ---
 layout: word
-word: augmented_reality
+word: Augmented Reality
+translation: واقعیت افزوده
 tags:
   - A
 ---
-    
+تكنولوژی‌ای که با قرار دادن تصویر کامپیوتری از دنیای واقعی بر روی دید كاربر، نمای مرکبی را ارائه می‌دهد.

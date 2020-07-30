@@ -1,7 +1,7 @@
 ---
 layout: word
 word: Automation Bias
-translation: مقدار  پیش‌فرض خودکار
+translation: سوگیری فرایند خودکار
 tags:
   - A
 ---
