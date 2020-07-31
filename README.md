@@ -14,32 +14,32 @@ If you are willing to contribute, *open a pull request*.
 
 ## Glossary
 
-[A](/words/a) ·
-[B](/words/b) ·
-[C](/words/c) ·
-[D](/words/d) ·
-[E](/words/e) ·
-[F](/words/f) ·
-[G](/words/g) ·
-[H](/words/h) ·
-[I](/words/i) ·
-[J](/words/j) ·
-[K](/words/k) ·
-[L](/words/l) ·
-[M](/words/m) ·
-[N](/words/n) ·
-[O](/words/o) ·
-[P](/words/p) ·
-[Q](/words/q) ·
-[R](/words/r) ·
-[S](/words/s) ·
-[T](/words/t) ·
-[U](/words/u) ·
-[V](/words/v) ·
-[W](/words/w) ·
-[X](/words/x) ·
-[Y](/words/y) ·
-[Z](/words/z)
+[A](/words/A) ·
+[B](/words/B) ·
+[C](/words/C) ·
+[D](/words/D) ·
+[E](/words/E) ·
+[F](/words/F) ·
+[G](/words/G) ·
+[H](/words/H) ·
+[I](/words/I) ·
+[J](/words/J) ·
+[K](/words/K) ·
+[L](/words/L) ·
+[M](/words/M) ·
+[N](/words/N) ·
+[O](/words/O) ·
+[P](/words/P) ·
+[Q](/words/Q) ·
+[R](/words/R) ·
+[S](/words/S) ·
+[T](/words/T) ·
+[U](/words/U) ·
+[V](/words/V) ·
+[W](/words/W) ·
+[X](/words/X) ·
+[Y](/words/Y) ·
+[Z](/words/Z)
 
 ## run local
 
