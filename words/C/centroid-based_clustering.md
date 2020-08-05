@@ -1,6 +1,7 @@
 ---
 layout: word
-word: centroid-based_clustering
+word: Centroid-based Clustering
+translation: خوشخ‌بندی بر اساس مرکز خوشه
 tags:
   - word
   - C
