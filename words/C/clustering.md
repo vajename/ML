@@ -1,6 +1,6 @@
 ---
 layout: word
-word: clustering -> Clustering
+word: Clustering
 translation: خوشه‌بندی
 tags:
   - word
