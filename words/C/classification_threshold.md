@@ -1,6 +1,6 @@
 ---
 layout: word
-word: classification_threshold -> Classification Threshold
+word: Classification Threshold
 translation: آستانه دسته‌بندی
 tags:
   - word
