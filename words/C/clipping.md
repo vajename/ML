@@ -1,6 +1,6 @@
 ---
 layout: word
-word: clipping -> Clipping
+word: Clipping
 translation: بریده‌سازی
 tags:
   - word
