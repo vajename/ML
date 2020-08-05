@@ -1,6 +1,6 @@
 ---
 layout: word
-word: class
+word: Class
 translation: دسته
 tags:
   - word
