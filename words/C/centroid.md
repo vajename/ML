@@ -1,6 +1,6 @@
 ---
 layout: word
-word: centroid
+word: Centroid
 translation: مرکز خوشه
 tags:
   - word
