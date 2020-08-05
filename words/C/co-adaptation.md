@@ -1,6 +1,6 @@
 ---
 layout: word
-word: co-adaptation
+word: Co-adaptation
 translation: سازگاری
 tags:
   - word
