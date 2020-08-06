@@ -1,6 +1,6 @@
 ---
 layout: word
-word: class-imbalanced_dataset
+word: Class-imbalanced Dataset
 translation: مجموعه داده نامتوازن
 tags:
   - word

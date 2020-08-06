@@ -1,6 +1,6 @@
 ---
 layout: word
-word: classification_model
+word: Classification Model
 translation: مدل دسته‌بندی
 tags:
   - word
