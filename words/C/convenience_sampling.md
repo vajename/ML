@@ -1,7 +1,7 @@
 ---
 layout: word
 word: Convenience Sampling
-translation: نمونه‌گیری مصلحتی
+translation: نمونه‌گیری آسان
 tags:
   - word
   - C
