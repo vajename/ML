@@ -1,6 +1,6 @@
 ---
 layout: word
-word: checkpoint
+word: Checkpoint
 translation: نقطه وارسی
 tags:
   - word

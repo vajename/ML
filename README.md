@@ -11,6 +11,7 @@ If you are willing to contribute, *open a pull request*.
 ## Related projects
 
 * [Google Machine Learning Glossary](https://developers.google.com/machine-learning/glossary)
+* [VajeYar](http://vajeyar.apll.ir)
 
 ## Glossary
 
