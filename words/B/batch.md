@@ -8,4 +8,4 @@ tags:
 ---
 مجموعه مواردی که در یک تکرار (یکبار بروزرسانی گرادیان ) از فرآیند آموزش مدل استفاده میشود.
 
-همچین بخوانید **[batch size](https://developers.google.com/machine-learning/glossary#batch-size)**.
+مطالعه بیشتر: [اندازه دسته (batch size)](/B/batch_size)
