@@ -4,6 +4,8 @@
 html,
 body {
   scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
 }
 
 *,
@@ -13,8 +15,6 @@ body {
 }
 
 body {
-  width: 100%;
-  height: 100%;
   background: #efefef42;
   padding: 5em 0;
   display: grid;
