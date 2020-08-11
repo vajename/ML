@@ -1,6 +1,6 @@
 ---
 layout: word
-word: bayesian_neural_network
+word: Bayesian Neural Network
 tags:
   - word
   - B

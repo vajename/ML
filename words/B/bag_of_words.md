@@ -1,11 +1,12 @@
 ---
 layout: word
-word: bag_of_words
-translation: کیف کلمات;d
+word: Bag of Words
+translation: کیف کلمات
 tags:
   - word
   - B
 ---
+
 ارائه ای بدون ترتیب از لغات درون یک عبارت یا متن برای مثال در کیف کلمات سه عبارت زیر یکسان دیده میشوند.
 
 * سگ میپرد بالاتر

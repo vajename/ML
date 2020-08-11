@@ -1,11 +1,12 @@
 ---
 layout: word
-word: batch_normalization
+word: Batch Normalization
 translation: نرمال سازی دسته
 tags:
   - word
   - B
 ---
+
 نرمال سازی ورودی یا خروجی تابع فعال ساز در یک لایه‌ی مخفی. نرمال سازی دسته میتواند مزایای زیر را داشته باشد:
 
 \- شبکه‌های عصبی را به وسیله ی محافظت در برابر وزن [داده‌های پرت](https://developers.google.com/machine-learning/glossary#outliers) پایدار تر میکند.

@@ -1,6 +1,6 @@
 ---
 layout: word
-word: batch
+word: Batch
 translation: دسته
 tags:
   - word
