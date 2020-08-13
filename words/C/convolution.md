@@ -1,6 +1,6 @@
 ---
 layout: word
-word: convolution
+word: Convolution
 translation: کانولوشن
 tags:
   - C
