@@ -6,7 +6,7 @@ tags:
   - word
   - C
 ---
-لایه‌ای از یک شبکه عصبی عمیق که در آن یک پالایه پیچشی (convolutional fliter) از روی ماتریس ورودی گذر می‌کند. به عنوان مثال، پالایه پیچشی ۳ * ۳ زیر را در نظر بگیرید:
+لایه‌ای از یک [شبکه عصبی عمیق](/D/deep_model) که در آن یک [پالایه پیچشی (convolutional fliter)](/C/convolutional_filter) از روی ماتریس ورودی گذر می‌کند. به عنوان مثال، [پالایه پیچشی](/C/convolutional_filter) ۳ * ۳ زیر را در نظر بگیرید:
 
 ![](/assets/img/convolutionalfilter33.svg)
 
