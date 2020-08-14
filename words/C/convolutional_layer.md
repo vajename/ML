@@ -1,7 +1,7 @@
 ---
 layout: word
 word: Convolutional Layer
-translation: لایه پیچشی
+translation: لایه کانولوشنی (پیچشی)
 tags:
   - word
   - C
