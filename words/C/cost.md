@@ -1,8 +1,9 @@
 ---
 layout: word
-word: cost
+word: Cost
+translation: هزینه
 tags:
   - word
   - C
 ---
-    
+مترادف: [زیان (loss)](/L/loss)
