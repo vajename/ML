@@ -1,6 +1,6 @@
 ---
 layout: word
-word: batch_size
+word: Batch Size
 translation: اندازه دسته
 tags:
   - word

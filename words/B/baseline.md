@@ -1,6 +1,6 @@
 ---
 layout: word
-word: baseline
+word: Baseline
 translation: مبنا
 tags:
   - word
