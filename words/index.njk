@@ -6,6 +6,7 @@
     <title>Machine Learning Glossary (Persian)</title>
     <link rel="stylesheet" href="/assets/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v26.0.2/dist/font-face.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css"/>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
@@ -24,13 +25,17 @@
           });
       }
     </script>
+    <a class="github-fork-ribbon" href="https://github.com/mhsattarian/ML-Glossary" data-ribbon="در ترجمه کمک کنید" title="Help translate">در ترجمه کمک کنید</a>
 
-    <header></header>
+    <header>
+      <h1>لغت‌نامه یادگیری ماشین</h1>
+      <p>Machine Learning Glossary</p>
+    </header>
 
     <main>
       <div id="search">
         <span>جستجو</span>
-        <input type="text" name="query" id="query"/>
+        <input type="text" name="query" id="query" placeholder='e.g. convolutional layer'/>
       </div>
       <div id="words">
         {%- for C in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" -%}

@@ -3,6 +3,7 @@
 html,
 body {
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 *,
@@ -13,11 +14,12 @@ body {
 
 body {
   display: grid;
-  grid-template-columns: auto 10vw;
+  grid-template-columns: 9fr 1fr;
   grid-template-rows: 400px auto;
   grid-template-areas:
     "header header"
     "main aside";
+  justify-items: center;
 }
 
 header {
@@ -26,6 +28,10 @@ header {
   width: 100%;
   background-color: #f9fafb;
   border-bottom: 1px solid #d2d6dc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -47,6 +53,8 @@ a:visited {
 
 main {
   grid-area: main;
+  width: 100%;
+  max-width: 1000px;
 }
 
 #search {
@@ -69,6 +77,7 @@ main {
   width: 80%;
   height: 40%;
   border-radius: 5px;
+  padding: 1em;
 
   line-height: 20px;
   color: #24292e;
@@ -154,4 +163,10 @@ aside > ul {
 aside > ul > li {
   padding-left: 1em;
   margin-bottom: 5px;
+}
+
+@media (max-width: 650px) {
+  .github-fork-ribbon {
+    display: none;
+  }
 }
