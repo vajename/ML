@@ -1,5 +1,5 @@
 ---
-layout: ""
+layout: word
 word: Bayesian Neural Network
 translation: شبکه عصبی بیزین
 tags:

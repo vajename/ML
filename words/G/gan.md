@@ -1,5 +1,5 @@
 ---
-layout: ""
+layout: word
 word: Gan
 translation: GAN
 tags:
