@@ -1,7 +1,7 @@
 ---
 layout: word
 word: Convolutional Filter
-translation: پالایه پیچشی
+translation: پالایه کانولوشنی (پیچشی)
 tags:
   - word
   - C

@@ -1,5 +1,5 @@
 ---
-layout: ""
+layout: word
 word: " Generalization"
 translation: تعمیم
 tags:
