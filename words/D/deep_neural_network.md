@@ -1,8 +1,9 @@
 ---
 layout: word
-word: deep_neural_network
+word: Deep Neural Network
+translation: شبکه‌ی عصبی عمیق
 tags:
   - word
   - D
 ---
-    
+مترادفی برای [مدل عمیق](https://developers.google.com/machine-learning/glossary#deep_model) است.
