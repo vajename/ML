@@ -6,4 +6,4 @@ tags:
   - word
   - D
 ---
-مترادفی برای [مدل عمیق](https://developers.google.com/machine-learning/glossary#deep_model) است.
+مترادفی برای[ مدل عمیق](d/deep_model) است.
