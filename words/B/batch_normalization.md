@@ -9,10 +9,10 @@ tags:
 
 نرمال سازی ورودی یا خروجی تابع فعال ساز در یک لایه‌ی مخفی. نرمال سازی دسته میتواند مزایای زیر را داشته باشد:
 
-\- شبکه‌های عصبی را به وسیله ی محافظت در برابر وزن [داده‌های پرت](https://developers.google.com/machine-learning/glossary#outliers) پایدار تر میکند.
+\- شبکه‌های عصبی را به وسیله ی محافظت در برابر وزن [داده‌های پرت](/O/outliers/) پایدار تر میکند.
 
-\- [نرخ یادگیری](https://developers.google.com/machine-learning/glossary#learning-rate) را بالاتر میبرد.
+\- [نرخ یادگیری](/L/learning_rate/) را بالاتر میبرد.
 
-\-[ بیش برازاندن](https://developers.google.com/machine-learning/glossary#overfitting) (overfitting) را کاهش میدهد.
+\-[ بیش برازاندن](/O/overfitting/) (overfitting) را کاهش میدهد.
 
-*
+\*
