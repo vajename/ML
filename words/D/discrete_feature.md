@@ -1,8 +1,9 @@
 ---
 layout: word
-word: discrete_feature
+word: Discrete Feature
+translation: ویژگی گسسته
 tags:
   - word
   - D
 ---
-    
+یک [ویژگی](/f/feature) با مجموعه محدودی از مقادیر ممکن است. به عنوان مثال ویژگی‌ای که مقادیر آن فقط ممکن است حیوانی، نباتی یا معدنی باشد یک ویژگی گسسته یا طبقه بندی شده است.( در تضاد با ویژگی [پیوسته](/c/continuous_feature))
