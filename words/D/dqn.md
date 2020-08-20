@@ -6,4 +6,4 @@ tags:
   - word
   - D
 ---
-اختصار [Deep Q-Network](/d/deep_q-network).
+اختصار [Deep Q-Network](/d/deep_q-network_(dqn)).
