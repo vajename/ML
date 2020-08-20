@@ -46,7 +46,7 @@ body {
   flex-direction: column-reverse;
   justify-content: center;
   align-items: flex-start;
-  padding: 2em 0;
+  padding: 2em 3em;
   margin: 0 auto 0;
   direction: rtl;
   text-align: center;
@@ -61,6 +61,7 @@ h3 {
   margin: 0;
   font-size: 0.8em;
   font-weight: 300;
+  text-align: start;
 }
 
 #content {

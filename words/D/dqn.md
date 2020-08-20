@@ -1,6 +1,6 @@
 ---
 layout: word
-word: Dqn
+word: DQN
 translation: DQN
 tags:
   - word

@@ -1,7 +1,7 @@
 ---
 layout: word
-word: Depthwise Separable Convolutional Neural Network(sepcnn)
-translation: (sepCNN)شبکه عصبی کانولوشنال تفکیک‌پذیر
+word: Depthwise Separable Convolutional Neural Network (sepcnn)
+translation: (sepCNN) شبکه عصبی کانولوشنال تفکیک‌پذیر
 tags:
   - word
   - D
