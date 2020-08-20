@@ -1,15 +1,16 @@
 ---
 layout: word
-word: bias_(math)
+word: Bias (Math)
 translation: سوگیری (ریاضی)
 tags:
   - word
   - B
 ---
+
 رهگیری یا انحراف از مبدا. در مدل‌های یادگیری ماشین سوگیری (همچنین به عنوان اصطلاح سوگیری نیز شناخته میشود.) به عنوان *b* یا *w0  ارجاع داده میشود.*
 
 
 
-![](/assets/img/capture.png)
+![](/assets/img/b_bias_(math).png)
 
 با [سوگیری اخلاق و عدالت](b/bias_ethics) و [سوگیری پیش بینی](p/prediction_bias) اشتباه گرفته نشود.

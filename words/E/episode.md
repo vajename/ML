@@ -1,6 +1,6 @@
 ---
 layout: word
-word: episode
+word: Episode
 translation: قسمت
 tags:
   - word

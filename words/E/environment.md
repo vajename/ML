@@ -1,6 +1,6 @@
 ---
 layout: word
-word: environment
+word: Environment
 translation: محیط
 tags:
   - word
