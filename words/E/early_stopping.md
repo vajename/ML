@@ -1,8 +1,9 @@
 ---
 layout: word
-word: early_stopping
+word: Early Stopping
+translation: توقف اولیه
 tags:
   - word
   - E
 ---
-    
+روشی برای [نظم‌دهی (regularization)](/R/regularization) که شامل توقف آموزش مدل قبل از به پایان رسیدن کاهش مقدار تابع زیان آموزش است. در این روش، فرآیند آموزش زمانی متوقف می‌شود که تابع زیان روی [داده‌های اعتبارسنجی](/V/validation_set) افزایش پیدا کند، که این زمانی‌ست که قدرت [تعمیم](/G/generalization) مدل کاهش پیدا می‌کند.
