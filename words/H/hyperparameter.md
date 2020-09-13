@@ -1,8 +1,9 @@
 ---
 layout: word
-word: hyperparameter
+word: Hyperparameter
+translation: ابر پارامتر
 tags:
   - word
   - H
 ---
-    
+پارامتر‌هایی که در طول دوره‌های متوالی آموزش یک مدل تغییر می‌دهید. به عنوان مثال[ میزان یادگیری ](/l/learning_rate)یک[ ابر پارامتر](/p/parameter) است(در تضاد با پارامتر است).
