@@ -6,7 +6,7 @@
 
 If you are willing to contribute, *open a pull request*.
 
-> Note: while this project is fully readable from this GitHub repository, Just open [words directory](/words/). you can also enjoy the dedicated website: [ML-Glossary](https://ml-glossary-fa.netlify.app/).
+> Note: while this project is fully readable from this GitHub repository, Just open [words directory](/words/). you can also enjoy the dedicated website: [ML-Glossary](http://mlglossary.ir/).
 
 ## Related projects
 
