@@ -1,8 +1,9 @@
 ---
 layout: word
-word: data_set_or_dataset
+word: Dataset
+translation: مجموعه داده
 tags:
   - word
   - D
 ---
-    
+مجموعه‌ای از [نمونه‌ها](/E/example).

@@ -60,6 +60,7 @@ npm start
     <td align="center"><a href="https://github.com/ElmiraGhorbani"><img src="https://avatars2.githubusercontent.com/u/23237541?v=4" width="100px;" alt=""/><br /><sub><b>Elmira Ghorbani</b></sub></a><br /><a href="#content-ElmiraGhorbani" title="Content">🖋</a> <a href="#translation-ElmiraGhorbani" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/Atefe97"><img src="https://avatars2.githubusercontent.com/u/23237558?v=4" width="100px;" alt=""/><br /><sub><b>Atefe97</b></sub></a><br /><a href="#content-Atefe97" title="Content">🖋</a> <a href="#translation-Atefe97" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/mohamad-qodosi"><img src="https://avatars1.githubusercontent.com/u/23719357?v=4" width="100px;" alt=""/><br /><sub><b>mohamad qodosi</b></sub></a><br /><a href="#content-mohamad-qodosi" title="Content">🖋</a> <a href="#translation-mohamad-qodosi" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/marzi9696"><img src="https://avatars1.githubusercontent.com/u/68329143?v=4" width="100px;" alt=""/><br /><sub><b>marzi9696</b></sub></a><br /><a href="#content-marzi9696" title="Content">🖋</a> <a href="#translation-marzi9696" title="Translation">🌍</a></td>
   </tr>
 </table>
 
