@@ -1,10 +1,9 @@
 ---
 layout: word
-word: unawareness_(to_a_sensitive_attribute)
+word: Unawareness(To A Sensitive Attribute)
+translation: ناآگاهی (به یک ویژگی حساس)
 tags:
   - word
   - U
 ---
-    
-
-testing U!
+موقعیتی که در آن [ویژگی‌های حساس](/s/sensitive_attribute) وجود دارند، اما در میان داد‌ه‌های آموزش نیستند. از آنجایی که ویژگی‌های حساس اغلب با سایر ویژگی‌های داده‌ ارتباط دارند، مدلی که با عدم آگاهی نسبت به یک ویژگی حساس آموزش داده شده است، می‌تواند [تاثیر متفاوتی ](/d/disparate_impact)نسبت به آن ویژگی داشته باشد یا سایر [محدودیت‌های انصاف](/f/fairness_constraint) را نقض کند.
