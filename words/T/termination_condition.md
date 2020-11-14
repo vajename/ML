@@ -1,8 +1,9 @@
 ---
 layout: word
-word: termination_condition
+word: Termination Condition
+translation: شرط فسخ
 tags:
   - word
   - T
 ---
-    
+در یادگیری تقویتی، شرایطی است که زمان پایان یک [قسمت](/e/episode) را تعیین می‌کنند بطور مثال زمانی که عامل به حالت خاصی می‌رسد یا از یک حد انتقال حالت گذر می‌کند. به عنوان مثال در[ tic-tac-toe](https://wikipedia.org/wiki/Tic-tac-toe) بازی زمانی خاتمه می‌یابد که یک بازیکن سه فاصله متوالی را علامت گذاری می‌کند یا وقتی که تمام فاصله‌ها مشخص می‌شوند.

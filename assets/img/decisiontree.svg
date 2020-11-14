@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   viewBox="0.0 0.0 743.3595800524935 344.56430446194224"
+   fill="none"
+   stroke="none"
+   stroke-linecap="square"
+   stroke-miterlimit="10"
+   id="svg251"
+   sodipodi:docname="DecisionTree.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <metadata
+     id="metadata257">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs255" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1857"
+     inkscape:window-height="1210"
+     id="namedview253"
+     showgrid="false"
+     inkscape:zoom="2"
+     inkscape:cx="392.80374"
+     inkscape:cy="151.11719"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg251"
+     inkscape:snap-global="false" />
+  <clipPath
+     id="p.0">
+    <path
+       d="m0 0l743.35956 0l0 344.5643l-743.35956 0l0 -344.5643z"
+       clip-rule="nonzero"
+       id="path2" />
+  </clipPath>
+  <g
+     clip-path="url(#p.0)"
+     id="g249">
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m0 0l743.35956 0l0 344.5643l-743.35956 0z"
+       fill-rule="evenodd"
+       id="path5" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m511.0 87.80052l45.007874 0l0 30.992126l-45.007874 0z"
+       fill-rule="evenodd"
+       id="path7" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m319.0 55.800526l0 30.992123"
+       fill-rule="evenodd"
+       id="path11" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m319.0 55.800526l0 30.992123"
+       fill-rule="evenodd"
+       id="path13" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m197.0 87.784775l322.01575 0"
+       fill-rule="evenodd"
+       id="path15" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m197.0 87.784775l322.01575 0"
+       fill-rule="evenodd"
+       id="path17" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m199.0 87.80052l0 30.992126"
+       fill-rule="evenodd"
+       id="path19" />
+    <path
+       d="m 197,87.80052 v 30.99213"
+       id="path21"
+       inkscape:connector-curvature="0"
+       style="fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m519.0 87.80052l0 30.992126"
+       fill-rule="evenodd"
+       id="path23" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m519.0 87.80052l0 30.992126"
+       fill-rule="evenodd"
+       id="path25" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m169.0 87.784775l45.007874 0l0 30.992126l-45.007874 0z"
+       fill-rule="evenodd"
+       id="path27" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m260.0 12.800525l118.99213 0l0 45.007874l-118.99213 0z"
+       fill-rule="evenodd"
+       id="path31" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m279.0 183.78477l45.007874 0l0 30.992126l-45.007874 0z"
+       fill-rule="evenodd"
+       id="path37" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m103.00787 183.76903l182.99213 0"
+       fill-rule="evenodd"
+       id="path41" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m103.00787 183.76903l182.99213 0"
+       fill-rule="evenodd"
+       id="path43" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m104.0 183.80052l0 30.992126"
+       fill-rule="evenodd"
+       id="path45" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m104.0 183.80052l0 30.992126"
+       fill-rule="evenodd"
+       id="path47" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m287.0 183.80052l0 30.992126"
+       fill-rule="evenodd"
+       id="path49" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m287.0 183.80052l0 30.992126"
+       fill-rule="evenodd"
+       id="path51" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m74.0 183.78477l45.007874 0l0 30.992126l-45.007874 0z"
+       fill-rule="evenodd"
+       id="path53" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m140.0 108.80052l118.99213 0l0 45.007874l-118.99213 0z"
+       fill-rule="evenodd"
+       id="path57" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m199.0 151.80052l0 30.992126"
+       fill-rule="evenodd"
+       id="path63" />
+    <path
+       d="m 197,151.80052 v 30.99213"
+       id="path65"
+       inkscape:connector-curvature="0"
+       style="fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m136.0 287.80054l45.007874 0l0 30.992126l-45.007874 0z"
+       fill-rule="evenodd"
+       id="path67" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m54.0 287.80054l90.01575 0"
+       fill-rule="evenodd"
+       id="path71" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m54.0 287.80054l90.01575 0"
+       fill-rule="evenodd"
+       id="path73" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m54.0 287.80054l0 30.992126"
+       fill-rule="evenodd"
+       id="path75" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m54.0 287.80054l0 30.992126"
+       fill-rule="evenodd"
+       id="path77" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m144.0 287.80054l0 30.992126"
+       fill-rule="evenodd"
+       id="path79" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m144.0 287.80054l0 30.992126"
+       fill-rule="evenodd"
+       id="path81" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m24.0 287.7848l45.007874 0l0 30.992126l-45.007874 0z"
+       fill-rule="evenodd"
+       id="path83" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m104.0 255.80052l0 30.992142"
+       fill-rule="evenodd"
+       id="path87" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m104.0 255.80052l0 30.992142"
+       fill-rule="evenodd"
+       id="path89" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m45.0 212.80052l118.99213 0l0 45.00789l-118.99213 0z"
+       fill-rule="evenodd"
+       id="path91" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m6.0 309.13773l96.0 0l0 30.992126l-96.0 0z"
+       fill-rule="evenodd"
+       id="path97" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m96.0 309.13773l96.0 0l0 30.992126l-96.0 0z"
+       fill-rule="evenodd"
+       id="path101" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m319.0 287.80054l45.007874 0l0 30.992126l-45.007874 0z"
+       fill-rule="evenodd"
+       id="path105" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m231.0 287.80054l95.02362 0"
+       fill-rule="evenodd"
+       id="path109" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m231.0 287.80054l95.02362 0"
+       fill-rule="evenodd"
+       id="path111" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m231.0 287.80054l0 30.992126"
+       fill-rule="evenodd"
+       id="path113" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m231.0 287.80054l0 30.992126"
+       fill-rule="evenodd"
+       id="path115" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m327.0 287.80054l0 30.992126"
+       fill-rule="evenodd"
+       id="path117" />
+    <path
+       d="m 325,287.80054 v 30.99213"
+       id="path119"
+       inkscape:connector-curvature="0"
+       style="fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m201.0 287.7848l38.992126 0l0 30.992126l-38.992126 0z"
+       fill-rule="evenodd"
+       id="path121" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m287.0 255.80052l0 30.992142"
+       fill-rule="evenodd"
+       id="path125" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m287.0 255.80052l0 30.992142"
+       fill-rule="evenodd"
+       id="path127" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m236.0 212.80052l118.99213 0l0 45.00789l-118.99213 0z"
+       fill-rule="evenodd"
+       id="path129" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m183.0 309.13773l96.0 0l0 30.992126l-96.0 0z"
+       fill-rule="evenodd"
+       id="path135" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m279.0 309.13773l96.0 0l0 30.992126l-96.0 0z"
+       fill-rule="evenodd"
+       id="path139" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m649.0 183.78477l45.007874 0l0 30.992126l-45.007874 0z"
+       fill-rule="evenodd"
+       id="path143" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m463.0 187.80052l193.00787 0"
+       fill-rule="evenodd"
+       id="path147" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m463.0 187.80052l193.00787 0"
+       fill-rule="evenodd"
+       id="path149" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m463.0 187.80052l0 30.992126"
+       fill-rule="evenodd"
+       id="path151" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m463.0 187.80052l0 30.992126"
+       fill-rule="evenodd"
+       id="path153" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m656.0 186.80052l0 30.992126"
+       fill-rule="evenodd"
+       id="path155" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m656.0 186.80052l0 30.992126"
+       fill-rule="evenodd"
+       id="path157" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m433.0 183.78477l38.992126 0l0 30.992126l-38.992126 0z"
+       fill-rule="evenodd"
+       id="path159" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m519.0 155.80052l0 30.992126"
+       fill-rule="evenodd"
+       id="path163" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m519.0 155.80052l0 30.992126"
+       fill-rule="evenodd"
+       id="path165" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m467.0 112.80052l118.99213 0l0 45.007874l-118.99213 0z"
+       fill-rule="evenodd"
+       id="path167" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m496.0 287.80054l45.007874 0l0 30.992126l-45.007874 0z"
+       fill-rule="evenodd"
+       id="path173" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m414.0 287.80054l90.01575 0"
+       fill-rule="evenodd"
+       id="path177" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m414.0 287.80054l90.01575 0"
+       fill-rule="evenodd"
+       id="path179" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m414.0 287.80054l0 30.992126"
+       fill-rule="evenodd"
+       id="path181" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m414.0 287.80054l0 30.992126"
+       fill-rule="evenodd"
+       id="path183" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m504.0 287.80054l0 30.992126"
+       fill-rule="evenodd"
+       id="path185" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m504.0 287.80054l0 30.992126"
+       fill-rule="evenodd"
+       id="path187" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m384.0 287.7848l45.007874 0l0 30.992126l-45.007874 0z"
+       fill-rule="evenodd"
+       id="path189" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m464.0 255.80052l0 30.992142"
+       fill-rule="evenodd"
+       id="path193" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m464.0 255.80052l0 30.992142"
+       fill-rule="evenodd"
+       id="path195" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m405.0 212.80052l118.99213 0l0 45.00789l-118.99213 0z"
+       fill-rule="evenodd"
+       id="path197" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m358.0 309.13773l96.0 0l0 30.992126l-96.0 0z"
+       fill-rule="evenodd"
+       id="path203" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m456.0 309.13773l96.0 0l0 30.992126l-96.0 0z"
+       fill-rule="evenodd"
+       id="path207" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m687.0 287.80054l45.007874 0l0 30.992126l-45.007874 0z"
+       fill-rule="evenodd"
+       id="path211" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m599.0 287.80054l95.02362 0"
+       fill-rule="evenodd"
+       id="path215" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m599.0 287.80054l95.02362 0"
+       fill-rule="evenodd"
+       id="path217" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m599.0 287.80054l0 30.992126"
+       fill-rule="evenodd"
+       id="path219" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m599.0 287.80054l0 30.992126"
+       fill-rule="evenodd"
+       id="path221" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m695.0 287.80054l0 30.992126"
+       fill-rule="evenodd"
+       id="path223" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m695.0 287.80054l0 30.992126"
+       fill-rule="evenodd"
+       id="path225" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m569.0 287.7848l38.992126 0l0 30.992126l-38.992126 0z"
+       fill-rule="evenodd"
+       id="path227" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m655.0 255.80052l0 30.992142"
+       fill-rule="evenodd"
+       id="path231" />
+    <path
+       stroke="#000000"
+       stroke-width="1.0"
+       stroke-linejoin="round"
+       stroke-linecap="butt"
+       d="m655.0 255.80052l0 30.992142"
+       fill-rule="evenodd"
+       id="path233" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m608.0 207.80052l118.99213 0l0 45.007874l-118.99213 0z"
+       fill-rule="evenodd"
+       id="path235" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m551.0 309.13773l96.0 0l0 30.992126l-96.0 0z"
+       fill-rule="evenodd"
+       id="path241" />
+    <path
+       fill="#000000"
+       fill-opacity="0.0"
+       d="m647.0 309.13773l96.0 0l0 30.992126l-96.0 0z"
+       fill-rule="evenodd"
+       id="path245" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="435.5"
+       y="182.0643"
+       id="text417"><tspan
+         sodipodi:role="line"
+         id="tspan415"
+         x="435.5"
+         y="182.0643"
+         style="font-size:12px">No</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="428.82227"
+       y="234.39438"
+       id="text421"><tspan
+         sodipodi:role="line"
+         id="tspan419"
+         x="428.82227"
+         y="234.39438"
+         style="font-size:12px">Is house &lt; 40</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="429.64258"
+       y="247.06821"
+       id="text425"><tspan
+         sodipodi:role="line"
+         id="tspan423"
+         x="429.64258"
+         y="247.06821"
+         style="font-size:12px">years old?</tspan></text>
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="273.82227"
+     y="36.394379"
+     id="text261"><tspan
+       sodipodi:role="line"
+       id="tspan259"
+       x="273.82227"
+       y="36.394379"
+       style="font-size:12px">Is house &gt; 160</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="274.34961"
+     y="49.068207"
+     id="text265"><tspan
+       sodipodi:role="line"
+       id="tspan263"
+       x="274.34961"
+       y="49.068207"
+       style="font-size:12px">square meters?</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="174.5"
+     y="86.564301"
+     id="text269"><tspan
+       sodipodi:role="line"
+       id="tspan267"
+       x="174.5"
+       y="86.564301"
+       style="font-size:12px">No</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="163.82227"
+     y="134.39438"
+     id="text273"><tspan
+       sodipodi:role="line"
+       id="tspan271"
+       x="163.82227"
+       y="134.39438"
+       style="font-size:12px">Is house &lt; 25</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="164.64258"
+     y="147.06821"
+     id="text277"><tspan
+       sodipodi:role="line"
+       id="tspan275"
+       x="164.64258"
+       y="147.06821"
+       style="font-size:12px">years old?</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="526.5"
+     y="83.064301"
+     id="text281"><tspan
+       sodipodi:role="line"
+       id="tspan279"
+       x="526.5"
+       y="83.064301"
+       style="font-size:12px">Yes</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="483.82227"
+     y="134.39438"
+     id="text285"><tspan
+       sodipodi:role="line"
+       id="tspan283"
+       x="483.82227"
+       y="134.39438"
+       style="font-size:12px">Does house</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="483.91016"
+     y="149.39438"
+     id="text289"><tspan
+       sodipodi:role="line"
+       id="tspan287"
+       x="483.91016"
+       y="149.39438"
+       style="font-size:12px">have &gt; 3 bdrms?</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="79"
+     y="177.5643"
+     id="text293"><tspan
+       sodipodi:role="line"
+       id="tspan291"
+       x="79"
+       y="177.5643"
+       style="font-size:12px">No</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="58.822266"
+     y="234.39438"
+     id="text297"><tspan
+       sodipodi:role="line"
+       id="tspan295"
+       x="58.822266"
+       y="234.39438"
+       style="font-size:12px">Is house &gt; 100</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="59.349609"
+     y="247.06821"
+     id="text301"><tspan
+       sodipodi:role="line"
+       id="tspan299"
+       x="59.349609"
+       y="247.06821"
+       style="font-size:12px">square meters?</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="661.5"
+     y="181.5643"
+     id="text305"><tspan
+       sodipodi:role="line"
+       id="tspan303"
+       x="661.5"
+       y="181.5643"
+       style="font-size:12px">Yes</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="613.82227"
+     y="234.39438"
+     id="text309"><tspan
+       sodipodi:role="line"
+       id="tspan307"
+       x="613.82227"
+       y="234.39438"
+       style="font-size:12px">Is house &lt; 10</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="614.64258"
+     y="247.06821"
+     id="text313"><tspan
+       sodipodi:role="line"
+       id="tspan311"
+       x="614.64258"
+       y="247.06821"
+       style="font-size:12px">years old?</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="31.5"
+     y="283.5643"
+     id="text325"><tspan
+       sodipodi:role="line"
+       id="tspan323"
+       x="31.5"
+       y="283.5643"
+       style="font-size:12px">No</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="14.500266"
+     y="332.39438"
+     id="text329"><tspan
+       sodipodi:role="line"
+       id="tspan327"
+       x="14.500266"
+       y="332.39438"
+       style="font-size:12px">Price = 217</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="296.5"
+     y="177.0643"
+     id="text333"><tspan
+       sodipodi:role="line"
+       id="tspan331"
+       x="296.5"
+       y="177.0643"
+       style="font-size:12px">Yes</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="238.82227"
+     y="234.39438"
+     id="text337"><tspan
+       sodipodi:role="line"
+       id="tspan335"
+       x="238.82227"
+       y="234.39438"
+       style="font-size:12.00000668px">Does house</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="238.91016"
+     y="249.39438"
+     id="text341"><tspan
+       sodipodi:role="line"
+       id="tspan339"
+       x="238.91016"
+       y="249.39438"
+       style="font-size:12px">have &gt; 2 bdrms?</tspan></text>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot343"
+     style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:18.66533333px;line-height:1.25;letter-spacing:0px;word-spacing:0px"><flowRegion
+       id="flowRegion345"><rect
+         id="rect347"
+         width="160"
+         height="105"
+         x="700"
+         y="395.5643" /></flowRegion><flowPara
+       id="flowPara349" /></flowRoot>  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="575.5"
+     y="283.5643"
+     id="text361"><tspan
+       sodipodi:role="line"
+       id="tspan359"
+       x="575.5"
+       y="283.5643"
+       style="font-size:12px">No</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="562"
+     y="332.39438"
+     id="text365"><tspan
+       sodipodi:role="line"
+       id="tspan363"
+       x="562"
+       y="332.39438"
+       style="font-size:12px">Price = 382</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="507"
+     y="284.5643"
+     id="text369"><tspan
+       sodipodi:role="line"
+       id="tspan367"
+       x="507"
+       y="284.5643"
+       style="font-size:12px">Yes</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="468.5"
+     y="332.39438"
+     id="text373"><tspan
+       sodipodi:role="line"
+       id="tspan371"
+       x="468.5"
+       y="332.39438"
+       style="font-size:12px">Price = 335</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="391"
+     y="284.0643"
+     id="text377"><tspan
+       sodipodi:role="line"
+       id="tspan375"
+       x="391"
+       y="284.0643"
+       style="font-size:12px">No</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="377"
+     y="332.39438"
+     id="text381"><tspan
+       sodipodi:role="line"
+       id="tspan379"
+       x="377"
+       y="332.39438"
+       style="font-size:12px">Price = 312</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="209"
+     y="284.0643"
+     id="text385"><tspan
+       sodipodi:role="line"
+       id="tspan383"
+       x="209"
+       y="284.0643"
+       style="font-size:12px">No</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="193.5"
+     y="332.39438"
+     id="text389"><tspan
+       sodipodi:role="line"
+       id="tspan387"
+       x="193.5"
+       y="332.39438"
+       style="font-size:12px">Price = 258</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="147.5"
+     y="284.5643"
+     id="text393"><tspan
+       sodipodi:role="line"
+       id="tspan391"
+       x="147.5"
+       y="284.5643"
+       style="font-size:12px">Yes</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="106"
+     y="332.39438"
+     id="text397"><tspan
+       sodipodi:role="line"
+       id="tspan395"
+       x="106"
+       y="332.39438"
+       style="font-size:12px">Price = 285</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="330.5"
+     y="284.0643"
+     id="text401"><tspan
+       sodipodi:role="line"
+       id="tspan399"
+       x="330.5"
+       y="284.0643"
+       style="font-size:12px">Yes</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="288"
+     y="332.39438"
+     id="text405"><tspan
+       sodipodi:role="line"
+       id="tspan403"
+       x="288"
+       y="332.39438"
+       style="font-size:12px">Price = 341</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="698.5"
+     y="283.5643"
+     id="text409"><tspan
+       sodipodi:role="line"
+       id="tspan407"
+       x="698.5"
+       y="283.5643"
+       style="font-size:12px">Yes</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:18.66533279px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="658.5"
+     y="332.39438"
+     id="text413"><tspan
+       sodipodi:role="line"
+       id="tspan411"
+       x="658.5"
+       y="332.39438"
+       style="font-size:12px">Price = 510</tspan></text>
+</svg>
