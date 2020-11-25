@@ -1,8 +1,9 @@
 ---
 layout: word
-word: tower
+word: Tower
+translation: برج(Tower)
 tags:
   - word
   - T
 ---
-    
+یک جزء(component) از [شبکه عصبی عمیق](/d/deep_neural_network) است، که فاقد لایه خروجی است. به طور معمول هر برج از یک منبع داده مستقل می‌خواند و تا زمانی که خروجی آن‌ها در یک لایه نهایی ترکیب نشود، مستقل هستند.
