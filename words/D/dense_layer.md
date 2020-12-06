@@ -7,4 +7,4 @@ tags:
   - D
 ---
 
-مترادفی برای لایه [کاملاً متصل](/f/fully_connected_layer) است.
+مترادفی برای لایه [کاملاً همبند](/f/fully_connected_layer) است.

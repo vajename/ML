@@ -6,7 +6,6 @@ tags:
   - word
   - G
 ---
+زیر سیستم در یک [شبکه‌ی مولد تخاصمی](/G/generative_adversarial_network_(gan)/) که [نمونه‌های](/E/example/) جدیدی ایجاد می‌کند.
 
-زیر سیستم در یک [شبکه‌ی مولد تخاصمی](</G/generative_adversarial_network_(gan)/>) که [نمونه‌های](/E/example/) جدیدی ایجاد می‌کند.
-
-در تضاد با مدل [تشخیص‌دهنده](/D/discriminative_model/) است.
+متضاد: [تشخیص‌دهنده](/D/discriminative_model/)
