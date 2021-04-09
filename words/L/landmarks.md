@@ -6,4 +6,4 @@ tags:
   - word
   - L
 ---
-مترادف: [نقاط کلیدی (keypoints](/K/keypoints))
+مترادف: [نقاط کلیدی (keypoints)](/K/keypoints)
