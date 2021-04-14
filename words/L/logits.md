@@ -1,6 +1,6 @@
 ---
 layout: word
-word: logits
+word: Logits
 translation: لوجیت
 tags:
   - word
