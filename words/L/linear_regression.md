@@ -1,8 +1,11 @@
 ---
 layout: word
-word: linear_regression
+word: Linear Regression
+translation: رگرسیون خطی
 tags:
   - word
   - L
 ---
-    
+استفاده از خروجی خام (y') یک [مدل خطی](/L/linear_model) به عنوان نتیجه نهایی یک [مدل رگرسیون](/R/regression_model). هدف مساله‌های رگرسیون یک پیش‌بینی با ارزش واقعی ات. به عنوان مثال، اگر مقدار خروجی مدل خطی ۸.۳۷ باشد، مقدار پیش‌بینی نیز ۸.۳۷ خواهد بود.
+
+متضادها: [رگرسیون لجستیک](/L/logistic_regression)، [دسته‌بندی](/C/classification_model) (این مدل‌ها در مقابل رگرسیون به صورت کلی قرار می‌گیرند.)
