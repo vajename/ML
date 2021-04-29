@@ -1,8 +1,9 @@
 ---
 layout: word
-word: natural_language_understanding
+word: Natural Language Understanding
+translation: فهم زبان‌ طبیعی
 tags:
   - word
   - N
 ---
-    
+درک مقصود کاربر با توجه به آنچه کاربر گفته یا نوشته است. به عنوان مثال، یک موتور جستجو از فهم زبان طبیعی جهت تشخیص این که کاربر به دنبال چه می‌گردد استفاده می‌کند.
