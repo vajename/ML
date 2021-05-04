@@ -1,8 +1,9 @@
 ---
 layout: word
-word: node_(neural_network)
+word: Node (Neural Network)
+translation: گره (شبکه عصبی)
 tags:
   - word
   - N
 ---
-    
+[نورونی](/N/neuron) در یک [لایه پنهان](/H/hidden_layer) شبکه عصبی.
