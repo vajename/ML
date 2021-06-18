@@ -6,6 +6,6 @@ tags:
   - word
   - P
 ---
+هر متغیر در مدل که سیستم یادگیری ماشین مقدار آن را خود یاد می‌گیرد. به عنوان مثال، [وزن‌ها](/W/weight) پارامترهایی هستند که سیستم یادگیری ماشین در تکرارهای متوالی فرآیند آموزش مقدار آن را فرا می‌گیرد.
 
-
-A variable of a model that the machine learning system trains on its own. For example, **[weights](https://developers.google.com/machine-learning/glossary#weight)** are parameters whose values the machine learning system gradually learns through successive training iterations. Contrast with **[hyperparameter](https://developers.google.com/machine-learning/glossary#hyperparameter)**.
+متضادها: [ابرپارامتر (hyperparameter](/H/hyperparameter)[)](/H/hyperparameter)
