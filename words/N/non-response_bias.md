@@ -1,8 +1,9 @@
 ---
 layout: word
-word: non-response_bias
+word: Non-response Bias
+translation: سوگیری عدم پاسخ
 tags:
   - word
   - N
 ---
-    
+مترادف: [سوگیری انتخاب](/S/selection_bias)

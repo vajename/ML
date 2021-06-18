@@ -1,8 +1,9 @@
 ---
 layout: word
-word: overfitting
+word: Overfitting
+translation: بیش‌برازش
 tags:
   - word
   - O
 ---
-    
+ایجاد یک مدل که به نمونه‌های [مجموعه داده آموزش](/T/training_set) بسیار نزدیک شده است؛ به طوری که در پیش‌بینی داده‌های جدید به مشکل می‌خورد.
