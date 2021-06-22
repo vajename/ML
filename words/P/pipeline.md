@@ -1,6 +1,6 @@
 ---
 layout: word
-word: pipeline
+word: Pipeline
 translation: خط لوله
 tags:
   - word
