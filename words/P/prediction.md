@@ -1,8 +1,9 @@
 ---
 layout: word
-word: prediction
+word: Prediction
+translation: پیش‌بینی
 tags:
   - word
   - P
 ---
-    
+خروجی مدل که به ازای یک [نمونه](/E/example) ورودی تولید می‌شود.

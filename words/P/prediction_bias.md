@@ -1,8 +1,11 @@
 ---
 layout: word
-word: prediction_bias
+word: Prediction Bias
+translation: سوگیری پیش‌بینی
 tags:
   - word
   - P
 ---
-    
+مقداری که بیان می‌کند که میانگین [پیش‌بینی‌های](/P/prediction) مدل چقدر از میانگین [برچسب‌ها](/L/label) در مجموعه داده فاصله دارد.
+
+این لغت نباید با [اریبی](/B/bias_(math)) در مدل‌های یادگیری ماشین یا با [سوگیری در اخلاق و عدالت](/B/bias_(ethics-fairness)) اشتباه گرفته شود.
