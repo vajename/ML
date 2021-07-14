@@ -1,8 +1,9 @@
 ---
 layout: word
-word: predictive_rate_parity
+word: Predictive Rate Parity
+translation: برابری نرخ پیش‌نگر
 tags:
   - word
   - P
 ---
-    
+نام دیگری برای[ برابری پیش‌نگر](/P/predictive_parity).
