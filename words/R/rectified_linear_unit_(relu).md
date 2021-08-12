@@ -1,8 +1,12 @@
 ---
 layout: word
-word: rectified_linear_unit_(relu)
+word: Rectified Linear Unit (ReLU)
+translation: واحد یکسوشده‌ی خطی
 tags:
   - word
   - R
 ---
-    
+یک [تابع فعال‌ساز](/A/activation_function) با شزایط زیر:
+
+* اگر مقدار ورودی منفی یا صفر باشد، خروجی صفر است.
+* اگر مقدار ورودی مثبت باشد، خروجی برابر ورودی است.
