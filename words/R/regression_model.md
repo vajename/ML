@@ -1,8 +1,9 @@
 ---
 layout: word
-word: regression_model
+word: Regression Model
+translation: مدل رگرسیون
 tags:
   - word
   - R
 ---
-    
+نوعی از مدل‌ها که خروجی آن‌ها مقادیر پیوسته (معمولا اعشاری) است. این مدل‌ها در برابر [مدل‌های دسته‌بندی](/C/classification_model) قرار می‌گیرند که در آن‌ها خروجی مقداری گسسته و محدود، مانند «زنبق» یا «رز» دارد.
