@@ -1,6 +1,6 @@
 ---
 layout: word
-word: return
+word: Return
 translation: بازده
 tags:
   - word

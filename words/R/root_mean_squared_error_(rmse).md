@@ -1,8 +1,9 @@
 ---
 layout: word
-word: root_mean_squared_error_(rmse)
+word: Root Mean Squared Error (RMSE)
+translation: ریشه میانگین مجذور خطا
 tags:
   - word
   - R
 ---
-    
+ریشه دوم میانگین مجذور خطا.
