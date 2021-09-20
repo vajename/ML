@@ -1,8 +1,9 @@
 ---
 layout: word
-word: serving
+word: Serving
+translation: استقرار
 tags:
   - word
   - S
 ---
-    
+مترادف‌: [استنباط](/I/inference)
