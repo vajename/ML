@@ -1,10 +1,11 @@
 ---
 layout: word
-word: sparse_vector
+word: Sparse Vector
 translation: بردار پراکنده
 tags:
   - word
   - S
 ---
+یک بردار که بیشتر مقادیرش صفر هستند.
 
-یک بردار که بیش تر مقادیرش صفر هستند. [مطالعه بیشتر](/S/sparse_feature/)
+مطالعه بیشتر: [ویژگی پراکنده](/S/sparse_feature/)

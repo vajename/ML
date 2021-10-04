@@ -1,9 +1,9 @@
 ---
 layout: word
 word: Sampling Bias
-translation: "نمونه‌گیری پیش‌فرض "
+translation: سوگیری نمونه‌برداری
 tags:
   - word
   - S
 ---
-[انتخاب پیش‌فرض](/s/selection_bias) را مشاهده کنید.
+[](/s/selection_bias)[سوگیری انتخاب](/s/selection_bias) را مشاهده کنید.
