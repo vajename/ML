@@ -1,8 +1,9 @@
 ---
 layout: word
-word: stochastic_gradient_descent_(sgd)
+word: Stochastic Gradient Descent (SGD)
+translation: کاهش شیب تصادفی
 tags:
   - word
   - S
 ---
-    
+یک الگوریتم [کاهش شیب](/G/gradient_descent) که در آن تعداد داده‌های یک دسته برابر یک است. به بیان دیگر، این الگوریتم برای تخمین شیب در هر گام، تنها به یک نمونه داده که به صورت تصادفی از میان مجموعه داده انتخاب شده نیاز دارد.

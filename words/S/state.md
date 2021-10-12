@@ -1,6 +1,6 @@
 ---
 layout: word
-word: state
+word: State
 translation: حالت
 tags:
   - word

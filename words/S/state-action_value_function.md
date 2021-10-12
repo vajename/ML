@@ -1,8 +1,9 @@
 ---
 layout: word
-word: state-action_value_function
+word: State-Action Value Function
+translation: تابع ارزش حالت-عمل
 tags:
   - word
   - S
 ---
-    
+مترادف: [تابع Q](/Q/q-function)
