@@ -1,6 +1,6 @@
 ---
 layout: word
-word: markov_property
+word: Markov Property
 translation: ویژگی مارکوف
 tags:
   - word
