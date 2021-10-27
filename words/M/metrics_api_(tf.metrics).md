@@ -1,6 +1,6 @@
 ---
 layout: word
-word: metrics_api_(tf.metrics)
+word: Metrics API (tf.metrics)
 translation: "  ماژول معیارها"
 tags:
   - word
