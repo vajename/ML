@@ -1,6 +1,6 @@
 ---
 layout: word
-word: mean_absolute_error_(mae)
+word: Mean Absolute Error (MAE)
 translation: میانگین خطا مطلق
 tags:
   - word
