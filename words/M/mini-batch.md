@@ -1,6 +1,6 @@
 ---
 layout: word
-word: mini-batch
+word: Mini Batch
 translation: دسته کوچک
 tags:
   - word
