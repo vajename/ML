@@ -1,6 +1,6 @@
 ---
 layout: word
-word: majority class
+word: Majority Class
 translation: کلاس اکثریت
 tags:
   - word
