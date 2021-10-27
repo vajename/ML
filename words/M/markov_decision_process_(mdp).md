@@ -1,6 +1,6 @@
 ---
 layout: word
-word: markov_decision_process_(mdp)
+word: Markov Decision Process (MDP)
 translation: "(MDP) فرایند تصمیم گیری مارکوف "
 tags:
   - word
