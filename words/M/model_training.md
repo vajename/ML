@@ -1,8 +1,9 @@
 ---
 layout: word
-word: model_training
+word: Model Training
+translation: آموزش مدل
 tags:
   - word
   - M
 ---
-    
+مراحل تعیین بهترین مدل
