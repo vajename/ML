@@ -1,6 +1,6 @@
 ---
 layout: word
-word: minimax_loss
+word: Minimax Loss
 translation: خطا مینی‌مکس
 tags:
   - word
