@@ -1,6 +1,6 @@
 ---
 layout: word
-word: mini-batch Stochastic Gradient Descent_(SGD)
+word: mini-batch Stochastic Gradient Descent (SGD)
 translation: کاهش شیب تصادفی دسته کوچک
 tags:
   - word
