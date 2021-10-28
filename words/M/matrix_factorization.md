@@ -1,6 +1,6 @@
 ---
 layout: word
-word: matrix_factorization
+word: Matrix Factorization
 translation: ماتریس عامل‌بندی
 tags:
   - word
