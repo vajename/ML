@@ -1,8 +1,9 @@
 ---
 layout: word
-word: markov_property
+word: Markov Property
+translation: ویژگی مارکوف
 tags:
   - word
   - M
 ---
-    
+ویژگی از محیط های قطعی که اطلاعات جاجایی در بین حالت ها با داشتن حالت فعلی و عمل عامل به صورت کاملا قطعی مشخص شده است.
