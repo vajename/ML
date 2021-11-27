@@ -8,14 +8,25 @@
   </head>
   <body>
 
-    <div id="word">
-      <div id="header">
-        <h2>{{translation}}</h2>
-        <h3>{{word}}</h3>
-      </div>
-      <div id='content'>{{content | safe}}</div>
-      <div id='footer'></div>
-    </div>
+    <main>
+      <aside></aside>
+      <header>
+        <nav id='breadcrumb'></nav>
+        <hgroup>
+          <h1>{{translation}}</h1>
+          <h2>{{word}}</h2>
+        </hgroup>
+        <section id='word-actions'></section>
+      </header>
 
+      <article>
+        <section id='description'>
+          <h3>تعریف</h3>
+          <dfn>{{content | safe}}</dfn>
+        </section>
+      </article>
+
+      <footer></footer>
+    </main>
   </body>
 </html>

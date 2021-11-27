@@ -165,6 +165,16 @@ aside > ul > li {
   margin-bottom: 5px;
 }
 
+footer {
+  width: 100%;
+  height: 5em;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+
 @media (max-width: 650px) {
   .github-fork-ribbon {
     display: none;

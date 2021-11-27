@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Machine Learning Glossary (Persian)</title>
+    <title>لغت‌نامه یادگیری ماشین (ML Glossary)</title>
     <link rel="stylesheet" href="/assets/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v26.0.2/dist/font-face.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css"/>
@@ -28,17 +28,22 @@
     </script>
     <a class="github-fork-ribbon" href="https://github.com/mhsattarian/ML-Glossary" data-ribbon="در ترجمه کمک کنید" title="Help translate">در ترجمه کمک کنید</a>
 
+    <aside id="main-sidebar">
+
+    </aside>
+
     <header>
       <h1>لغت‌نامه یادگیری ماشین</h1>
       <p>Machine Learning Glossary</p>
     </header>
 
     <main>
-      <div id="search">
+      <section id="search">
         <span>جستجو</span>
         <input type="text" name="query" id="query" placeholder='e.g. convolutional layer'/>
-      </div>
-      <div id="words">
+      </section>
+
+      <article id="words">
         {%- for C in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" -%}
           <div class="letter-section" id="{{C}}">
             <a href="/{{C }}">{{C}}</a>
@@ -58,7 +63,7 @@
             {%- endfor -%}
           </div>
         {%- endfor -%}
-      </div>
+      </article>
     </main>
 
     <aside>
@@ -70,6 +75,9 @@
         {%- endfor -%}
       </ul>
     </aside>
+
+    <footer id="site-footer">
+    </footer>
 
     <script src="/assets/index.js"></script>
   </body>
