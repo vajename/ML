@@ -7,16 +7,13 @@
 {% set title = word%}
 
 {% block body %}
-  <section class="word">
-    <aside></aside>
+  <main>
     <header>
       <nav id='breadcrumb'></nav>
       <hgroup>
         <h1>{{translation}}</h1>
         <h2>{{word}}</h2>
       </hgroup>
-
-      <section id='word-actions'></section>
     </header>
 
     <article>
@@ -26,7 +23,6 @@
       </section>
     </article>
 
-    {% include "footer.njk" %}
-
-  </section>
+    <footer></footer>
+  </main>
 {% endblock %}
