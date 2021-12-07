@@ -44,7 +44,7 @@
       <input type="search" placeholder="Search..." id="searchField" @input.debounce="dosearch($event.target.value)"/>
     </div>
     <ol>
-      <template x-for="result in results" :key="result.id" >
+      <template x-for="result in results" :key="result.ref" >
         <li>
           <a :href="result.ref">
             <strong x-text="result.doc.word"></strong>
