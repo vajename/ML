@@ -51,8 +51,12 @@ article {
   box-shadow: 0 0 25px -20px #607d8b;
 }
 
-article > section#description {
+article > section:not(:last-child) {
   border-bottom: 1px solid #e8e8e8;
+}
+
+article > section#description > p {
+  line-height: 25px;
 }
 
 h1 {
@@ -93,5 +97,9 @@ p a::after {
 }
 
 img {
-  width: 100%;
+  max-width: 400px;
+}
+
+ol {
+  list-style: persian;
 }

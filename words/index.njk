@@ -1,84 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لغت‌نامه یادگیری ماشین (ML Glossary)</title>
-    <link rel="stylesheet" href="/assets/index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v26.0.2/dist/font-face.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css"/>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script async src="https://cdn.splitbee.io/sb.js"></script>
-  </head>
-  <body>
-    <script>
-      if (window.netlifyIdentity) {
-        window
-          .netlifyIdentity
-          .on("init", user => {
-            if (!user) {
-              window
-                .netlifyIdentity
-                .on("login", () => {
-                  document.location.href = "/admin/";
-                });
-            }
-          });
-      }
-    </script>
-    <a class="github-fork-ribbon" href="https://github.com/mhsattarian/ML-Glossary" data-ribbon="در ترجمه کمک کنید" title="Help translate">در ترجمه کمک کنید</a>
+{% extends "body.njk" %}
 
-    <aside id="main-sidebar">
+{% block links %}
+  <link rel="stylesheet" href="/assets/word.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
+  <script src="//unpkg.com/alpinejs" defer></script>
+{% endblock %}
 
-    </aside>
+{% block scripts %}
+  <script>
+    (function (window, document) {
+      "use strict";
 
-    <header>
-      <h1>لغت‌نامه یادگیری ماشین</h1>
-      <p>Machine Learning Glossary</p>
-    </header>
+      document.addEventListener('alpine:init', () => {
+        Alpine.data('searchResults', () => ({
+          results: [],
+          dosearch(text) {
+            const results = window
+              .searchIndex
+              .search(text, {
+                bool: "OR",
+                expand: true
+              });
+            console.log("🚀 ~ file: index.njk ~ line 29 ~ dosearch ~ results", results)
+            this.results = results;
+          }
+        }))
 
-    <main>
-      <section id="search">
-        <span>جستجو</span>
-        <input type="text" name="query" id="query" placeholder='e.g. convolutional layer'/>
-      </section>
+      });
 
-      <article id="words">
-        {%- for C in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" -%}
-          <div class="letter-section" id="{{C}}">
-            <a href="/{{C }}">{{C}}</a>
-            {%- for word in collections[C] -%}
-              <details class="word">
-                <summary>
-                  <a href="{{word.url}}">{{word.data.word}}</a>
-                  <span>
-                    <span class="translation">{{word.data.translation}}</span>
-                    <svg fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                  </span>
-                </summary>
-                {{word.templateContent | safe}}
-              </details>
-            {%- endfor -%}
-          </div>
-        {%- endfor -%}
-      </article>
-    </main>
+      fetch("/search-index.json").then((response) => response.json().then((rawIndex) => {
+        window.searchIndex = elasticlunr
+          .Index
+          .load(rawIndex);
+      }));
+    })(window, document);
+  </script>
+{% endblock %}
 
-    <aside>
-      <ul>
-        {%- for C in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" -%}
-          <li>
-            <a href='#{{C}}'>{{C}}</a>
-          </li>
-        {%- endfor -%}
-      </ul>
-    </aside>
-
-    <footer id="site-footer">
-    </footer>
-
-    <script src="/assets/index.js"></script>
-  </body>
-</html>
+{% block body %}
+  <section x-data="searchResults">
+    <div class="field">
+      <label for="searchField">Search</label>
+      <input type="search" placeholder="Search..." id="searchField" @input.debounce="dosearch($event.target.value)"/>
+    </div>
+    <ol>
+      <template x-for="result in results" :key="result.id" >
+        <li>
+          <a :href="result.ref">
+            <strong x-text="result.doc.word"></strong>
+            <span x-text="`(${result.doc.translation})`"></span>
+          </a>
+        </li>
+      </template>
+    </ol>
+    <div id="noResultsFound" x-show="!results.length" x-transition>
+      <p>No results found.</p>
+    </div>
+  </section>
+{% endblock %}

@@ -1,15 +1,8 @@
-@import "https://unpkg.com/modern-normalize@0.6.0/modern-normalize.css";
-@import "https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v26.0.2/dist/font-face.css";
+@import 'https://unpkg.com/modern-normalize@0.6.0/modern-normalize.css';
 
 html,
 body {
   scroll-behavior: smooth;
-}
-
-*,
-*::before,
-*::after {
-  font-family: Vazir;
 }
 
 body {
