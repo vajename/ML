@@ -1,6 +1,6 @@
 @import 'https://unpkg.com/modern-normalize@0.6.0/modern-normalize.css';
 
-section.word {
+main > section.word {
   width: 100%;
   min-height: 100%;
   display: grid;
@@ -55,10 +55,6 @@ article > section:not(:last-child) {
   border-bottom: 1px solid #e8e8e8;
 }
 
-article > section#description > p {
-  line-height: 25px;
-}
-
 h1 {
   margin: 0;
   font-size: 4em;
@@ -90,10 +86,6 @@ p a {
   /* text-decoration: wavy; */
   text-decoration-color: #ccc;
   text-decoration-line: underline;
-}
-
-p a::after {
-  content: '🔗';
 }
 
 img {

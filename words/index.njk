@@ -39,22 +39,26 @@
 
 {% block body %}
   <section x-data="searchResults">
-    <div class="field">
-      <label for="searchField">Search</label>
-      <input type="search" placeholder="Search..." id="searchField" @input.debounce="dosearch($event.target.value)"/>
-    </div>
-    <ol>
-      <template x-for="result in results" :key="result.ref" >
-        <li>
-          <a :href="result.ref">
-            <strong x-text="result.doc.word"></strong>
-            <span x-text="`(${result.doc.translation})`"></span>
-          </a>
-        </li>
-      </template>
-    </ol>
-    <div id="noResultsFound" x-show="!results.length" x-transition>
-      <p>No results found.</p>
-    </div>
+    <article>
+      <div class="field">
+        <label for="searchField">جستجو:‌ </label>
+        <input type="search" placeholder="کلمات: accuracy، bias و ..." id="searchField" @input.debounce="dosearch($event.target.value)"/>
+      </div>
+      <ol>
+        <template x-for="result in results" :key="result.ref" >
+          <li>
+            <a :href="result.ref">
+              <strong x-text="result.doc.word"></strong>
+              <span x-text="`(${result.doc.translation})`"></span>
+            </a>
+          </li>
+        </template>
+      </ol>
+      <div id="noResultsFound" x-show="!results.length" x-transition>
+        <p>نتیجه‌ای پیدا نشد.</p>
+      </div>
+    </article>
+
+    {% include "footer.njk" %}
   </section>
 {% endblock %}
