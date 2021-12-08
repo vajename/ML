@@ -1,64 +1,15 @@
-{% extends "body.njk" %}
+{% extends "base.njk" %}
 
 {% block links %}
   <link rel="stylesheet" href="/assets/word.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
-  <script src="//unpkg.com/alpinejs" defer></script>
 {% endblock %}
 
-{% block scripts %}
-  <script>
-    (function (window, document) {
-      "use strict";
-
-      document.addEventListener('alpine:init', () => {
-        Alpine.data('searchResults', () => ({
-          results: [],
-          dosearch(text) {
-            const results = window
-              .searchIndex
-              .search(text, {
-                bool: "OR",
-                expand: true
-              });
-            console.log("🚀 ~ file: index.njk ~ line 29 ~ dosearch ~ results", results)
-            this.results = results;
-          }
-        }))
-
-      });
-
-      fetch("/search-index.json").then((response) => response.json().then((rawIndex) => {
-        window.searchIndex = elasticlunr
-          .Index
-          .load(rawIndex);
-      }));
-    })(window, document);
-  </script>
-{% endblock %}
+{% block scripts %}{% endblock %}
 
 {% block body %}
   <section x-data="searchResults">
-    <article>
-      <div class="field">
-        <label for="searchField">جستجو:‌ </label>
-        <input type="search" placeholder="کلمات: accuracy، bias و ..." id="searchField" @input.debounce="dosearch($event.target.value)"/>
-      </div>
-      <ol>
-        <template x-for="result in results" :key="result.ref" >
-          <li>
-            <a :href="result.ref">
-              <strong x-text="result.doc.word"></strong>
-              <span x-text="`(${result.doc.translation})`"></span>
-            </a>
-          </li>
-        </template>
-      </ol>
-      <div id="noResultsFound" x-show="!results.length" x-transition>
-        <p>نتیجه‌ای پیدا نشد.</p>
-      </div>
-    </article>
-
+    <article style="display: grid; place-items: center;">به‌زودی...</article>
     {% include "footer.njk" %}
   </section>
 {% endblock %}

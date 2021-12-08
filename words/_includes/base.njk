@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+      <title>{{title}}</title>
+    {% else %}
+      <title>الفبای یادگیری ماشین - ML Glossary</title>
+    {% endif %}
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="/assets/index.css"/>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    {% block links %}{% endblock %}
+  </head>
+  <body>
+    <aside>
+      <button id="open-search" x-data @click="$store.search.toggle()">
+        <object data="/assets/s/search.svg" type="image/svg+xml"></object>
+      </button>
+      <a id='link-home-page' href='/'>
+        <span id='link-home-page__fa'>الفبای یادگیری ماشین</span>
+        <span id='link-home-page__en'>ML Glossary</span>
+      </a>
+    </aside>
+
+    <main>
+      <section id='search' x-data :class="$store.search.open ? 'open' : ''" x-transition x-cloak>
+        <header>جستجو</header>
+        <section x-data="searchResults">
+          <section id="search-input-section">
+            <div id="input-wrapper">
+              <input type="search" placeholder="کلمه: accuracy، bias و ..." id="searchField" :value="searchInput" @input.debounce="setSearchInput($event.target.value)"/>
+              <button>
+                <object data="/assets/s/search.svg" type="image/svg+xml"></object>
+              </button>
+            </div>
+            <div id='search-options-wrapper'>
+              <ul id='search-options'>
+                <li>خانه</li>
+                <li>فهرست</li>
+                <template x-for="l in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'" :key="l">
+                  <li x-text="l" @click="setSearchInput(l)"></li>
+                </template>
+              </ul>
+            </div>
+          </section>
+
+          <ol>
+            <template x-for="result in results" :key="result.ref" >
+              <li>
+                <a :href="result.ref">
+                  <strong x-text="result.doc.word"></strong>
+                  <span x-text="`(${result.doc.translation})`"></span>
+                </a>
+              </li>
+            </template>
+          </ol>
+          <div id="noResultsFound" x-show="!results.length && searchInput.length" x-transition>
+            <p>نتیجه‌ای پیدا نشد.</p>
+          </div>
+        </section>
+      </section>
+      {% block body %}
+        {{ content | safe }}
+      {% endblock %}
+    </main>
+
+    {% block scripts %}{% endblock %}
+    <script>
+      (function (window, document) {
+        "use strict";
+
+        document.addEventListener('alpine:init', () => {
+          Alpine.data('searchResults', () => ({
+            searchInput: '',
+            results: [],
+            init() {
+              this.$watch('searchInput', this.dosearch.bind(this));
+            },
+            setSearchInput(value) {
+              this.searchInput = value;
+            },
+            dosearch(text) {
+              const results = window
+                .searchIndex
+                .search(text, {
+                  bool: "OR",
+                  expand: true
+                });
+              console.log(this);
+              this.results = results;
+            }
+          }));
+
+          Alpine.store('search', {
+            open: false,
+            toggle() {
+              this.open = !this.open
+            }
+          });
+
+          fetch("/search-index.json").then((response) => response.json().then((rawIndex) => {
+            window.searchIndex = elasticlunr
+              .Index
+              .load(rawIndex);
+          }));
+        });
+      })(window, document);
+    </script>
+  </body>
+</html>

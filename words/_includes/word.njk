@@ -1,4 +1,4 @@
-{% extends "body.njk" %}
+{% extends "base.njk" %}
 
 {% block links %}
   <link rel="stylesheet" href="/assets/word.css"/>
@@ -8,9 +8,10 @@
 
 {% block body %}
   <section class="word">
-    <aside>
+    <nav>
       <p>{{page.fileSlug}}</p>
-    </aside>
+    </nav>
+
     <header>
       <nav id='breadcrumb'></nav>
       <hgroup>
