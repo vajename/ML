@@ -2,9 +2,6 @@
 layout: word
 word: Generalized Linear Model
 translation: مدل خطی تعمیم یافته
-tags:
-  - word
-  - G
 ---
 
 تعمیم مدل‌های [رگرسیون کمترین مربعات](/L/least_squares_regression) که مبتنی بر [نویز گوسی](https://wikipedia.org/wiki/Gaussian_noise) است، به سایر مدل‌های مبتنی بر انواع دیگر نویز، مانند [نویز پواسون](https://wikipedia.org/wiki/Shot_noise) یا نویزهای طبقه‌ای. نمونه‌هایی از مدل‌های خطی تعمیم یافته عبارت‌اند از:

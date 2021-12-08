@@ -1,10 +1,7 @@
 ---
 layout: word
 word: Deep Q-network (DQN)
-translation: " (DQN) شبکه عمیق-Q"
-tags:
-  - word
-  - D
+translation: ' (DQN) شبکه عمیق-Q'
 ---
 
 در [یادگیری Q](/q/q-learning) ، یک [شبکه‌ی عصبی](/n/neural_network) عمیق است که [توابع Q](/q/q-function) را پیش‌بینی می‌کند.

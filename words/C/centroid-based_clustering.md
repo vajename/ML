@@ -2,9 +2,6 @@
 layout: word
 word: Centroid-based Clustering
 translation: خوشه‌بندی بر اساس مرکز خوشه
-tags:
-  - word
-  - C
 ---
 
 \

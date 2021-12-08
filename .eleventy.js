@@ -8,9 +8,14 @@ module.exports = function (eleventyConfig) {
   /// Search indexing
   eleventyConfig.addFilter("search", searchFilter);
 
-  eleventyConfig.addCollection("words_to_index", collection => {
+  eleventyConfig.addCollection("words", collection => {
     return [...collection.getFilteredByGlob("./words/**/*.md")];
   });
+
+  const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  alphabet.forEach(l => eleventyConfig.addCollection(l, collection => {
+    return [...collection.getFilteredByGlob(`./words/${l}/*.md`)];
+  }))
 
 
   return {

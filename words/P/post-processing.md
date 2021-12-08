@@ -2,10 +2,8 @@
 layout: word
 word: Post-Processing
 translation: پس‌پردازش
-tags:
-  - word
-  - P
 ---
+
 پردازش خروجی مدل بعد از اجرای آن. پس‌پردازش‌ها می‌توانند بدون ایجاد تغییر در مدل‌ها به متحقق شدن قیدهای تساوی کمک کنند.
 
-به عنوان مثال، یک نمونه پس‌پردازش در یک طبقه‌بند دوتایی می‌تواند انتخاب حد آستانه‌ای باشد که با بررسی یکسان بودن [نرخ مثبت حقیقی (True Positive Rate)](/T/true_positive_rate_(tpr)) برای همه گروه‌ها به [برابری فرصت (equality of opportunity)](/E/equality_of_opportunity) منجر شود.
+به عنوان مثال، یک نمونه پس‌پردازش در یک طبقه‌بند دوتایی می‌تواند انتخاب حد آستانه‌ای باشد که با بررسی یکسان بودن [نرخ مثبت حقیقی (True Positive Rate)](</T/true_positive_rate_(tpr)>) برای همه گروه‌ها به [برابری فرصت (equality of opportunity)](/E/equality_of_opportunity) منجر شود.

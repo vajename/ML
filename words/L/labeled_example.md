@@ -2,8 +2,6 @@
 layout: word
 word: Labeled Example
 translation: نمونه برچسب‌خورده
-tags:
-  - word
-  - L
 ---
+
 نمونه‌ای که شامل [ویژگی‌ها](/F/feature) و یک [برچسب](/L/label) است. در یادگیری با ناظر، مدل‌ها از نمونه‌های برچسب‌خورده یاد می‌گیرند.

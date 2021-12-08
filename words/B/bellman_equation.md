@@ -2,15 +2,13 @@
 layout: word
 word: Bellman Equation
 translation: معادله بلمن
-tags:
-  - word
-  - B
 ---
+
 در یادگیری تقویتی (reinforcement learning) اتحاد زیر به وسیله [تابع Q ](/Q/q-function)زیر بهینه می‌شود.
 
 ![](/assets/img/11.jpg)
 
-[یادگیری تقویتی](/R/reinforcement_learning_(rl)) با اعمال این اتحاد به [یادگیری Q ](/Q/q-learning)با قاعده به‌روزرسانی زیر منجر می‌شود:
+[یادگیری تقویتی](</R/reinforcement_learning_(rl)>) با اعمال این اتحاد به [یادگیری Q ](/Q/q-learning)با قاعده به‌روزرسانی زیر منجر می‌شود:
 
 ![](/assets/img/22.jpg)
 

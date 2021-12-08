@@ -2,10 +2,8 @@
 layout: word
 word: Convex Function
 translation: تابع محدب
-tags:
-  - word
-  - C
 ---
+
 تابعی که در آن فضای بالای گراف تابع یک [مجموعه محدب](/C/convex_set) باشد. نمونه اولیه تابع محدب شکلی شبیه حرف "U" دارد. به عنوان مثال، توابع زیر نمونه‌هایی از تابع محدب هستند.
 
 ![](/assets/img/convex_functions.png)
@@ -18,12 +16,12 @@ tags:
 
 تعداد زیادی از[ توابع زیان (loss functions) ](/L/loss)از جمله موارد زیر تابع محدب هستند.
 
-* [تابع زیان ‌L2 (L2 loss)](/L/l2_loss)
-* [تابع زیان لگاریتمی (Log loss)](/L/log_loss)
-* [تنظیم L1 (L1 regularization)](/L/l1_regularization)
-* [تنظیم L2 (L2 regularization)](/L/l2_regularization)
+- [تابع زیان ‌L2 (L2 loss)](/L/l2_loss)
+- [تابع زیان لگاریتمی (Log loss)](/L/log_loss)
+- [تنظیم L1 (L1 regularization)](/L/l1_regularization)
+- [تنظیم L2 (L2 regularization)](/L/l2_regularization)
 
-تعداد زیادی از انواع الگوریتم‌های [گرادیان کاهشی (gradient descent) ](/G/gradient_descent)تضمین می‌کنند که نقطه‌ای نزدیک به کمینه تابع اکیدا محدب را پیدا می‌کنند. هم‌چنین، تعداد زیادی از انواع الگوریتم های [گرادیان کاهشی تصادفی (stochastic gradient descent)](/S/stochastic_gradient_descent_(sgd)) نیز شانس بالایی در پیدا کردن نقطه‌ای نزدیک به کمینه یک تابع اکیدا محدب دارند.
+تعداد زیادی از انواع الگوریتم‌های [گرادیان کاهشی (gradient descent) ](/G/gradient_descent)تضمین می‌کنند که نقطه‌ای نزدیک به کمینه تابع اکیدا محدب را پیدا می‌کنند. هم‌چنین، تعداد زیادی از انواع الگوریتم های [گرادیان کاهشی تصادفی (stochastic gradient descent)](</S/stochastic_gradient_descent_(sgd)>) نیز شانس بالایی در پیدا کردن نقطه‌ای نزدیک به کمینه یک تابع اکیدا محدب دارند.
 
 مجموع دو تابع محدب (به عنوان مثال، تابع زیان L2 + تنظیم L1) نیز تابعی محدب است.
 
