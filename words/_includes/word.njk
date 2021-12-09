@@ -4,12 +4,27 @@
   <link rel="stylesheet" href="/assets/word.css"/>
 {% endblock %}
 
-{% set title = word%}
+{% set title = word %}
+{# {% set letter = word[0] %} #}
+{% set letter = page.url[1] %}
 
 {% block body %}
   <section class="word">
     <nav>
-      <p>{{page.fileSlug}}</p>
+      <header>حرف {{letter}}</header>
+      <section>
+        <ul>
+          {%- for w in collections[letter] -%}
+            <li 
+            {% if page.url === w.url %}
+              class="current" aria-current="page"
+            {% endif %}
+            >
+              <a href="{{w.url}}">{{ w.data.word }}</a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </section>
     </nav>
 
     <header>

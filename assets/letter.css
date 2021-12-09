@@ -2,11 +2,11 @@ main > section.word {
   width: 100%;
   min-height: 100%;
   display: grid;
-  grid-template: 22em 1fr auto / 14em 1fr;
+  grid-template: 23em 1fr auto / 1fr;
   grid-template-areas:
-    'nav header'
-    'nav article'
-    'nav footer';
+    'header'
+    'article'
+    'footer';
   justify-content: flex-start;
   align-items: stretch;
 }
@@ -16,9 +16,9 @@ main > section.word {
 main > section.word > header {
   grid-area: header;
   width: 100%;
-  height: 22em;
+  height: 100%;
   display: grid;
-  grid-template: 4em 1fr 2em / 1fr;
+  grid-template: 4em 1fr / 1fr;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 2em 6em;
@@ -28,50 +28,44 @@ main > section.word > header {
   direction: rtl;
 }
 
-/************************* Navbar *************************/
+main > section.word > header section#titles {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1em;
+}
 
-main > section.word > nav {
-  grid-area: nav;
-  width: 100%;
-  min-height: 100%;
+main > section.word > header section#titles > strong {
+  font-weight: 900;
+  font-size: 23em;
+  line-height: 1;
+}
+
+main > section.word > header section#titles hgroup {
+  transform: translateY(50%);
+}
+
+h1 {
+  margin: 0;
+  font-size: 4em;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.8em;
+  font-weight: 100;
+}
+
+main > section.word > header section#titles hgroup h2 strong {
+  font-weight: bold;
+}
+
+hgroup {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: stretch;
-  gap: 1.5em;
-  padding: 3.5em 1.7em;
-  background-color: black;
-  color: white;
-  border-left: 1px solid #393939;
-}
-
-main > section.word > nav header {
-  font-weight: bold;
-  font-size: 1.7em;
-}
-
-main > section.word > nav ul {
-  padding: 0;
-  list-style: none;
-  direction: ltr;
-}
-
-main > section.word > nav ul li {
-  max-width: 100%;
-  padding: 0;
-  font-size: 0.8em;
-  font-weight: 100;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-main > section.word > nav ul li a {
-  text-decoration: none;
-}
-
-main > section.word > nav ul li.current {
-  opacity: 0.6;
+  align-items: flex-start;
+  gap: 1em;
 }
 
 /************************* Article *************************/
@@ -93,25 +87,6 @@ main > section.word > article {
 
 main > section.word > article > section:not(:last-child) {
   border-bottom: 1px solid #e8e8e8;
-}
-
-h1 {
-  margin: 0;
-  font-size: 4em;
-}
-
-h2 {
-  margin: 0;
-  font-size: 1.8em;
-  font-weight: 100;
-}
-
-hgroup {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1em;
 }
 
 p {

@@ -4,51 +4,84 @@ pagination:
   size: 1
   alias: letter
 letters:
- - A
- - B
- - C
- - D
- - E
- - F
-permalink: "test/{{ letter }}/"
+  - A
+  - B
+  - C
+  - D
+  - E
+  - F
+  - G
+  - H
+  - I
+  - J
+  - K
+  - L
+  - M
+  - N
+  - O
+  - P
+  - Q
+  - R
+  - S
+  - T
+  - U
+  - V
+  - W
+  - X
+  - Y
+  - Z
+permalink: "{{ letter }}/"
 ---
 
 {% extends "base.njk" %}
 
 {% block links %}
-  <link rel="stylesheet" href="/assets/word.css"/>
+  <link rel="stylesheet" href="/assets/letter.css"/>
 {% endblock %}
 
-{% set title = word%}
+{% set title = word %}
+{# {% set letter = word[0] %} #}
+{% set letter = page.url[1] %}
 
 {% block body %}
   <section class="word">
-    <nav>
-      <p>{{page.fileSlug}}</p>
-    </nav>
-
     <header>
       <nav id='breadcrumb'></nav>
-      <hgroup>
-        <h1>{{translation}}</h1>
-        <h2>{{word}}</h2>
-      </hgroup>
-
-      <section id='word-actions'></section>
+      <section id="titles">
+        <strong>{{letter}}</strong>
+        <hgroup>
+          <h1>حرف {{letter}}</h1>
+          <h2>
+            Letter
+            <strong>{{letter}}</strong>
+          </h2>
+        </hgroup>
+      </section>
     </header>
 
     <article>
-      <h2>{{letter}}</h2>
-      <div>
-        {%- for word in collections[letter] -%}
-          <details>
-            <summary>
-              <a href="{{word.url}}">{{ word.data.word }}</a>
-            </summary>
-            {{word.templateContent | safe}}
-          </details>
-        {%- endfor -%}
-      </div>
+      <table>
+        <thead>
+          <tr>
+            {# <th></th> #}
+            <th>کلمات</th>
+            {# <th>توضیح</th> #}
+          </tr>
+        </thead>
+        <tbody>
+          {%- for word in collections[letter] -%}
+            <tr>
+              {# <td>{{loop.index}}</td> #}
+              <td>
+                <a href="{{word.url}}">{{ word.data.word }}</a>
+              </td>
+              {# <td>
+                {{word.templateContent | safe}}
+              </td> #}
+            </tr>
+          {%- endfor -%}
+        </tbody>
+      </table>
     </article>
 
     {% include "footer.njk" %}

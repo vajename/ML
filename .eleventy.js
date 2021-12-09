@@ -15,7 +15,10 @@ module.exports = function (eleventyConfig) {
   const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
   alphabet.forEach(l => eleventyConfig.addCollection(l, collection => {
     return [...collection.getFilteredByGlob(`./words/${l}/*.md`)];
-  }))
+  }));
+
+  // TODO: When v1 is ready, use:
+  // eleventyConfig.addGlobalData("alphabet", alphabet);
 
 
   return {

@@ -11,6 +11,7 @@
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="stylesheet" href="/assets/index.css"/>
     <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
     {% block links %}{% endblock %}
   </head>
   <body>
@@ -86,13 +87,13 @@
               this.searchInput = value;
             },
             dosearch(text) {
+              console.log(text, window.searchIndex)
               const results = window
                 .searchIndex
                 .search(text, {
                   bool: "OR",
                   expand: true
                 });
-              console.log(this);
               this.results = results;
             }
           }));
@@ -108,6 +109,8 @@
             window.searchIndex = elasticlunr
               .Index
               .load(rawIndex);
+          }).catch(err => {
+            console.error(err);
           }));
         });
       })(window, document);
