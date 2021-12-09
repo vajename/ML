@@ -11,7 +11,9 @@
 {% block body %}
   <section class="word">
     <nav>
-      <header>حرف {{letter}}</header>
+      <header>
+        <a href="/{{letter}}">حرف {{letter}}</a>
+      </header>
       <section>
         <ul>
           {%- for w in collections[letter] -%}

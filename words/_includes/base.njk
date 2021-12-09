@@ -31,7 +31,7 @@
         <section x-data="searchResults">
           <section id="search-input-section">
             <div id="input-wrapper">
-              <input type="search" placeholder="کلمه: accuracy، bias و ..." id="searchField" :value="searchInput" @input.debounce="setSearchInput($event.target.value)"/>
+              <input id="searchField" type="search" placeholder="کلمه: accuracy، bias و ..."  :value="searchInput" @input.debounce="setSearchInput($event.target.value)" x-init="$watch('$store.search.open', value => {if (value) $el.focus()})"/>
               <button>
                 <object data="/assets/s/search.svg" type="image/svg+xml"></object>
               </button>
@@ -51,7 +51,7 @@
             </div>
           </section>
 
-          <ol>
+          <ol id="searchresults">
             <template x-for="result in results" :key="result.ref" >
               <li>
                 <a :href="result.ref">

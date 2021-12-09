@@ -50,6 +50,10 @@ main > section.word > nav header {
   font-size: 1.7em;
 }
 
+main > section.word > nav header a {
+  text-decoration: none;
+}
+
 main > section.word > nav ul {
   padding: 0;
   list-style: none;

@@ -138,6 +138,8 @@ section#search {
 
 section#search.open {
   display: flex;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 section#search > header {
@@ -191,6 +193,14 @@ section#search ul#search-options li {
   padding: 0.5em 0;
   border-bottom: 2px solid white;
   cursor: pointer;
+}
+
+section#search ul#search-options li a {
+  text-decoration: none;
+}
+
+section#search ol#searchresults {
+  margin-top: 3em;
 }
 
 /************************* Footer *************************/
