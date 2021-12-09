@@ -1,0 +1,56 @@
+---
+pagination:
+  data: letters
+  size: 1
+  alias: letter
+letters:
+ - A
+ - B
+ - C
+ - D
+ - E
+ - F
+permalink: "test/{{ letter }}/"
+---
+
+{% extends "base.njk" %}
+
+{% block links %}
+  <link rel="stylesheet" href="/assets/word.css"/>
+{% endblock %}
+
+{% set title = word%}
+
+{% block body %}
+  <section class="word">
+    <nav>
+      <p>{{page.fileSlug}}</p>
+    </nav>
+
+    <header>
+      <nav id='breadcrumb'></nav>
+      <hgroup>
+        <h1>{{translation}}</h1>
+        <h2>{{word}}</h2>
+      </hgroup>
+
+      <section id='word-actions'></section>
+    </header>
+
+    <article>
+      <h2>{{letter}}</h2>
+      <div>
+        {%- for word in collections[letter] -%}
+          <details>
+            <summary>
+              <a href="{{word.url}}">{{ word.data.word }}</a>
+            </summary>
+            {{word.templateContent | safe}}
+          </details>
+        {%- endfor -%}
+      </div>
+    </article>
+
+    {% include "footer.njk" %}
+  </section>
+{% endblock %}

@@ -37,8 +37,12 @@
             </div>
             <div id='search-options-wrapper'>
               <ul id='search-options'>
-                <li>خانه</li>
-                <li>فهرست</li>
+                <li>
+                  <a href="/">خانه</a>
+                </li>
+                <li>
+                  <a href="/list">فهرست</a>
+                </li>
                 <template x-for="l in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'" :key="l">
                   <li x-text="l" @click="setSearchInput(l)"></li>
                 </template>
