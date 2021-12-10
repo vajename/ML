@@ -9,7 +9,7 @@
       <title>الفبای یادگیری ماشین - ML Glossary</title>
     {% endif %}
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-    <link rel="stylesheet" href="/assets/index.css"/>
+    <link rel="stylesheet" href="/assets/base.css"/>
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
     {% block links %}{% endblock %}
@@ -25,7 +25,7 @@
       </a>
     </aside>
 
-    <main>
+    <main x-data :class="$store.search.open ? 'no-scroll' : ''">
       <section id='search' x-data :class="$store.search.open ? 'open' : ''" x-transition x-cloak>
         <header>جستجو</header>
         <section x-data="searchResults">

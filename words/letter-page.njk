@@ -1,35 +1,8 @@
 ---
 pagination:
-  data: letters
+  data: alphabet.alphabet
   size: 1
   alias: letter
-letters:
-  - A
-  - B
-  - C
-  - D
-  - E
-  - F
-  - G
-  - H
-  - I
-  - J
-  - K
-  - L
-  - M
-  - N
-  - O
-  - P
-  - Q
-  - R
-  - S
-  - T
-  - U
-  - V
-  - W
-  - X
-  - Y
-  - Z
 permalink: "{{ letter }}/"
 ---
 
@@ -39,9 +12,9 @@ permalink: "{{ letter }}/"
   <link rel="stylesheet" href="/assets/letter.css"/>
 {% endblock %}
 
-{% set title = word %}
 {# {% set letter = word[0] %} #}
 {% set letter = page.url[1] %}
+{% set title = 'حرف ' + letter %}
 
 {% block body %}
   <section class="word">

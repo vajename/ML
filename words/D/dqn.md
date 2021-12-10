@@ -4,4 +4,4 @@ word: DQN
 translation: DQN
 ---
 
-اختصار [Deep Q-Network](</d/deep_q-network_(dqn)>).
+اختصار [Deep Q-Network](</D/deep_q-network_(dqn)>).

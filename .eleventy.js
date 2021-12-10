@@ -1,4 +1,5 @@
-const searchFilter = require("./words/_includes/filters/searchFilter");
+const searchFilter = require("./src/_includes/filters/searchFilter");
+const alphabet = require("./src/_data/alphabet").alphabet;
 
 module.exports = function (eleventyConfig) {
 
@@ -12,7 +13,7 @@ module.exports = function (eleventyConfig) {
     return [...collection.getFilteredByGlob("./words/**/*.md")];
   });
 
-  const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
   alphabet.forEach(l => eleventyConfig.addCollection(l, collection => {
     return [...collection.getFilteredByGlob(`./words/${l}/*.md`)];
   }));
@@ -26,6 +27,11 @@ module.exports = function (eleventyConfig) {
     dir: {
       input: "words",
       output: "public",
+
+      // ⚠️ These values are both relative to your input directory.
+      data: "../src/_data",
+      includes: "../src/_includes",
+      // layouts: "../src/_layouts"
     },
   };
 };

@@ -4,17 +4,17 @@
   <link rel="stylesheet" href="/assets/word.css"/>
 {% endblock %}
 
-{% set title = word %}
+{% set title = word + ' - ' + translation %}
 {# {% set letter = word[0] %} #}
 {% set letter = page.url[1] %}
 
 {% block body %}
   <section class="word">
     <nav>
-      <header>
-        <a href="/{{letter}}">حرف {{letter}}</a>
-      </header>
       <section>
+        <header>
+          <a href="/{{letter}}">حرف {{letter}}</a>
+        </header>
         <ul>
           {%- for w in collections[letter] -%}
             <li 
