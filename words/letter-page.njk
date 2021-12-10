@@ -36,21 +36,22 @@ permalink: "{{ letter }}/"
       <table>
         <thead>
           <tr>
-            {# <th></th> #}
+            <th></th>
             <th>کلمات</th>
-            {# <th>توضیح</th> #}
+            <th>توضیح</th>
           </tr>
         </thead>
         <tbody>
           {%- for word in collections[letter] -%}
             <tr>
-              {# <td>{{loop.index}}</td> #}
+              <td>{{loop.index | toFaDigits}}</td>
               <td>
                 <a href="{{word.url}}">{{ word.data.word }}</a>
               </td>
-              {# <td>
-                {{word.templateContent | safe}}
-              </td> #}
+              <td>
+                {{word.templateContent | striptags(true) | escape | truncate(80) | safe}}
+                {# {{word.templateContent | truncate(100) | safe}} #}
+              </td>
             </tr>
           {%- endfor -%}
         </tbody>

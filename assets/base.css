@@ -92,6 +92,11 @@ body > aside button#open-search {
   cursor: pointer;
 }
 
+body > aside button#open-search.disable {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 /************************* Main *************************/
 
 main {
@@ -207,11 +212,20 @@ section#search ul#search-options li a {
   text-decoration: none;
 }
 
-section#search ol#searchresults {
+section#search #search-result-wrapper {
   margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1em;
+}
+
+section#search ol#searchresults {
   display: inline-flex;
   flex-direction: column;
   gap: 1em;
+  margin: 0;
 }
 
 /************************* Footer *************************/

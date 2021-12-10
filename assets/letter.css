@@ -118,3 +118,24 @@ img {
 ol {
   list-style: persian;
 }
+
+table {
+}
+
+table > thead {
+}
+
+table > thead th {
+  font-size: 1.2em;
+}
+
+table > tbody {
+}
+
+table > tr {
+}
+
+table :is(th, td) {
+  padding: 1em 0;
+  border-bottom: 1px solid #e8e8e8;
+}

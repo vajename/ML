@@ -16,7 +16,7 @@
   </head>
   <body>
     <aside>
-      <button id="open-search" x-data @click="$store.search.toggle()">
+      <button id="open-search" x-data :class="$store.search.disable && 'disable'" @click="$store.search.toggle()">
         <object data="/assets/s/search.svg" type="image/svg+xml"></object>
       </button>
       <a id='link-home-page' href='/'>
@@ -37,6 +37,7 @@
               </button>
             </div>
             <div id='search-options-wrapper'>
+
               <ul id='search-options'>
                 <li>
                   <a href="/">خانه</a>
@@ -51,18 +52,21 @@
             </div>
           </section>
 
-          <ol id="searchresults">
-            <template x-for="result in results" :key="result.ref" >
-              <li>
-                <a :href="result.ref">
-                  <strong x-text="result.doc.word"></strong>
-                  <span x-text="`(${result.doc.translation})`"></span>
-                </a>
-              </li>
-            </template>
-          </ol>
-          <div id="noResultsFound" x-show="!results.length && searchInput.length" x-transition>
-            <p>نتیجه‌ای پیدا نشد.</p>
+          <div id="search-result-wrapper">
+            <strong x-show="searchInput.length === 1">
+              <a :href="`/${searchInput.toUpperCase()}`" x-text="`حرف ${searchInput.toUpperCase()}`"></a>
+            </strong>
+            <ol id="searchresults">
+              <template x-for="result in results" :key="result.ref" >
+                <li>
+                  <a :href="result.ref">
+                    <strong x-text="result.doc.word"></strong>
+                    <span x-text="`(${result.doc.translation})`"></span>
+                  </a>
+                </li>
+              </template>
+            </ol>
+            <p id="noResultsFound" x-show="!results.length && searchInput.length" x-transition>نتیجه‌ای پیدا نشد.</p>
           </div>
         </section>
       </section>
@@ -87,7 +91,6 @@
               this.searchInput = value;
             },
             dosearch(text) {
-              console.log(text, window.searchIndex)
               const results = window
                 .searchIndex
                 .search(text, {
@@ -100,6 +103,7 @@
 
           Alpine.store('search', {
             open: false,
+            disable: true,
             toggle() {
               this.open = !this.open
             }
@@ -109,6 +113,9 @@
             window.searchIndex = elasticlunr
               .Index
               .load(rawIndex);
+            Alpine
+              .store('search')
+              .disable = false
           }).catch(err => {
             console.error(err);
           }));

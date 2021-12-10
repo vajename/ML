@@ -1,5 +1,8 @@
-const searchFilter = require("./src/_includes/filters/searchFilter");
+/// Data
 const alphabet = require("./src/_data/alphabet").alphabet;
+/// Filters
+const searchFilter = require("./src/_includes/filters/searchFilter");
+const { toFaDigits } = require("./src/utils/index");
 
 module.exports = function (eleventyConfig) {
 
@@ -8,6 +11,7 @@ module.exports = function (eleventyConfig) {
 
   /// Search indexing
   eleventyConfig.addFilter("search", searchFilter);
+  eleventyConfig.addFilter("toFaDigits", toFaDigits);
 
   eleventyConfig.addCollection("words", collection => {
     return [...collection.getFilteredByGlob("./words/**/*.md")];
