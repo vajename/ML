@@ -54,7 +54,7 @@
           </section>
 
           <div id="search-result-wrapper">
-            <strong x-show="searchInput.length === 1">
+            <strong x-show="searchInput.length === 1 && 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.includes(searchInput.toUpperCase()) ">
               <a :href="`/${searchInput.toUpperCase()}`" x-text="`حرف ${searchInput.toUpperCase()}`"></a>
             </strong>
             <ol id="searchresults">
@@ -95,7 +95,15 @@
               const results = window
                 .searchIndex
                 .search(text, {
-                  bool: "OR",
+                  fields: {
+                    word: {
+                      boost: 2
+                    },
+                    translation: {
+                      boost: 1
+                    }
+                  },
+                  boolean: "OR",
                   expand: true
                 });
               this.results = results;
@@ -111,6 +119,7 @@
           });
 
           fetch("/search-index.json").then((response) => response.json().then((rawIndex) => {
+            elasticlunr.clearStopWords();
             window.searchIndex = elasticlunr
               .Index
               .load(rawIndex);

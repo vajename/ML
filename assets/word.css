@@ -176,6 +176,7 @@ main > section.word > article img {
   max-width: 400px;
   display: block;
   margin: 0 auto 0;
+  border-bottom: 4px solid black;
 }
 
 /************************* Article > Section#options *************************/

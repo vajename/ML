@@ -1,4 +1,5 @@
 const elasticlunr = require("elasticlunr");
+// elasticlunr.clearStopWords();
 
 module.exports = function (collection) {
   // what fields we'd like our index to consist of
@@ -8,6 +9,7 @@ module.exports = function (collection) {
     this.addField("tags");
     this.setRef("id");
   });
+
 
   // loop through each page and add it to the index
   collection.forEach((page) => {

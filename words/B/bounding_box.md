@@ -1,7 +1,7 @@
 ---
 layout: word
-word: Bounding Box
-translation: کادر محصورکننده
+word: Bounding Box (BBox)
+translation: کادر محصورکننده (BBox)
 ---
 
 مختصات x و y مستطیلی به دور یک شی در یک تصویر، مانند سگ در تصویر زیر.
