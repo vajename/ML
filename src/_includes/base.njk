@@ -15,7 +15,6 @@
     {% block links %}{% endblock %}
   </head>
   <body>
-    {% svgsprite %}
     <aside>
       <button id="open-search" x-data :class="$store.search.disable && 'disable'" @click="$store.search.toggle()">
         <object data="/assets/s/search.svg" type="image/svg+xml"></object>
@@ -27,6 +26,7 @@
     </aside>
 
     <main x-data :class="$store.search.open ? 'no-scroll' : ''">
+      {% svgsprite %}
       <section id='search' x-data :class="$store.search.open ? 'open' : ''" x-transition x-cloak>
         <header>جستجو</header>
         <section x-data="searchResults">

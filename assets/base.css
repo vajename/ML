@@ -392,6 +392,12 @@ footer > section#footer #refrence {
   display: flex;
   align-items: center;
   gap: 1em;
+  color: white;
+}
+
+footer > section#footer #refrence svg {
+  width: 2em;
+  height: 2em;
 }
 
 /************************* Others *************************/
