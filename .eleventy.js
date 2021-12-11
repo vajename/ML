@@ -1,3 +1,5 @@
+const svgSprite = require("eleventy-plugin-svg-sprite");
+
 /// Data
 const alphabet = require("./src/_data/alphabet").alphabet;
 /// Filters
@@ -5,6 +7,11 @@ const searchFilter = require("./src/_includes/filters/searchFilter");
 const { toFaDigits } = require("./src/utils/index");
 
 module.exports = function (eleventyConfig) {
+
+  eleventyConfig.addPlugin(svgSprite, {
+    path: "./assets/s",
+  });
+
 
   eleventyConfig.addPassthroughCopy({ assets: "assets" });
   eleventyConfig.addPassthroughCopy({ admin: "admin" });

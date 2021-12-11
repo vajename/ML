@@ -1,23 +1,37 @@
+{% set navLinks = [
+  {
+    text: 'خانه',
+    link: '/'
+  }, {
+    text: 'فهرست الفبایی',
+    link: '/list'
+  }, {
+    text: 'دربارهٔ ما',
+    link: '/about'
+  }
+] %}
+
 <footer>
   <section id='information'>
     <div id="pages" class="footer-info-wrapper">
       <h4>صفحات</h4>
       <ul>
-        <li>
-          <a href="/">خانه</a>
-        </li>
-        <li>
-          <a href="/list">فهرست الفبایی</a>
-        </li>
-        <li>
-          <a href="/about">دربارهٔ ما</a>
-        </li>
+        {% for l in navLinks -%}
+          <li>
+            <a href="{{l.link}}">
+              <object data="/assets/s/arrow-left-small.svg" type="image/svg+xml">
+                <img src="/assets/s/arrow-left-small.svg"/>
+              </object>
+              {{l.text}}
+            </a>
+          </li>
+        {%- endfor %}
       </ul>
     </div>
     <div id="description" class="footer-info-wrapper">
       <h4>الفبای یادگیری ماشین</h4>
       <p>
-      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+        {{infos.footer_description | trim}}
       </p>
     </div>
     <div id="logo" class="footer-info-wrapper">
@@ -38,7 +52,7 @@
     <p>به تاریخ ــــ۱۴</p>
 
     <div id='refrence'>
-      <a href="//github.com/mhsattarian/ML-Glossary" target="_blank" rel="noopener">
+      <a href="{{infos.github_url}}" target="_blank" rel="noopener">
         <object data="/assets/s/github.svg" type="image/svg+xml"></object>
       </a>
     </div>

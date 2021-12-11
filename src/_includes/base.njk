@@ -15,6 +15,7 @@
     {% block links %}{% endblock %}
   </head>
   <body>
+    {% svgsprite %}
     <aside>
       <button id="open-search" x-data :class="$store.search.disable && 'disable'" @click="$store.search.toggle()">
         <object data="/assets/s/search.svg" type="image/svg+xml"></object>
@@ -61,7 +62,7 @@
                 <li>
                   <a :href="result.ref">
                     <strong x-text="result.doc.word"></strong>
-                    <span x-text="`(${result.doc.translation})`"></span>
+                    <span x-text="`(${result.doc.translation.trim()})`"></span>
                   </a>
                 </li>
               </template>

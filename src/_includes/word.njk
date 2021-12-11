@@ -1,7 +1,32 @@
+{%- from "macros.njk" import breadcrumb -%}
+
 {% extends "base.njk" %}
 
 {% block links %}
   <link rel="stylesheet" href="/assets/word.css"/>
+  <script>
+    const shareData = {
+      title: "الفبای یادگیری ماشین",
+      text: "{{word}}" + ' - ' + "{{translation}}",
+      url: window.location.href
+    }
+
+    async function shareWordPage() {
+      if (navigator.canShare(shareData)) 
+        await navigator.share(shareData);
+      else {
+        await navigator
+          .clipboard
+          .writeText(shareData.url);
+      }
+    }
+
+    async function copyTranslation() {
+      await navigator
+        .clipboard
+        .writeText("{{translation}}");
+    }
+  </script>
 {% endblock %}
 
 {% set title = word + ' - ' + translation %}
@@ -30,19 +55,32 @@
     </nav>
 
     <header>
-      <nav id='breadcrumb'></nav>
+      {{
+        breadcrumb([{text: 'خانه', link: '/'}, {text: letter, link: '/' + letter }, {text: translation, link: ''}])
+      }}
       <hgroup>
         <h1>{{translation}}</h1>
         <h2>{{word}}</h2>
       </hgroup>
 
-      <section id='word-actions'></section>
+      <section id='word-actions'>
+        <span x-data @click="copyTranslation">{% svg "copy" %}</span>
+        <span x-data @click="shareWordPage">{% svg "share" %}</span>
+      </section>
     </header>
 
     <article>
       <section id='description'>
         <h3>تعریف</h3>
         <p>{{content | safe}}</p>
+      </section>
+      <section id='options'>
+        <div id="info">
+          <a href="https://github.com/mhsattarian/ML-Glossary/blob/master/words/{{letter}}/{{page.fileSlug}}.md">
+            {% svg "github" %}
+            ویرایش این ترجمه
+          </a>
+        </div>
       </section>
     </article>
 

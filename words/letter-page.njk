@@ -6,10 +6,17 @@ pagination:
 permalink: "{{ letter }}/"
 ---
 
+{%- from "macros.njk" import breadcrumb -%}
 {% extends "base.njk" %}
 
 {% block links %}
   <link rel="stylesheet" href="/assets/letter.css"/>
+  <script>
+    function rowClick(row) {
+      const {link} = row.dataset;
+      window.location = link;
+    }
+  </script>
 {% endblock %}
 
 {# {% set letter = word[0] %} #}
@@ -17,9 +24,11 @@ permalink: "{{ letter }}/"
 {% set title = 'حرف ' + letter %}
 
 {% block body %}
-  <section class="word">
+  <section class="letter">
     <header>
-      <nav id='breadcrumb'></nav>
+      {{
+        breadcrumb([{text: 'خانه', link: '/'}, {text: letter, link: '' }])
+      }}
       <section id="titles">
         <strong>{{letter}}</strong>
         <hgroup>
@@ -43,10 +52,12 @@ permalink: "{{ letter }}/"
         </thead>
         <tbody>
           {%- for word in collections[letter] -%}
-            <tr>
-              <td>{{loop.index | toFaDigits}}</td>
+            <tr x-data @click="rowClick($event.currentTarget)" data-link="{{word.url}}">
               <td>
-                <a href="{{word.url}}">{{ word.data.word }}</a>
+                {{loop.index | toFaDigits}}
+              </td>
+              <td>
+                {{ word.data.word }}
               </td>
               <td>
                 {{word.templateContent | striptags(true) | escape | truncate(80) | safe}}

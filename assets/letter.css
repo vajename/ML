@@ -1,4 +1,4 @@
-main > section.word {
+main > section.letter {
   width: 100%;
   min-height: 100%;
   display: grid;
@@ -13,7 +13,7 @@ main > section.word {
 
 /************************* Header *************************/
 
-main > section.word > header {
+main > section.letter > header {
   grid-area: header;
   width: 100%;
   height: 100%;
@@ -29,7 +29,7 @@ main > section.word > header {
   direction: rtl;
 }
 
-main > section.word > header section#titles {
+main > section.letter > header section#titles {
   width: 100%;
   height: 100%;
   flex-grow: 2;
@@ -39,7 +39,7 @@ main > section.word > header section#titles {
   gap: 1em;
 }
 
-main > section.word > header section#titles > strong {
+main > section.letter > header section#titles > strong {
   display: inline-block;
   align-self: flex-end;
   font-weight: 900;
@@ -50,7 +50,7 @@ main > section.word > header section#titles > strong {
   text-transform: capitalize;
 }
 
-main > section.word > header section#titles hgroup {
+main > section.letter > header section#titles hgroup {
   transform: translateY(50%);
 }
 
@@ -65,7 +65,7 @@ h2 {
   font-weight: 100;
 }
 
-main > section.word > header section#titles hgroup h2 strong {
+main > section.letter > header section#titles hgroup h2 strong {
   font-weight: bold;
 }
 
@@ -79,7 +79,7 @@ hgroup {
 
 /************************* Article *************************/
 
-main > section.word > article {
+main > section.letter > article {
   grid-area: article;
   width: 100%;
   min-height: 100%;
@@ -94,7 +94,7 @@ main > section.word > article {
   box-shadow: 0 0 25px -20px #607d8b;
 }
 
-main > section.word > article > section:not(:last-child) {
+main > section.letter > article > section:not(:last-child) {
   border-bottom: 1px solid #e8e8e8;
 }
 
@@ -129,10 +129,20 @@ table > thead th {
   font-size: 1.2em;
 }
 
-table > tbody {
+table > tbody tr:hover:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #0000000d;
+  inset: 0;
+  z-index: -1;
 }
 
-table > tr {
+table > tbody tr {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 
 table :is(th, td) {
