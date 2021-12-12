@@ -19,9 +19,7 @@
         {% for l in navLinks -%}
           <li>
             <a href="{{l.link}}">
-              <object data="/assets/s/arrow-left-small.svg" type="image/svg+xml">
-                <img src="/assets/s/arrow-left-small.svg"/>
-              </object>
+              <span class="icon">{% svg "arrow-left-small" %}</span>
               {{l.text}}
             </a>
           </li>
@@ -37,9 +35,7 @@
     <div id="logo" class="footer-info-wrapper">
       <div id='logo-wrapper'>
         <a href="/">
-          <object data="/assets/s/logo.svg" type="image/svg+xml">
-            <img src="/assets/s/logo.png"/>
-          </object>
+          <span class="icon svg-inline">{% svg "logo" %}</span>
         </a>
       </div>
     </div>

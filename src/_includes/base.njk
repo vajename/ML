@@ -13,12 +13,13 @@
     <link rel="stylesheet" href="/assets/base.css"/>
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
+    <script async src="https://cdn.splitbee.io/sb.js"></script>
     {% block links %}{% endblock %}
   </head>
   <body>
     <aside>
       <button id="open-search" x-data :class="$store.search.disable && 'disable'" @click="$store.search.toggle()">
-        <object data="/assets/s/search.svg" type="image/svg+xml"></object>
+        <span class="icon">{% svg "search" %}</span>
       </button>
       <a id='link-home-page' href='/'>
         <span id='link-home-page__fa'>الفبای یادگیری ماشین</span>
@@ -35,7 +36,7 @@
             <div id="input-wrapper">
               <input id="searchField" type="search" placeholder="کلمه: accuracy، bias و ..."  :value="searchInput" @input.debounce="setSearchInput($event.target.value)" x-init="$watch('$store.search.open', value => {if (value) $el.focus()})"/>
               <button>
-                <object data="/assets/s/search.svg" type="image/svg+xml"></object>
+                <span class="icon">{% svg "search" %}</span>
               </button>
             </div>
             <div id='search-options-wrapper'>
@@ -68,7 +69,8 @@
                 </li>
               </template>
             </ol>
-            <p id="noResultsFound" x-show="!results.length && searchInput.length" x-transition>نتیجه‌ای پیدا نشد.</p>
+            <p id="noResultsFound" x-show="!results.length && searchInput.length" x-text="$store.search.loading ? 
+            'درحال دریافت لیست کلمات...' : 'نتیجه‌ای پیدا نشد.'" x-transition></p>
           </div>
         </section>
       </section>
@@ -82,12 +84,25 @@
       (function (window, document) {
         "use strict";
 
+        const {q} = Object.fromEntries(new URLSearchParams(window.location.search));
+        console.log("🚀 ~ file: base.njk ~ line 87 ~ q", q)
+
         document.addEventListener('alpine:init', () => {
           Alpine.data('searchResults', () => ({
-            searchInput: '',
+            searchInput: q ?? '',
             results: [],
             init() {
               this.$watch('searchInput', this.dosearch.bind(this));
+              this.$watch('$store.search.loading', this.dosearch.bind(this));
+              this.$watch('$store.search.open', (open) => {
+                if (!open) 
+                  this.searchInput = '';
+                
+                // remove query params
+                window
+                  .history
+                  .pushState({}, document.title, window.location.pathname);
+              });
             },
             setSearchInput(value) {
               this.searchInput = value;
@@ -95,7 +110,7 @@
             dosearch(text) {
               const results = window
                 .searchIndex
-                .search(text, {
+                .search(this.searchInput, {
                   fields: {
                     word: {
                       boost: 2
@@ -112,12 +127,21 @@
           }));
 
           Alpine.store('search', {
-            open: false,
+            open: Boolean(q),
             disable: true,
+            loading: true,
             toggle() {
               this.open = !this.open
             }
           });
+
+          Alpine.effect(() => {
+            const searchLoading = Alpine
+              .store('search')
+              .loading;
+
+            // Now do something with `count`...
+          })
 
           fetch("/search-index.json").then((response) => response.json().then((rawIndex) => {
             elasticlunr.clearStopWords();
@@ -127,8 +151,14 @@
             Alpine
               .store('search')
               .disable = false
+            Alpine
+              .store('search')
+              .loading = false
           }).catch(err => {
             console.error(err);
+            Alpine
+              .store('search')
+              .loading = false
           }));
         });
       })(window, document);
