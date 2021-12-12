@@ -11,12 +11,12 @@ const onLoad = () => {
 
     words.forEach(
       (w) =>
-        (w.style.display = w
-          .querySelector("a")
-          .textContent.toLowerCase()
-          .includes(query)
-          ? "block"
-          : "none")
+      (w.style.display = w
+        .querySelector("a")
+        .textContent.toLowerCase()
+        .includes(query)
+        ? "block"
+        : "none")
     );
 
     letterSections.forEach((ls) => {
@@ -30,6 +30,12 @@ const onLoad = () => {
         ls.style.display = "block";
     });
   });
+
+
+  const { q } = Object.fromEntries(new URLSearchParams(window.location.search));
+  console.log("🚀 ~ file: index.js ~ line 36 ~ onLoad ~ q", q)
+  searchbar.value = q;
+  searchbar.dispatchEvent(new Event('input', { bubbles: true }))
 };
 
 window.onload = onLoad;
