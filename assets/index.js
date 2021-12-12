@@ -32,7 +32,7 @@ const onLoad = () => {
   });
 
 
-  const { q } = Object.fromEntries(new URLSearchParams(window.location.search));
+  const { q } = Object.fromEntries(new URLSearchParams(window.location.search ?? ''));
   console.log("🚀 ~ file: index.js ~ line 36 ~ onLoad ~ q", q)
   searchbar.value = q;
   searchbar.dispatchEvent(new Event('input', { bubbles: true }))
