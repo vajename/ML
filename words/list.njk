@@ -1,84 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لغت‌نامه یادگیری ماشین (ML Glossary)</title>
-    <link rel="stylesheet" href="/assets/index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v26.0.2/dist/font-face.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css"/>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script async src="https://cdn.splitbee.io/sb.js"></script>
-  </head>
-  <body>
-    <script>
-      if (window.netlifyIdentity) {
-        window
-          .netlifyIdentity
-          .on("init", user => {
-            if (!user) {
-              window
-                .netlifyIdentity
-                .on("login", () => {
-                  document.location.href = "/admin/";
-                });
-            }
-          });
-      }
-    </script>
-    <a class="github-fork-ribbon" href="https://github.com/mhsattarian/ML-Glossary" data-ribbon="در ترجمه کمک کنید" title="Help translate">در ترجمه کمک کنید</a>
+{%- from "macros.njk" import breadcrumb -%}
+{% extends "base.njk" %}
 
-    <aside id="main-sidebar">
+{% block links %}
+  <link rel="stylesheet" href="/assets/list.css"/>
+  <script>
+    function rowClick(row) {
+      const {link} = row.dataset;
+      window.location = link;
+    }
+  </script>
+{% endblock %}
 
-    </aside>
+{# {% set letter = word[0] %} #}
+{% set title_fa = "فهرست الفبایی" %}
+{% set title_en = "Alphabetical Index" %}
+{% set title = title_fa + ' - ' + title_en %}
 
+{% block body %}
+  <section class="list">
     <header>
-      <h1>لغت‌نامه یادگیری ماشین</h1>
-      <p>Machine Learning Glossary</p>
-    </header>
+      {{
+          breadcrumb([{text: 'خانه', link: '/'}, {text: title_fa, link: '' }])
+        }}
+      <section id="titles">
+        <h1>{{title_fa}}</h1>
+        <h2>{{title_en}}</h2>
+      </hgroup>
+    </section>
+  </header>
 
-    <main>
-      <section id="search">
-        <span>جستجو</span>
-        <input type="text" name="query" id="query" placeholder='e.g. convolutional layer'/>
-      </section>
-
-      <article id="words">
-        {%- for C in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" -%}
-          <div class="letter-section" id="{{C}}">
-            <a href="/{{C }}">{{C}}</a>
-            {%- for word in collections[C] -%}
-              <details class="word">
-                <summary>
-                  <a href="{{word.url}}">{{word.data.word}}</a>
-                  <span>
-                    <span class="translation">{{word.data.translation}}</span>
-                    <svg fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                  </span>
-                </summary>
-                {{word.templateContent | safe}}
-              </details>
-            {%- endfor -%}
+  <article>
+    {% for l in alphabet.alphabet -%}
+      {% set letter = l %}
+      <section class="letter">
+        <h2>
+          <a href="/{{letter}}">حرف <strong>{{letter}}</strong>
+          </a>
+        </h2>
+        <article>
+          <div class="table-wrapper">
+            <ul class="word-list">
+              {%- for word in collections[letter] -%}
+                <li class="word-list__item">
+                  <a href="{{word.url}}">{{ word.data.word }}</a>
+                </li>
+              {%- endfor -%}
+            </ul>
           </div>
-        {%- endfor -%}
-      </article>
-    </main>
+        </article>
+      </section>
+    {%- endfor %}
+  </article>
 
-    <aside>
-      <ul>
-        {%- for C in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" -%}
-          <li>
-            <a href='#{{C}}'>{{C}}</a>
-          </li>
-        {%- endfor -%}
-      </ul>
-    </aside>
-
-    <footer id="site-footer">
-    </footer>
-
-    <script src="/assets/index.js"></script>
-  </body>
-</html>
+  {% include "footer.njk" %}
+</section>
+{% endblock %}

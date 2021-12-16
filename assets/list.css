@@ -1,4 +1,4 @@
-main > section.letter {
+main > section.list {
   width: 100%;
   min-height: 100%;
   display: grid;
@@ -13,7 +13,7 @@ main > section.letter {
 
 /************************* Header *************************/
 
-main > section.letter > header {
+main > section.list > header {
   grid-area: header;
   width: 100%;
   height: 100%;
@@ -29,22 +29,23 @@ main > section.letter > header {
   direction: rtl;
 }
 
-main > section.letter > header section#titles {
+main > section.list > header section#titles {
   width: 100%;
   height: 100%;
   flex-grow: 2;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1em;
   overflow: hidden;
 }
 
-main > section.letter > header section#titles > strong {
+main > section.list > header section#titles > strong {
   display: inline-block;
 }
 
-main > section.letter > header section#titles > strong span {
+main > section.list > header section#titles > strong span {
   display: inline-block;
   align-self: flex-end;
   font-weight: 900;
@@ -55,7 +56,7 @@ main > section.letter > header section#titles > strong span {
   text-transform: capitalize;
 }
 
-main > section.letter > header section#titles hgroup {
+main > section.list > header section#titles hgroup {
   transform: translateY(50%);
 }
 
@@ -70,7 +71,7 @@ h2 {
   font-weight: 100;
 }
 
-main > section.letter > header section#titles hgroup h2 strong {
+main > section.list > header section#titles hgroup h2 strong {
   font-weight: bold;
 }
 
@@ -84,7 +85,7 @@ hgroup {
 
 /************************* Article *************************/
 
-main > section.letter > article {
+main > section.list > article {
   grid-area: article;
   width: 100%;
   min-height: 100%;
@@ -94,13 +95,20 @@ main > section.letter > article {
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
+  gap: 3em;
   padding: 3em 6em;
   margin: 0 auto;
   box-shadow: 0 0 25px -20px #607d8b;
 }
 
-main > section.letter > article > section:not(:last-child) {
+main > section.list > article > section:not(:last-child) {
   border-bottom: 1px solid #e8e8e8;
+}
+
+/************************* Section.letter *************************/
+
+main > section.list section.letter a {
+  text-decoration: none;
 }
 
 p {
@@ -124,67 +132,12 @@ ol {
   list-style: persian;
 }
 
-.table-wrapper {
-  width: 100%;
-  overflow: hidden;
+ul.word-list {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
 }
 
-table {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  overflow: hidden;
-}
-
-table > tbody {
-  width: 100%;
-}
-
-table > thead th {
-  font-size: 1.2em;
-  text-align: start;
-}
-
-table > tbody tr:hover {
-  font-weight: bold;
-}
-
-/* table > tbody tr:hover:after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: #0000000d;
-  inset: 0;
-  z-index: -1;
-} */
-
-table > tbody tr {
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-}
-
-table :is(th, td) {
-  padding: 1em;
-  border-bottom: 1px solid #e8e8e8;
-}
-
-table tr td:nth-child(2) {
-  white-space: nowrap;
-  width: 20ch;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-table :is(th, td):first-child {
-  width: 10ch;
-}
-
-table > tbody p.description {
-  white-space: nowrap;
-  /* calc: viewport - sidebar - article padding - 1st col - 2nd col - col pads - current padd */
-  max-width: calc(100vw - 4.5rem - 12rem - 10ch - 20ch - 4em - 1em);
-  overflow: hidden;
-  text-overflow: ellipsis;
+ul.word-list li.word-list__item {
+  list-style: url(/assets/s/arrow-left-small.svg);
 }

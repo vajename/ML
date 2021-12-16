@@ -1,9 +1,7 @@
 {% macro breadcrumb(leads) %}
   <nav id='breadcrumb'>
     {% for l in leads -%}
-      <span>
-        <a href="{{ l.link }}">{{ l.text }}</a>
-      </span>
+      <a href="{{ l.link }}">{{ l.text }}</a>
       {% if loop.revindex0 !== 0 %}
         {% svg "breadcrumb-seperator" %}
       {% endif %}

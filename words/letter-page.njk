@@ -30,7 +30,8 @@ permalink: "{{ letter }}/"
         breadcrumb([{text: 'خانه', link: '/'}, {text: letter, link: '' }])
       }}
       <section id="titles">
-        <strong>{{letter}}</strong>
+        <strong>
+          <span>{{letter}}</span></strong>
         <hgroup>
           <h1>حرف {{letter}}</h1>
           <h2>
@@ -42,31 +43,33 @@ permalink: "{{ letter }}/"
     </header>
 
     <article>
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th>کلمات</th>
-            <th>توضیح</th>
-          </tr>
-        </thead>
-        <tbody>
-          {%- for word in collections[letter] -%}
-            <tr x-data @click="rowClick($event.currentTarget)" data-link="{{word.url}}">
-              <td>
-                {{loop.index | toFaDigits}}
-              </td>
-              <td>
-                {{ word.data.word }}
-              </td>
-              <td>
-                {{word.templateContent | striptags(true) | escape | truncate(80) | safe}}
-                {# {{word.templateContent | truncate(100) | safe}} #}
-              </td>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>کلمات</th>
+              <th>توضیح</th>
             </tr>
-          {%- endfor -%}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {%- for word in collections[letter] -%}
+              <tr x-data @click="rowClick($event.currentTarget)" data-link="{{word.url}}">
+                <td>
+                  {{loop.index | toFaDigits}}
+                </td>
+                <td>
+                  {{ word.data.word }}
+                </td>
+                <td>
+                  <p class="description">{{word.templateContent | striptags(true) | escape | truncate(200) | safe}}</p>
+                  {# {{word.templateContent | truncate(100) | safe}} #}
+                </td>
+              </tr>
+            {%- endfor -%}
+          </tbody>
+        </table>
+      </div>
     </article>
 
     {% include "footer.njk" %}
