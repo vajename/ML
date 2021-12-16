@@ -33,6 +33,11 @@
 {# {% set letter = word[0] %} #}
 {% set letter = page.url[1] %}
 
+{% set previousPost = collections[letter] | getPreviousCollectionItem(page) %}
+{% set nextPost = collections[letter] | getNextCollectionItem(page) %}
+
+{% set blameData = page.inputPath | blame %}
+
 {% block body %}
   <section class="word">
     <nav>
@@ -76,10 +81,16 @@
       </section>
       <section id='options'>
         <div id="info">
-          <a href="https://github.com/mhsattarian/ML-Glossary/blob/master/words/{{letter}}/{{page.fileSlug}}.md">
-            {% svg "github" %}
+          <p>قبلی: {{previousPost.url}}</p>
+          <p>بعدی: {{nextPost.url}}</p>
+          <p>آخرین ویرایش در {{blameData.time.year}} توسط {{blameData.email}}
+          </p>
+          <p>
+            <a href="https://github.com/mhsattarian/ML-Glossary/blob/master/words/{{letter}}/{{page.fileSlug}}.md">
+              {% svg "github" %}
             ویرایش این ترجمه
           </a>
+          </p>
         </div>
       </section>
     </article>

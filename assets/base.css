@@ -318,7 +318,7 @@ footer > section#information {
 
 @media screen and (min-width: 1200px) {
   footer > section#information {
-    grid-template: 1fr / 8em 1fr 10em;
+    grid-template: 1fr / 8em 1fr 20em;
     grid-template-areas: 'pages description logo';
   }
 }

@@ -30,13 +30,13 @@
   </header>
 
   <article>
-    {% for l in alphabet.alphabet -%}
-      {% set letter = l %}
+    {% for letter in alphabet.alphabet -%}
       <section class="letter">
         <h2>
           <a href="/{{letter}}">حرف <strong>{{letter}}</strong>
           </a>
         </h2>
+        <span>{{collections[letter].length | toFaDigits}} کلمه</span>
         <article>
           <div class="table-wrapper">
             <ul class="word-list">

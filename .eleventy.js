@@ -4,6 +4,7 @@ const svgSprite = require("eleventy-plugin-svg-sprite");
 const alphabet = require("./src/_data/alphabet").alphabet;
 /// Filters
 const searchFilter = require("./src/_includes/filters/searchFilter");
+const blame = require("./src/_includes/filters/blame");
 const { toFaDigits } = require("./src/utils/index");
 
 module.exports = function (eleventyConfig) {
@@ -18,6 +19,11 @@ module.exports = function (eleventyConfig) {
 
   /// Search indexing
   eleventyConfig.addFilter("search", searchFilter);
+  if (process.env.NODE_ENV !== "production") {
+    eleventyConfig.addFilter("blame", () => ({ email: 'someone@mail.co', time: { year: 1400, month: 8, day: 20 } }));
+  }
+  else
+    eleventyConfig.addNunjucksAsyncFilter("blame", blame);
   eleventyConfig.addFilter("toFaDigits", toFaDigits);
 
   eleventyConfig.addCollection("words", collection => {

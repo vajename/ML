@@ -18,6 +18,8 @@
     "prettier": "^2.5.0"
   },
   "dependencies": {
-    "elasticlunr": "^0.9.5"
+    "elasticlunr": "^0.9.5",
+    "jalali-moment": "^3.3.10",
+    "nodegit": "^0.27.0"
   }
 }
