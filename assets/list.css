@@ -18,7 +18,7 @@ main > section.list > header {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template: 4em 1fr / 1fr;
+  grid-template: 4em 1fr 4em / 1fr;
   justify-content: space-between;
   align-items: flex-start;
   padding: 2em 6em;
@@ -29,7 +29,7 @@ main > section.list > header {
   direction: rtl;
 }
 
-main > section.list > header section#titles {
+main > section.list > header hgroup#titles {
   width: 100%;
   height: 100%;
   flex-grow: 2;
@@ -41,23 +41,11 @@ main > section.list > header section#titles {
   overflow: hidden;
 }
 
-main > section.list > header section#titles > strong {
-  display: inline-block;
-}
-
-main > section.list > header section#titles > strong span {
-  display: inline-block;
-  align-self: flex-end;
-  font-weight: 900;
-  font-size: 23em;
-  line-height: 1;
-  vertical-align: bottom;
-  text-anchor: end;
-  text-transform: capitalize;
-}
-
-main > section.list > header section#titles hgroup {
-  transform: translateY(50%);
+main > section.list > header hgroup#titles > h2 {
+  font-weight: bold;
+  margin: 0;
+  font-size: 1.8em;
+  font-weight: 100;
 }
 
 h1 {
@@ -65,22 +53,28 @@ h1 {
   font-size: 4em;
 }
 
-h2 {
-  margin: 0;
-  font-size: 1.8em;
-  font-weight: 100;
-}
+/************************* Nav *************************/
 
-main > section.list > header section#titles hgroup h2 strong {
-  font-weight: bold;
-}
-
-hgroup {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+main > section.list > header ul {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-evenly;
+  align-items: center;
   gap: 1em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main > section.list > header li {
+  flex-basis: 1ch;
+  min-width: 1ch;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+
+main > section.list > header li a {
+  text-decoration: none;
 }
 
 /************************* Article *************************/
@@ -106,6 +100,33 @@ main > section.list > article > section:not(:last-child) {
 }
 
 /************************* Section.letter *************************/
+
+main > section.list section.letter {
+  scroll-margin-block-start: 2em;
+}
+
+main > section.list section.letter hgroup.letter-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+}
+
+main > section.list section.letter hgroup.letter-header h2 {
+  font-weight: bold;
+  margin: 0;
+  font-size: 1.8em;
+  font-weight: 100;
+}
+
+main
+  > section.list
+  section.letter
+  hgroup.letter-header
+  .letter-header__word-count {
+  font-weight: 100;
+  color: var(--c-secondary);
+}
 
 main > section.list section.letter a {
   text-decoration: none;

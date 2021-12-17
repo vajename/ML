@@ -27,6 +27,13 @@ body {
   align-items: flex-start;
 }
 
+:root {
+  --c-primary: black;
+  --c-secondary: #393939;
+  --c-accent: #f8f8f8;
+  --c-gray: #9f9f9f;
+}
+
 a {
   text-decoration: underline;
   text-decoration-line: underline;
@@ -107,7 +114,7 @@ body > aside {
   align-items: center;
   position: relative;
   background: black;
-  border-left: 1px solid #393939;
+  border-left: 1px solid var(--c-secondary);
 }
 
 body > aside > a {
@@ -154,7 +161,7 @@ main {
   overflow: hidden;
   overflow-y: auto;
   background: white;
-  /* position: relative; */
+  scroll-behavior: smooth;
 }
 
 main.no-scroll {

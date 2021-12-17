@@ -1,11 +1,11 @@
 const svgSprite = require("eleventy-plugin-svg-sprite");
 
 /// Data
-const alphabet = require("./src/_data/alphabet").alphabet;
+const alphabet = require("./src/_data/alphabet");
 /// Filters
 const searchFilter = require("./src/_includes/filters/searchFilter");
 const blame = require("./src/_includes/filters/blame");
-const { toFaDigits } = require("./src/utils/index");
+const { toFaDigits, formatTime, getAutherByEmail, ifNoValue } = require("./src/utils/index");
 
 module.exports = function (eleventyConfig) {
 
@@ -18,13 +18,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ admin: "admin" });
 
   /// Search indexing
+  eleventyConfig.addFilter("toFaDigits", toFaDigits);
+  eleventyConfig.addFilter("formatTime", formatTime);
+  eleventyConfig.addFilter("ifNoValue", ifNoValue);
+  eleventyConfig.addFilter("getAutherByEmail", getAutherByEmail);
   eleventyConfig.addFilter("search", searchFilter);
   if (process.env.NODE_ENV !== "production") {
-    eleventyConfig.addFilter("blame", () => ({ email: 'someone@mail.co', time: { year: 1400, month: 8, day: 20 } }));
+    eleventyConfig.addFilter("blame", () => ({ email: 'someone@mail', time: new Date() }));
   }
   else
     eleventyConfig.addNunjucksAsyncFilter("blame", blame);
-  eleventyConfig.addFilter("toFaDigits", toFaDigits);
 
   eleventyConfig.addCollection("words", collection => {
     return [...collection.getFilteredByGlob("./words/**/*.md")];

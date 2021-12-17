@@ -1,7 +1,5 @@
 const git = require('nodegit');
-const moment = require('jalali-moment');
 const pathToRepo = require("path").resolve("./.git");
-// const makeSynchronous = require('make-synchronous');
 
 let $repo = null;
 
@@ -11,12 +9,7 @@ async function blame(filePath, callback) {
   const oid = blame.getHunkByIndex(blame.getHunkCount() - 1).origCommitId();
   const commit = await git.Commit.lookup(repo, oid);
   const email = commit.author().email();
-  const timeRaw = moment(commit.time() * 1000).locale('fa');
-  const time = {
-    year: timeRaw.jYear(),
-    month: timeRaw.jMonth(),
-    day: timeRaw.jDate(),
-  }
+  const time = commit.time() * 1000
 
   callback(null, { email: email, time });
 }

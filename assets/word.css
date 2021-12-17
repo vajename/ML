@@ -37,6 +37,7 @@ main > section.word > header #word-actions {
   justify-content: flex-start;
   align-items: center;
   gap: 1em;
+  color: var(--c-accent);
 }
 
 main > section.word > header #word-actions > span {
@@ -60,7 +61,7 @@ main > section.word > nav {
   min-height: 100%;
   background-color: black;
   color: white;
-  border-left: 1px solid #393939;
+  border-left: 1px solid var(--c-secondary);
 }
 
 main > section.word > nav > section {
@@ -133,6 +134,10 @@ main > section.word > article {
   box-shadow: 0 0 25px -20px #607d8b;
 }
 
+main > section.word > article > section {
+  padding-block-end: 2em;
+}
+
 main > section.word > article > section:not(:last-child) {
   border-bottom: 1px solid #e8e8e8;
   margin-bottom: 2em;
@@ -187,21 +192,108 @@ main > section.word > article > section#options {
 
 main > section.word > article > section#options #info {
   width: 100%;
+  display: grid;
+  grid-template: 4em 1.5em / 12em 1fr;
+  grid-template-areas: 'fastnav shortlink' 'fastnav infodetails';
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1em;
+}
+
+main > section.word > article > section#options #info #fast-nav {
+  grid-area: fastnav;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+main > section.word > article > section#options #info #fast-nav a {
+  text-decoration: none;
+}
+
+main > section.word > article > section#options #info #fast-nav a.prev .icon {
+  transform: rotate(90deg);
+}
+
+main > section.word > article > section#options #info #fast-nav a.next .icon {
+  transform: rotate(-90deg);
+}
+
+main > section.word > article > section#options #info #shortlink {
+  grid-area: shortlink;
+  width: 100%;
+  height: 100%;
+}
+
+main > section.word > article > section#options #info #info-details {
+  grid-area: infodetails;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 1em;
-  color: #9f9f9f;
+  gap: 3em;
+  color: var(--c-gray);
 }
 
-main > section.word > article > section#options #info svg {
+main
+  > section.word
+  > article
+  > section#options
+  #info
+  #info-details
+  .info-details__edit {
+  display: inline-flex;
+  gap: 3ch;
+  margin: 0;
+}
+
+main
+  > section.word
+  > article
+  > section#options
+  #info
+  #info-details
+  .info-details__info {
+  display: inline-flex;
+  gap: 1ch;
+}
+
+main
+  > section.word
+  > article
+  > section#options
+  #info
+  #info-details
+  .info-details__edit.link {
+  border-bottom: 3px solid currentColor;
+}
+
+main
+  > section.word
+  > article
+  > section#options
+  #info
+  #info-details
+  .info-details__edit.link
+  svg {
   width: 1em;
   height: 1em;
-  color: inherit;
+  color: currentColor;
   vertical-align: middle;
 }
 
-main > section.word > article > section#options #info a {
-  text-decoration-thickness: 3px;
+main
+  > section.word
+  > article
+  > section#options
+  #info
+  #info-details
+  .info-details__edit.link
+  a {
+  color: currentColor;
+  text-decoration: none;
 }
