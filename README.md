@@ -2,16 +2,14 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ee566a27-d773-46db-9433-d9c654312215/deploy-status)](https://app.netlify.com/sites/ml-glossary-fa/deploys)
 
-**Machine Learning Glossary** is a community-driven attempt to explain the buzzwords (Jargons) of the current *Machine-learning*/*Deep-learning* ecosystem in **Persian** with few simple words. The idea is not to replace individual documentations, but to act as some kind of glossary that can be easily referenced.
+**Machine Learning Glossary** is a community-driven attempt to explain the buzzwords (Jargons) of the current _Machine-learning_/_Deep-learning_ ecosystem in **Persian** with few simple words.
 
-If you are willing to contribute, *open a pull request*.
-
-> Note: while this project is fully readable from this GitHub repository, Just open [words directory](/words/). you can also enjoy the dedicated website: [ML-Glossary](http://mlglossary.ir/).
+If you are willing to contribute, _open a pull request_.
 
 ## Related projects
 
-* [Google Machine Learning Glossary](https://developers.google.com/machine-learning/glossary)
-* [VajeYar](http://vajeyar.apll.ir)
+- [Google Machine Learning Glossary](https://developers.google.com/machine-learning/glossary)
+- [VajeYar](http://vajeyar.apll.ir)
 
 ## Glossary
 
@@ -42,15 +40,6 @@ If you are willing to contribute, *open a pull request*.
 [Y](/words/Y) ·
 [Z](/words/Z)
 
-## run local
-
-```
-npm i
-```
-```
-npm start
-```
-
 ## Contributors
 
 <table>
@@ -65,7 +54,6 @@ npm start
   </tr>
 </table>
 
+## Acknowledgment
 
-## Special thanks
-
-to [Alireza AkhavanPour](https://github.com/alireza-Akhavan/) for supporting this project.
+Special thanks to [Alireza AkhavanPour](https://github.com/alireza-Akhavan/) for supporting this project.

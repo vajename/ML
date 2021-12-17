@@ -53,6 +53,12 @@ h1 {
   font-size: 4em;
 }
 
+a.anchor {
+  margin-right: -2ch;
+  font-size: 1.5em;
+  position: absolute;
+}
+
 /************************* Nav *************************/
 
 main > section.list > header ul {
@@ -103,6 +109,19 @@ main > section.list > article > section:not(:last-child) {
 
 main > section.list section.letter {
   scroll-margin-block-start: 2em;
+}
+
+main > section.list section.letter hgroup.letter-header {
+  position: relative;
+}
+
+main > section.list section.letter hgroup.letter-header .anchor {
+  opacity: 0;
+  transition: opacity 0.3 ease-in;
+}
+
+main > section.list section.letter hgroup.letter-header:hover .anchor {
+  opacity: 1;
 }
 
 main > section.list section.letter hgroup.letter-header {

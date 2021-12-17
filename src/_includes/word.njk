@@ -97,7 +97,7 @@
           <div id="shortlink"></div>
           <div id="info-details">
             <p class="info-details__edit info">
-              <span class="info-details__info">آخرین ویرایش: <span class="info-details__value">{{blameData.time.year | formatTime | toFaDigits}}</span>
+              <span class="info-details__info">آخرین ویرایش: <span class="info-details__value">{{blameData.time | formatTime | toFaDigits}}</span>
               </span>
               <span class="info-details__info">توسط: <span class="info-details__value">
                   {% set author = blameData.email | getAutherByEmail %}
