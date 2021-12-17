@@ -1,3 +1,7 @@
+main {
+  scroll-snap-type: y proximity;
+}
+
 main > section.list {
   width: 100%;
   min-height: 100%;
@@ -89,7 +93,6 @@ main > section.list > article {
   grid-area: article;
   width: 100%;
   min-height: 100%;
-  overflow-y: auto;
   background: white;
   display: flex;
   flex-direction: column;
@@ -109,6 +112,7 @@ main > section.list > article > section:not(:last-child) {
 
 main > section.list section.letter {
   scroll-margin-block-start: 2em;
+  scroll-snap-align: start;
 }
 
 main > section.list section.letter hgroup.letter-header {

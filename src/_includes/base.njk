@@ -85,7 +85,6 @@
         "use strict";
 
         const {q} = Object.fromEntries(new URLSearchParams(window.location.search));
-        console.log("🚀 ~ file: base.njk ~ line 87 ~ q", q)
 
         document.addEventListener('alpine:init', () => {
           Alpine.data('searchResults', () => ({
