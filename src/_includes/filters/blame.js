@@ -5,7 +5,7 @@ let $repo = null;
 
 /** Blame last file change | using commit id */
 async function blameLast_old(filePath, callback) {
-  const repo = $repo ?? await git.Repository.open(pathToRepo);
+  const repo = $repo ? $repo : await git.Repository.open(pathToRepo);
   const blame = await git.Blame.file(repo, filePath.slice(2));
   const oid = blame.getHunkByIndex(blame.getHunkCount() - 1).origCommitId();
   const commit = await git.Commit.lookup(repo, oid);
@@ -17,7 +17,7 @@ async function blameLast_old(filePath, callback) {
 
 /** Blame last file change */
 async function blameLast(filePath, callback) {
-  const repo = $repo ?? await git.Repository.open(pathToRepo);
+  const repo = $repo ? $repo : await git.Repository.open(pathToRepo);
   const blame = await git.Blame.file(repo, filePath.slice(2));
   const hunk = blame.getHunkByIndex(blame.getHunkCount() - 1);
   const email = hunk.finalSignature().email();
@@ -27,7 +27,7 @@ async function blameLast(filePath, callback) {
 }
 
 async function blameAll(filePath, callback) {
-  const repo = $repo ?? await git.Repository.open(pathToRepo);
+  const repo = $repo ? $repo : await git.Repository.open(pathToRepo);
   const blame = await git.Blame.file(repo, filePath.slice(2));
   const hunks = Array(blame.getHunkCount()).fill().map((_, idx) => blame.getHunkByIndex(idx));
   const contributors = hunks.map(hunk => {
