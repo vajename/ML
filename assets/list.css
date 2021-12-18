@@ -77,7 +77,6 @@ main > section.list > header ul {
 }
 
 main > section.list > header li {
-  flex-basis: 1ch;
   min-width: 1ch;
   text-align: center;
   border-bottom: 1px solid white;

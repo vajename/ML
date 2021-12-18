@@ -1,5 +1,5 @@
+const fetch = require('node-fetch');
 const moment = require('jalali-moment');
-const authors = require('../_data/contributors.json').contributors;
 
 /** Converts numbers in a string to Farsi (persian) numebrs */
 const toFaDigits = function (input) {
@@ -23,11 +23,17 @@ const toEnDigits = function (input) {
 
 const ifNoValue = (value, instead = '-') => [undefined, null].includes(value) ? instead : value;
 const formatTime = time => moment(time).locale('fa').format("Do MMM YYYY");
-const getAutherByEmail = email => {
+
+const getAutherByEmail = (email, authors) => {
   const author = authors.find(i => i.email === email);
   if (author) return author;
   else return { email };
 };
+
+
+const getFileContributors = async function fetchContributors(filePath) {
+  return fetch(`https://github.com/mhsattarian/ML-Glossary/contributors-list/master/${filePath}`).then(res => res.text());
+}
 
 
 module.exports = {
@@ -35,5 +41,6 @@ module.exports = {
   toEnDigits,
   ifNoValue,
   formatTime,
-  getAutherByEmail
+  getAutherByEmail,
+  getFileContributors
 }

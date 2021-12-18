@@ -297,3 +297,66 @@ main
   color: currentColor;
   text-decoration: none;
 }
+
+main > section.word > article > section#options #info #info-details ul {
+  display: inline-flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+main > section.word > article > section#options #info #info-details ul li {
+  width: var(--size);
+  height: var(--size);
+  margin-inline-end: calc(-1 * var(--size));
+  --size: 2em;
+  filter: grayscale(1);
+  position: relative;
+  box-shadow: 0 0 0px 2px black;
+  transition: translate 0.3s ease-in-out;
+}
+
+main
+  > section.word
+  > article
+  > section#options
+  #info
+  #info-details
+  ul
+  li:hover
+  ~ li {
+  transform: translateX(80%);
+}
+
+main
+  > section.word
+  > article
+  > section#options
+  #info
+  #info-details
+  ul
+  li:hover {
+  filter: none;
+  z-index: 11;
+}
+
+main > section.word > article > section#options #info #info-details ul li a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-decoration: none;
+  color: transparent;
+}
+
+main > section.word > article > section#options #info #info-details ul li img {
+  width: var(--size);
+  height: var(--size);
+  border: none;
+}
