@@ -1,6 +1,8 @@
 const fetch = require('node-fetch');
 const moment = require('jalali-moment');
 
+const repo = require('../_data/repo.json');
+
 /** Converts numbers in a string to Farsi (persian) numebrs */
 const toFaDigits = function (input) {
   input = input.toString();
@@ -21,8 +23,18 @@ const toEnDigits = function (input) {
   });
 };
 
+function uniqBy(a, key) {
+  let seen = new Set();
+  return a.filter(item => {
+    let k = key(item);
+    return seen.has(k) ? false : seen.add(k);
+  });
+}
+
+
+
 const ifNoValue = (value, instead = '-') => [undefined, null].includes(value) ? instead : value;
-const formatTime = time => moment(time).locale('fa').format("Do MMM YYYY");
+const formatTime = time => moment(time).locale('fa').format("DD MMM YYYY");
 
 const getAutherByEmail = (email, authors) => {
   const author = authors.find(i => i.email === email);
@@ -31,8 +43,29 @@ const getAutherByEmail = (email, authors) => {
 };
 
 
+const getFileContributorsByAPI = async function fetchContributors(filePath) {
+  const options = {
+    method: 'GET',
+    headers: {
+      Authorization: 'Basic ' + Buffer.from("mhsattarian" + ":" + process.env.GITHUB_TOKEN).toString('base64')
+    },
+  };
+
+  return fetch(`https://api.github.com/repos/${repo.user}/${repo.name}/commits?path=${filePath}`, options).then(res => res.json())
+    .then(contribs => {
+      const contributors = contribs.map(i => ({
+        user: i.author.login,
+        url: i.author.html_url,
+        /// reduce avatar image size by default
+        avatar_url: i.author.avatar_url + '&s=80'
+      }))
+
+      return uniqBy(contributors, i => i.user);
+    });
+}
+
 const getFileContributors = async function fetchContributors(filePath) {
-  return fetch(`https://github.com/mhsattarian/ML-Glossary/contributors-list/master/${filePath}`).then(res => res.text());
+  return fetch(`https://github.com/${repo.user}/${repo.name}/contributors-list/master/${filePath}`).then(res => res.text()).then(html => html.replace(/href="/g, `target="_blank" rel="noreferrer" href="//github.com`).replace(/s=40/g, "s=80"));
 }
 
 
@@ -42,5 +75,6 @@ module.exports = {
   ifNoValue,
   formatTime,
   getAutherByEmail,
-  getFileContributors
+  getFileContributors,
+  getFileContributorsByAPI
 }

@@ -1,11 +1,21 @@
 const svgSprite = require("eleventy-plugin-svg-sprite");
+const dotenv = require('dotenv');
+const fs = require('fs')
+
+const localConfigFile = '.env.local'
+if (fs.existsSync(localConfigFile)) {
+  const envConfig = dotenv.parse(fs.readFileSync(localConfigFile))
+  for (const k in envConfig) {
+    process.env[k] = envConfig[k]
+  }
+}
 
 /// Data
 const alphabet = require("./src/_data/alphabet");
 /// Filters
 const searchFilter = require("./src/_includes/filters/searchFilter");
-const { blameLast, blameAll } = require("./src/_includes/filters/blame");
-const { toFaDigits, formatTime, getAutherByEmail, ifNoValue, getFileContributors } = require("./src/utils/index");
+// const { blameLast, blameAll } = require("./src/_includes/filters/blame");
+const { toFaDigits, formatTime, getAutherByEmail, ifNoValue, getFileContributors, getFileContributorsByAPI } = require("./src/utils/index");
 
 module.exports = function (eleventyConfig) {
 
@@ -27,10 +37,28 @@ module.exports = function (eleventyConfig) {
 
 
   /******* SHORTCODES  *****/
-  if (process.env.NODE_ENV !== "production")
-    eleventyConfig.addNunjucksShortcode("getFileContributors", () => "###");
-  else
+  if (process.env.NODE_ENV !== "production") {
+    eleventyConfig.addNunjucksShortcode("getFileContributors", () => '###');
+    eleventyConfig.addNunjucksShortcode("getFileContributorsAPI", () => '###');
+  }
+  else {
     eleventyConfig.addNunjucksAsyncShortcode("getFileContributors", getFileContributors);
+    eleventyConfig.addNunjucksAsyncShortcode("getFileContributorsAPI", async path => {
+      const contribs = await getFileContributorsByAPI(path);
+      return `
+      <ul id="contributors">
+      ${contribs.map(i => `
+      <li>
+      <a href="${i.url}">
+          <img src="${i.avatar_url}" />
+          </a>
+        </li>
+        `).join('')}
+    </ul>
+    `
+    });
+  }
+
 
 
   /******* COLLECTIONS  *****/

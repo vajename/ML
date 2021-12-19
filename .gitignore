@@ -4,3 +4,6 @@
 # 11ty
 /_site
 /public
+
+#misc
+*.local

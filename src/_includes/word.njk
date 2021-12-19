@@ -62,7 +62,7 @@
 
     <header>
       {{
-        breadcrumb([{text: 'خانه', link: '/'}, {text: letter, link: '/' + letter }, {text: translation, link: ''}])
+        breadcrumb([{text: 'خانه', link: '/'}, {text: letter, link: '/' + letter }, {text: word, link: ''}])
       }}
       <hgroup>
         <h1>{{translation}}</h1>
@@ -102,20 +102,13 @@
               </span>
 
               <span class="info-details__info">
-                {% getFileContributors page
+                {# {% getFileContributors page
+                  .inputPath
+                  .slice(2) %} #}
+
+                {% getFileContributorsAPI page
                   .inputPath
                   .slice(2) %}
-
-                {# **** Manual Contrib images **** #}
-                {# <ul class="autors">
-                  {%- for blamee in blameAllData -%}
-                    {{blamee | log}}
-                    {% set author = blamee.email | getAutherByEmail(contributors) %}
-                    <li class="author">
-                      <a href="{{author.url}}"><img src="{{author.avatar_url}}"/></a>
-                    </li>
-                  {%- endfor -%}
-                </ul> #}
 
                 {# **** Last Blame **** #}
                 {# <span class="info-details__value">

@@ -1,5 +1,6 @@
 const git = require('nodegit');
 const pathToRepo = require("path").resolve("./.git");
+const uniqBy = require('../../utils').uniqBy
 
 let $repo = null;
 
@@ -40,14 +41,6 @@ async function blameAll(filePath, callback) {
   const uniqeContributors = uniqBy(contributors, (i) => i.email);
 
   callback(null, uniqeContributors);
-}
-
-function uniqBy(a, key) {
-  let seen = new Set();
-  return a.filter(item => {
-    let k = key(item);
-    return seen.has(k) ? false : seen.add(k);
-  });
 }
 
 module.exports = { blameLast, blameAll };

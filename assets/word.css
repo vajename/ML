@@ -317,7 +317,7 @@ main > section.word > article > section#options #info #info-details ul li {
   filter: grayscale(1);
   position: relative;
   box-shadow: 0 0 0px 2px black;
-  transition: translate 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 main
