@@ -68,20 +68,19 @@ nav#breadcrumb {
   gap: 0.5em;
 }
 
+nav#breadcrumb a {
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+nav#breadcrumb a:hover {
+  opacity: 1;
+}
+
 nav#breadcrumb svg {
   width: 1ch;
   height: 1ch;
   color: #929292;
-}
-nav#breadcrumb span {
-  opacity: 0.8;
-}
-nav#breadcrumb span:hover {
-  opacity: 1;
-}
-
-nav#breadcrumb a {
-  text-decoration: none;
 }
 
 span.icon {
@@ -485,4 +484,25 @@ input[type='search']::-webkit-search-results-decoration {
     bottom: 0;
     left: 0;
   }
+}
+
+#tooltip {
+  display: none;
+  position: absolute;
+  background: #222;
+  color: white;
+  border: 2px solid white;
+  padding: 5px;
+  pointer-events: none;
+  font-size: 10px;
+  z-index: 2;
+}
+
+#arrow {
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
 }

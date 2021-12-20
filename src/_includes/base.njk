@@ -14,6 +14,7 @@
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
     <script async src="https://cdn.splitbee.io/sb.js"></script>
+    <script type="module" src="/assets/tooltip.js"></script>
     {% block links %}{% endblock %}
   </head>
   <body>
@@ -34,7 +35,7 @@
         <section x-data="searchResults">
           <section id="search-input-section">
             <div id="input-wrapper">
-              <input id="searchField" type="search" placeholder="کلمه: accuracy، bias و ..."  :value="searchInput" @input.debounce="setSearchInput($event.target.value)" x-init="$watch('$store.search.open', value => {if (value) $el.focus()})"/>
+              <input id="searchField" type="search" placeholder="accuracy، bias یا ..."  :value="searchInput" @input.debounce="setSearchInput($event.target.value)" x-init="$watch('$store.search.open', value => {if (value) $el.focus()})"/>
               <button>
                 <span class="icon">{% svg "search" %}</span>
               </button>
@@ -64,7 +65,7 @@
                 <li>
                   <a :href="result.ref">
                     <strong x-text="result.doc.word"></strong>
-                    <span x-text="`(${result.doc.translation.trim()})`"></span>
+                    <span x-text="` - ${result.doc.translation.trim()}`"></span>
                   </a>
                 </li>
               </template>
@@ -122,9 +123,12 @@
                   boolean: "OR",
                   expand: true
                 });
-              this.results = results;
-            }
-          }));
+              if (this.searchInput.length > 1) 
+                this.results = results;
+              else 
+                this.results = results.filter(i => i.doc.word.startsWith(this.searchInput));
+              }
+            }));
 
           Alpine.store('search', {
             open: Boolean(q),

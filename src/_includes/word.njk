@@ -62,7 +62,7 @@
 
     <header>
       {{
-        breadcrumb([{text: 'خانه', link: '/'}, {text: letter, link: '/' + letter }, {text: word, link: ''}])
+        breadcrumb([{text: 'خانه', link: '/'}, {text: "فهرست الفبایی", link: '/list' }, {text: 'حرف ' + letter, link: '/' + letter }, {text: word, link: ''}])
       }}
       <hgroup>
         <h1>{{translation}}</h1>
@@ -70,8 +70,8 @@
       </hgroup>
 
       <section id='word-actions'>
-        <span x-data @click="copyTranslation">{% svg "copy" %}</span>
-        <span x-data @click="shareWordPage">{% svg "share" %}</span>
+        <span x-data @click="copyTranslation" data-tooltip="کپی کردن متن ترجمه">{% svg "copy" %}</span>
+        <span x-data @click="shareWordPage" data-tooltip="اشتراک‌گذاری">{% svg "share" %}</span>
       </section>
     </header>
 

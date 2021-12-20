@@ -41,11 +41,13 @@ main > section.word > header #word-actions {
 }
 
 main > section.word > header #word-actions > span {
-  display: inline-block;
   width: 1.5em;
   height: 1.5em;
-  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   color: white;
+  cursor: pointer;
 }
 
 main > section.word > header #word-actions svg {
