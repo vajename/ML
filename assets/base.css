@@ -101,6 +101,9 @@ span.svg-inline {
   height: 100%;
 }
 
+pre {
+  direction: ltr;
+}
 
 /************************* Aside *************************/
 

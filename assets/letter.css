@@ -111,7 +111,7 @@ p {
 }
 
 p a {
-  color: #2f2f2f;
+  color: var(--c-secondary);
   text-decoration-color: #ccc;
   text-decoration-line: underline;
 }

@@ -1,6 +1,8 @@
-const svgSprite = require("eleventy-plugin-svg-sprite");
 const dotenv = require('dotenv');
 const fs = require('fs');
+
+const svgSprite = require("eleventy-plugin-svg-sprite");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 const markdownIt = require("markdown-it");
 const implicitFigures = require('markdown-it-image-figures');
@@ -24,6 +26,7 @@ const { toFaDigits, formatTime, getAutherByEmail, ifNoValue, getFileContributors
 module.exports = function (eleventyConfig) {
 
   /******* PLUGINS  *****/
+  eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(svgSprite, {
     path: "./assets/s",
   });
