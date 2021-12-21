@@ -1,6 +1,10 @@
 const svgSprite = require("eleventy-plugin-svg-sprite");
 const dotenv = require('dotenv');
-const fs = require('fs')
+const fs = require('fs');
+
+const markdownIt = require("markdown-it");
+const implicitFigures = require('markdown-it-image-figures');
+
 
 const localConfigFile = '.env.local'
 if (fs.existsSync(localConfigFile)) {
@@ -75,6 +79,13 @@ module.exports = function (eleventyConfig) {
   /******* PASSTHROUGH  *****/
   eleventyConfig.addPassthroughCopy({ assets: "assets" });
   eleventyConfig.addPassthroughCopy({ admin: "admin" });
+
+  /******* Markdown Options  *****/
+  const options = {
+    html: true
+  };
+  const markdownLib = markdownIt(options).use(implicitFigures, { figcaption: true });
+  eleventyConfig.setLibrary("md", markdownLib);
 
 
   return {

@@ -34,7 +34,7 @@ function uniqBy(a, key) {
 
 
 const ifNoValue = (value, instead = '-') => [undefined, null].includes(value) ? instead : value;
-const formatTime = time => moment(time).locale('fa').format("DD MMM YYYY");
+const formatTime = time => moment(time).locale('fa').format("D MMM YYYY");
 
 const getAutherByEmail = (email, authors) => {
   const author = authors.find(i => i.email === email);

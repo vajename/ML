@@ -180,10 +180,31 @@ main > section.word > article p a {
 }
 
 main > section.word > article img {
+  max-width: 100%;
+  border-bottom: 4px solid black;
+}
+
+main > section.word > article figure {
   max-width: 400px;
   display: block;
   margin: 0 auto 0;
-  border-bottom: 4px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+main > section.word > article figure:hover figcaption {
+  color: white;
+}
+
+main > section.word > article figcaption {
+  background-color: black;
+  color: var(--c-gray);
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  padding: 0.3em 0.6em;
+  font-size: 0.8em;
+  transition: color 0.1s ease-in;
 }
 
 /************************* Article > Section#options *************************/

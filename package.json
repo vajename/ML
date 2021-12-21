@@ -23,6 +23,8 @@
   "dependencies": {
     "elasticlunr": "^0.9.5",
     "jalali-moment": "^3.3.10",
+    "markdown-it": "^12.3.0",
+    "markdown-it-image-figures": "^2.0.0",
     "node-fetch": "^2.6.6",
     "nodegit": "^0.27.0"
   }
