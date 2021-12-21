@@ -29,15 +29,20 @@ elementsWithTooltip.forEach(element => {
   );
 });
 
+let hideTimeout = undefined;
+
 function showTooltip(element) {
-  tooltip.style.display = 'block';
+  tooltip.classList.add('show');
   text.textContent = element.dataset.tooltip;
   updateTooltip(element);
+  clearTimeout(hideTimeout);
 }
 
 function hideTooltip() {
-  tooltip.style.display = '';
-  text.textContent = '';
+  tooltip.classList.remove('show');
+  hideTimeout = setTimeout(() => {
+    text.textContent = '';
+  }, 300);
 }
 
 

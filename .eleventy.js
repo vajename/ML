@@ -47,15 +47,14 @@ module.exports = function (eleventyConfig) {
       const contribs = await getFileContributorsByAPI(path);
       return `
       <ul id="contributors">
-      ${contribs.map(i => `
-      <li>
-      <a href="${i.url}">
-          <img src="${i.avatar_url}" />
-          </a>
-        </li>
+        ${contribs.map(i => `
+          <li>
+            <a href="${i.url}" target="_blank" rel="noreferrer">
+              <img src="${i.avatar_url}" />
+            </a>
+          </li>
         `).join('')}
-    </ul>
-    `
+      </ul>`
     });
   }
 

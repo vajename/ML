@@ -362,3 +362,16 @@ main > section.word > article > section#options #info #info-details ul li img {
   height: var(--size);
   border: none;
 }
+
+/***** Default Table Styling *****/
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto 0;
+}
+
+td,
+th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+}
