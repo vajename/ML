@@ -382,6 +382,7 @@ main > section.word > article > section#options #info #info-details ul li img {
   width: var(--size);
   height: var(--size);
   border: none;
+  display: block;
 }
 
 /***** Default Table Styling *****/
