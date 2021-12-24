@@ -26,7 +26,11 @@ const { toFaDigits, formatTime, getAutherByEmail, ifNoValue, getFileContributors
 module.exports = function (eleventyConfig) {
 
   /******* PLUGINS  *****/
-  eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(syntaxHighlight, {
+    init: function ({ Prism }) {
+
+    },
+  });
   eleventyConfig.addPlugin(svgSprite, {
     path: "./assets/s",
   });
