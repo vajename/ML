@@ -1,4 +1,5 @@
 @import 'https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v26.0.2/dist/font-face.css';
+@import 'https://unpkg.com/tippy.js@6/dist/tippy.css';
 
 /************************* Globals *************************/
 
@@ -489,31 +490,34 @@ input[type='search']::-webkit-search-results-decoration {
   }
 }
 
-#tooltip {
-  /* display: none; */
-  opacity: 0;
-  position: absolute;
+.tippy-box {
   background: #222;
   color: white;
   border: 2px solid white;
-  padding: 5px;
-  pointer-events: none;
   font-size: 10px;
-  z-index: 2;
-  transition: opacity 0.3s ease-in-out;
+  border-radius: 0;
+  padding: 0;
 }
 
-#tooltip.show {
-  opacity: 1;
+.tippy-box[data-theme~='mlgl'][data-placement^='top'] > .tippy-arrow::before {
+  border-width: 6px 6px 0;
+  bottom: -6px;
+  border-top-color: white;
 }
 
-#arrow {
-  position: absolute;
-  top: calc(100% + 1px);
-  left: 6px;
-  border-width: 6px;
-  border-style: solid;
-  border-color: white transparent transparent transparent;
+.tippy-box[data-theme~='mlgl'][data-placement^='bottom']
+  > .tippy-arrow::before {
+  border-bottom-color: white;
+}
+
+.tippy-box[data-theme~='mlgl'][data-placement^='left'] > .tippy-arrow::before {
+  right: -6px;
+  border-width: 6px 0 6px 6px;
+  border-left-color: white;
+}
+
+.tippy-box[data-theme~='mlgl'][data-placement^='right'] > .tippy-arrow::before {
+  border-right-color: white;
 }
 
 /* @font-face {
@@ -536,3 +540,18 @@ input[type='search']::-webkit-search-results-decoration {
   font-weight: 999;
   font-style: normal;
 } */
+
+kbd {
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: #333;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
+}

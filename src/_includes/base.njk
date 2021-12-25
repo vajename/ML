@@ -20,7 +20,7 @@
   </head>
   <body x-data @keydown.escape="$store.search.toggle()">
     <aside>
-      <button id="open-search" x-data :class="$store.search.disable && 'disable'" @click="$store.search.toggle()">
+      <button id="open-search" x-data :class="$store.search.disable && 'disable'" @click="$store.search.toggle()" data-tooltip="<kbd>ESC</kbd>" data-tippy-placement="left" data-tippy-allowHTML="true">
         <template x-if="!$store.search.open">
           <span class="icon" >
             {% svg "search" %}
