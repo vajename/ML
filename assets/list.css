@@ -6,9 +6,10 @@ main > section.list {
   width: 100%;
   min-height: 100%;
   display: grid;
-  grid-template: 23em 1fr auto / 1fr;
+  grid-template: 18em 5em 1fr auto / 1fr;
   grid-template-areas:
     'header'
+    'nav'
     'article'
     'footer';
   justify-content: flex-start;
@@ -31,6 +32,7 @@ main > section.list > header {
   background-color: black;
   color: white;
   direction: rtl;
+  scroll-snap-align: start;
 }
 
 main > section.list > header hgroup#titles {
@@ -65,7 +67,21 @@ a.anchor {
 
 /************************* Nav *************************/
 
-main > section.list > header ul {
+nav#alphabets {
+  grid-area: nav;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: black;
+  color: white;
+  padding: 1em 6em;
+}
+
+nav#alphabets ul {
   width: 100%;
   display: inline-flex;
   justify-content: space-evenly;
@@ -76,13 +92,13 @@ main > section.list > header ul {
   padding: 0;
 }
 
-main > section.list > header li {
+nav#alphabets li {
   min-width: 1ch;
   text-align: center;
   border-bottom: 1px solid white;
 }
 
-main > section.list > header li a {
+nav#alphabets li a {
   text-decoration: none;
 }
 
@@ -110,7 +126,7 @@ main > section.list > article > section:not(:last-child) {
 /************************* Section.letter *************************/
 
 main > section.list section.letter {
-  scroll-margin-block-start: 2em;
+  scroll-margin-block-start: 7em;
   scroll-snap-align: start;
 }
 
