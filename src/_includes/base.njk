@@ -10,6 +10,7 @@
     {% endif %}
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="search" type="application/opensearchdescription+xml" title="ML Glossary" href="/opensearch.xml"/>
+    <link rel="stylesheet" href="/assets/s/modern-normalize.css"/>
     <link rel="stylesheet" href="/assets/base.css"/>
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
@@ -17,10 +18,19 @@
     <script type="module" src="/assets/tooltip.js"></script>
     {% block links %}{% endblock %}
   </head>
-  <body>
+  <body x-data @keydown.escape="$store.search.toggle()">
     <aside>
       <button id="open-search" x-data :class="$store.search.disable && 'disable'" @click="$store.search.toggle()">
-        <span class="icon">{% svg "search" %}</span>
+        <template x-if="!$store.search.open">
+          <span class="icon" >
+            {% svg "search" %}
+          </span>
+        </template>
+        <template x-if="$store.search.open">
+          <span class="icon">
+            {% svg "close" %}
+          </span>
+        </template>
       </button>
       <a id='link-home-page' href='/'>
         <span id='link-home-page__fa'>الفبای یادگیری ماشین</span>
@@ -30,6 +40,7 @@
 
     <main x-data :class="$store.search.open ? 'no-scroll' : ''">
       {% svgsprite %}
+
       <section id='search' x-data :class="$store.search.open ? 'open' : ''" x-transition x-cloak>
         <header>جستجو</header>
         <section x-data="searchResults">
@@ -75,6 +86,7 @@
           </div>
         </section>
       </section>
+
       {% block body %}
         {{ content | safe }}
       {% endblock %}

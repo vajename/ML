@@ -1,4 +1,3 @@
-@import 'https://unpkg.com/modern-normalize@0.6.0/modern-normalize.css';
 @import 'https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v26.0.2/dist/font-face.css';
 
 /************************* Globals *************************/
@@ -31,7 +30,7 @@ body {
   --c-primary: black;
   --c-secondary: #393939;
   --c-accent: #f8f8f8;
-  --c-gray: #9f9f9f;
+  --c-accent-gray: #afafaf;
 }
 
 a {
@@ -328,7 +327,7 @@ footer > section#information {
 
 @media screen and (min-width: 1200px) {
   footer > section#information {
-    grid-template: 1fr / 8em 1fr 20em;
+    grid-template: 1fr / 8em 1fr 16em;
     grid-template-areas: 'pages description logo';
   }
 }
@@ -516,3 +515,24 @@ input[type='search']::-webkit-search-results-decoration {
   border-style: solid;
   border-color: white transparent transparent transparent;
 }
+
+/* @font-face {
+  font-family: YekanBakh;
+  src: url('/assets/s/YekanBakh-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: YekanBakh;
+  src: url('/assets/s/YekanBakh-Heavy.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: YekanBakh;
+  src: url('/assets/s/YekanBakh-Heavy.woff') format('woff');
+  font-weight: 999;
+  font-style: normal;
+} */

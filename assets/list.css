@@ -184,4 +184,5 @@ ul.word-list {
 ul.word-list li.word-list__item {
   list-style: url(/assets/s/arrow-left-small.svg);
   unicode-bidi: plaintext;
+  max-width: 80%;
 }
