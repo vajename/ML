@@ -18,9 +18,9 @@
     <script type="module" src="/assets/tooltip.js"></script>
     {% block links %}{% endblock %}
   </head>
-  <body x-data @keydown.escape="$store.search.toggle()">
+  <body x-data @keyup.escape="$store.search.open = false" @keyup="if ($event.key === '/') $store.search.open = true; $event.stopPropagation()">
     <aside>
-      <button id="open-search" x-data :class="$store.search.disable && 'disable'" @click="$store.search.toggle()" data-tooltip="<kbd>ESC</kbd>" data-tippy-placement="left" data-tippy-allowHTML="true">
+      <button id="open-search" x-data :class="$store.search.disable && 'disable'" @click="$store.search.toggle()" data-tippy-placement="left" data-tippy-allowHTML="true">
         <template x-if="!$store.search.open">
           <span class="icon" >
             {% svg "search" %}
@@ -41,12 +41,12 @@
     <main x-data :class="$store.search.open ? 'no-scroll' : ''">
       {% svgsprite %}
 
-      <section id='search' x-data :class="$store.search.open ? 'open' : ''" x-transition x-cloak>
-        <header>جستجو</header>
+      <section id='search' x-data :class="$store.search.open ? 'open' : ''" x-cloak>
+        <header>جست‌وجو</header>
         <section x-data="searchResults">
           <section id="search-input-section">
             <div id="input-wrapper">
-              <input id="searchField" type="search" placeholder="accuracy، bias یا ..."  :value="searchInput" @input.debounce="setSearchInput($event.target.value)" x-init="$watch('$store.search.open', value => {if (value) $el.focus()})"/>
+              <input id="searchField" type="search" placeholder="accuracy، bias یا..."  :value="searchInput" @input.debounce="setSearchInput($event.target.value)" x-init="$watch('$store.search.open', value => {if (value) $el.focus()})"/>
               <button>
                 <span class="icon">{% svg "search" %}</span>
               </button>
@@ -110,12 +110,17 @@
               this.$watch('$store.search.open', (open) => {
                 if (!open) 
                   this.searchInput = '';
-                
-                // remove query params
                 window
-                  .history
-                  .pushState({}, document.title, window.location.pathname);
+                  .openSearchButtonTippy
+                  .setContent(
+                    open
+                    ? '<kbd>ESC</kbd>'
+                    : '<kbd>/</kbd>');
               });
+              // remove query params
+              window
+                .history
+                .pushState({}, document.title, window.location.pathname);
             },
             setSearchInput(value) {
               this.searchInput = value;

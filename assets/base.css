@@ -170,6 +170,7 @@ main {
 main.no-scroll {
   overflow-x: hidden;
   overflow-y: hidden;
+  scroll-behavior: unset;
 }
 
 main > section {
@@ -542,16 +543,8 @@ input[type='search']::-webkit-search-results-decoration {
 } */
 
 kbd {
-  background-color: #eee;
   border-radius: 3px;
-  border: 1px solid #b4b4b4;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
-    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
-  color: #333;
+  border: 1px solid var(--c-accent);
   display: inline-block;
-  font-size: 0.85em;
-  font-weight: 700;
-  line-height: 1;
-  padding: 2px 4px;
-  white-space: nowrap;
+  padding: 0.5ch 1ch;
 }

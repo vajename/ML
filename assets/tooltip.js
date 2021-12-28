@@ -13,3 +13,13 @@ tippy('[data-tooltip]', {
   // hideOnClick: false,
   // trigger: 'click',
 });
+
+window.openSearchButtonTippy = tippy('#open-search', {
+  content() {
+    return '<kbd>/</kbd>';
+  },
+  placement: 'top-start',
+  arrow: true,
+  theme: 'mlgl',
+  allowHTML: true,
+})[0];
