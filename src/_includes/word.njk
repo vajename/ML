@@ -80,6 +80,7 @@
       <section id='word-actions'>
         <span x-data @click="copyTranslation" @contextmenu="copyWord" data-tooltip="کپی کردن: ترجمه (کلیک) /  لغت (راست کلیک)">{% svg "copy" %}</span>
         <span x-data @click="shareWordPage" data-tooltip="اشتراک‌گذاری">{% svg "share" %}</span>
+        <span x-data @click="() => window.print()" data-tooltip="پرینت">{% svg "print" %}</span>
       </section>
     </header>
 
