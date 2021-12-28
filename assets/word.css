@@ -407,6 +407,10 @@ main > section.word > article > section#options #info #info-details ul li img {
     grid-template-areas: 'main';
   }
 
+  body > main {
+    overflow: unset !important;
+  }
+
   body > aside,
   section#search {
     display: none;

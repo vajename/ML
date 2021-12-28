@@ -202,3 +202,56 @@ ul.word-list li.word-list__item {
   unicode-bidi: plaintext;
   max-width: 80%;
 }
+
+/***** Print Styles *****/
+
+@media print {
+  body {
+    grid-template: 1fr / 1fr;
+    grid-template-areas: 'main';
+  }
+
+  body > main {
+    overflow: unset !important;
+  }
+
+  body > aside,
+  section#search {
+    display: none;
+  }
+
+  main > section.list {
+    grid-template: 14em 1fr / 1fr;
+    grid-template-areas:
+      'header'
+      'article';
+  }
+
+  main > section.list article {
+    display: block;
+  }
+
+  main > section.list article section.letter {
+    page-break-inside: avoid;
+    margin: 3em 0;
+  }
+
+  main > section.list header {
+    background: var(--c-accent-gray);
+    color: black !important;
+    grid-template: 1fr / 1fr;
+  }
+
+  main > section.list article pre {
+    background: white;
+    border-left: 3px solid black;
+  }
+
+  main > section.list :is(article #options, header #word-actions, header nav) {
+    display: none !important;
+  }
+
+  section.list > :is(nav, footer) {
+    display: none !important;
+  }
+}
