@@ -200,7 +200,7 @@ main > section.word > article img {
 main > section.word > article figure {
   max-width: 400px;
   display: block;
-  margin: 16px auto;
+  margin: 2em auto;
   display: flex;
   flex-direction: column;
 }
@@ -355,6 +355,7 @@ main > section.word > article > section#options #info #info-details ul li {
   position: relative;
   box-shadow: 0 0 0px 2px black;
   transition: transform 0.3s ease-in-out;
+  background: var(--c-accent-gray);
 }
 
 main
@@ -426,6 +427,10 @@ main > section.word > article > section#options #info #info-details ul li img {
   main > section.word header {
     background: var(--c-accent-gray);
     color: black !important;
+  }
+
+  main > section.word article figure {
+    page-break-inside: avoid;
   }
 
   main > section.word article pre {

@@ -115,8 +115,8 @@ const getUserData = async function (email) {
     console.log(`Failed getting GitHub user data, email:  ${email}`);
     return {
       user: '',
-      url: '',
-      avatar_url: '',
+      url: `mailto:${email}`,
+      avatar_url: '/assets/s/github.svg',
     };
   }
 };

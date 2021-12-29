@@ -579,5 +579,6 @@ kbd {
     position: fixed;
     bottom: 0;
     padding: 0 1ch;
+    z-index: 999;
   }
 }

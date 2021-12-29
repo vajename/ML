@@ -184,7 +184,54 @@ table :is(th, td):first-child {
 table > tbody p.description {
   white-space: nowrap;
   /* calc: viewport - sidebar - article padding - 1st col - 2nd col - col pads - current padd */
-  max-width: calc(100vw - 4.5rem - 12rem - 10ch - 20ch - 4em - 1em);
+  max-width: calc(100vw - 4.5rem - 12rem - 10ch - 20ch - 4em - 3em);
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/***** Print Styles *****/
+
+@media print {
+  body {
+    grid-template: 1fr / 1fr;
+    grid-template-areas: 'main';
+  }
+
+  body > main {
+    overflow: unset !important;
+  }
+
+  body > aside,
+  section#search {
+    display: none;
+  }
+
+  main > section.letter {
+    grid-template: 14em 1fr / 1fr;
+    grid-template-areas:
+      'header'
+      'article';
+  }
+
+  main > section.letter article {
+    display: block;
+  }
+
+  main > section.letter header {
+    background: var(--c-accent-gray);
+    color: black !important;
+    grid-template: 1fr / 1fr;
+  }
+
+  main > section.letter table tr > *:nth-child(3) {
+    display: none;
+  }
+
+  main > section.letter :is(article #options, header nav) {
+    display: none !important;
+  }
+
+  section.letter > :is(nav, footer) {
+    display: none !important;
+  }
 }

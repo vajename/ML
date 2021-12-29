@@ -51,6 +51,11 @@ module.exports = function (eleventyConfig) {
         time: new Date(),
       },
     ]);
+    eleventyConfig.addFilter('getUserData', () => ({
+      user: '',
+      url: '',
+      avatar_url: '',
+    }));
   } else {
     eleventyConfig.addNunjucksAsyncFilter('blame', (path, callback) =>
       blameAll(path).then(callback.bind(null, null))
