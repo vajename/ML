@@ -9,7 +9,7 @@
   </nav>
 {% endmacro %}
 
-{% macro fileContributors(filePath) %}
+{# {% macro fileContributors(filePath) %}
   {% set authors = filePath | getFileContributors %}
   {{ authors | log}}
   {% if authors.length %}
@@ -25,4 +25,4 @@
   {% else %}
     "###"
   {% endif %}
-{% endmacro %}
+{% endmacro %} #}

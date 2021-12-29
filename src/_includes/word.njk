@@ -38,14 +38,13 @@
 {% endblock %}
 
 {% set title = word + ' - ' + translation %}
-{# {% set letter = word[0] %} #}
 {% set letter = page.url[1] %}
+{# {% set letter = word[0] %} #}
 
 {% set previousPost = collections[letter] | getPreviousCollectionItem(page) %}
 {% set nextPost = collections[letter] | getNextCollectionItem(page) %}
 
-{# {% set blameAllData = page.inputPath | blame %} #}
-{# {% set blameLast = blameAllData | last %} #}
+{% set blameAllData = page.inputPath | blame %}
 
 {% block body %}
   <section class="word">
@@ -107,22 +106,27 @@
           <div id="shortlink"></div>
           <div id="info-details">
             <p class="info-details__edit info">
-              <span class="info-details__info">آخرین ویرایش: <span class="info-details__value">{{blameData.time | formatTime | toFaDigits}}</span>
+              <span class="info-details__info">آخرین ویرایش: <span class="info-details__value">
+                  {% set lastBlame = blameAllData | last %}
+                  {{ lastBlame.time | formatTime | toFaDigits }}
+                </span>
               </span>
 
               <span class="info-details__info">
-                {# {% getFileContributors page
-                  .inputPath
-                  .slice(2) %} #}
+                {# **** Using Async Shortcode **** #}
+                {# {% getFileContributorsAPI page.inputPath %} #}
 
-                {% getFileContributorsAPI page
-                  .inputPath
-                  .slice(2) %}
-
-                {# **** Last Blame **** #}
-                {# <span class="info-details__value">
-                  {% set author = blameData.email | getAutherByEmail %}
-                  {{author.displayName | ifNoValue(author.email)}}</span> #}
+                {# **** Using Async Filter **** #}
+                <ul id="contributors">
+                  {%- for blame in blameAllData -%}
+                    {% set userData = blame.email | getUserData %}
+                    <li>
+                      <a href="{{userData.url}}" target="_blank" rel="noreferrer">
+                        <img src="{{userData.avatar_url}}"/>
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
               </span>
             </p>
             <p class="info-details__edit link">

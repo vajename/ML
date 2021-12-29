@@ -33,6 +33,7 @@ function uniqBy(a, key) {
 
 const ifNoValue = (value, instead = '-') =>
   [undefined, null].includes(value) ? instead : value;
+
 const formatTime = (time) => moment(time).locale('fa').format('D MMM YYYY');
 
 const getAutherByEmail = (email, authors) => {
@@ -41,58 +42,11 @@ const getAutherByEmail = (email, authors) => {
   else return { email };
 };
 
-const getFileContributorsByAPI = async function fetchContributors(filePath) {
-  const options = {
-    method: 'GET',
-    headers: {
-      Authorization:
-        'Basic ' +
-        Buffer.from('mhsattarian' + ':' + process.env.GITHUB_TOKEN).toString(
-          'base64'
-        ),
-    },
-  };
-
-  return fetch(
-    `https://api.github.com/repos/${repo.user}/${repo.name}/commits?path=${filePath}`,
-    options
-  )
-    .then((res) => res.json())
-    .then((contribs) => {
-      const contributors = contribs
-        .map((i) => ({
-          user: i.author.login,
-          url: i.author.html_url,
-          /// reduce avatar image size by default
-          avatar_url: i.author.avatar_url + '&s=80',
-        }))
-        .reverse();
-
-      return uniqBy(contributors, (i) => i.user);
-    });
-};
-
-const getFileContributors = async function fetchContributors(filePath) {
-  return fetch(
-    `https://github.com/${repo.user}/${repo.name}/contributors-list/master/${filePath}`
-  )
-    .then((res) => res.text())
-    .then((html) =>
-      html
-        .replace(
-          /href="/g,
-          `target="_blank" rel="noreferrer" href="//github.com`
-        )
-        .replace(/s=40/g, 's=80')
-    );
-};
-
 module.exports = {
   toFaDigits,
   toEnDigits,
   ifNoValue,
   formatTime,
   getAutherByEmail,
-  getFileContributors,
-  getFileContributorsByAPI,
+  uniqBy,
 };

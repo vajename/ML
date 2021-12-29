@@ -22,6 +22,7 @@
     "prettier": "^2.5.0"
   },
   "dependencies": {
+    "@11ty/eleventy-cache-assets": "^2.3.0",
     "elasticlunr": "^0.9.5",
     "jalali-moment": "^3.3.10",
     "markdown-it": "^12.3.0",
