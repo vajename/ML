@@ -1,4 +1,4 @@
-{% extends "base.njk" %}
+{# {% extends "base.njk" %}
 
 {% block links %}
   <link rel="stylesheet" href="/assets/word.css"/>
@@ -9,6 +9,83 @@
 {% block body %}
   <section x-data="searchResults">
     <article style="display: grid; place-items: center;">به‌زودی...</article>
+    {% include "footer.njk" %}
+  </section>
+{% endblock %} #}
+
+{%- from "macros.njk" import breadcrumb -%}
+{% extends "base.njk" %}
+
+{% block links %}
+  <link rel="stylesheet" href="/assets/list.css"/>
+  <script>
+    function rowClick(row) {
+      const {link} = row.dataset;
+      window.location = link;
+    }
+  </script>
+{% endblock %}
+
+{% set title_fa = "فهرست الفبایی" %}
+{% set title_en = "Alphabetical Index" %}
+{% set title = title_fa + ' - ' + title_en %}
+
+{% block body %}
+  <section class="list">
+    <header>
+      {{
+          breadcrumb([{text: 'خانه', link: '/'}, {text: title_fa, link: '' }])
+        }}
+      <hgroup id="titles">
+        <h1>{{title_fa}}</h1>
+        <h2>{{title_en}}</h2>
+      </hgroup>
+
+    </header>
+    <nav id="alphabets">
+      <ul>
+        {%- for letter in alphabet -%}
+          <li>
+            <a href="#{{letter}}">{{ letter }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+
+    <article>
+      {% for letter in alphabet -%}
+        <section id="{{letter}}" class="letter">
+          <hgroup class="letter-header">
+            <a href="#{{letter}}" class="anchor">#</a>
+            <h2>
+              <a href="/{{letter}}">حرف <strong>{{letter}}</strong>
+              </a>
+            </h2>
+            <span class="letter-header__word-count">|</span>
+            <span class="letter-header__word-count">
+              {% if collections[letter].length === 0 %}
+                {{"بدون"}}
+              {% else %}
+                {{collections[letter].length | toFaDigits}}
+              {% endif %}
+            
+             کلمه</span>
+          </hgroup>
+          <article>
+            <div class="table-wrapper">
+              <ul class="word-list">
+                {%- for word in collections[letter] -%}
+                  <li class="word-list__item">
+                    <a href="{{word.url}}">{{ word.data.word }}</a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          </article>
+        </section>
+      {%- endfor %}
+    </article>
+
     {% include "footer.njk" %}
   </section>
 {% endblock %}
