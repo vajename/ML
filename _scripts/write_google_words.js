@@ -10,9 +10,6 @@ Object.keys(words).forEach((k) => {
       `---
 layout: word
 word: ${w}
-tags:
-  - word
-  - ${w[0].toUpperCase()}
 ---
     `
     );

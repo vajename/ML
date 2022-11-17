@@ -1,0 +1,9 @@
+---
+permalink: /_redirects
+eleventyExcludeFromCollections: true
+---
+
+{%- for letter in alphabet %}
+/{{letter | lower}} /{{letter | upper}}
+
+{%- endfor -%}

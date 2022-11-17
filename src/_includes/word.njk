@@ -1,0 +1,146 @@
+{%- from "macros.njk" import breadcrumb -%}
+
+{% extends "base.njk" %}
+
+{% block links %}
+  <link rel="stylesheet" href="/assets/word.css"/>
+  <link href="/assets/codehighlight.css" rel="stylesheet">
+  <script>
+    const shareData = {
+      title: "الفبای یادگیری ماشین",
+      text: "{{word}}" + ' - ' + "{{translation}}",
+      url: window.location.href
+    }
+
+    async function shareWordPage() {
+      if (navigator.canShare(shareData)) 
+        await navigator.share(shareData);
+      else {
+        await navigator
+          .clipboard
+          .writeText(shareData.url);
+      }
+    }
+
+    async function copyTranslation() {
+      await navigator
+        .clipboard
+        .writeText("{{translation}}");
+    }
+
+    async function copyWord(e) {
+      e.preventDefault();
+      await navigator
+        .clipboard
+        .writeText("{{word}}");
+    }
+  </script>
+{% endblock %}
+
+{% set title = word + ' - ' + translation %}
+{% set letter = page.url[1] %}
+{# {% set letter = word[0] %} #}
+
+{% set previousPost = collections[letter] | getPreviousCollectionItem(page) %}
+{% set nextPost = collections[letter] | getNextCollectionItem(page) %}
+
+{% set blameAllData = page.inputPath | blame %}
+
+{% block body %}
+  <section class="word">
+    <nav>
+      <section>
+        <header>
+          <a href="/{{letter}}">حرف {{letter}}</a>
+        </header>
+        <ul>
+          {%- for w in collections[letter] -%}
+            <li 
+            {% if page.url === w.url %}
+              class="current" aria-current="page"
+            {% endif %}
+            >
+              <a href="{{w.url}}">{{ w.data.word }}</a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </section>
+    </nav>
+
+    <header>
+      {{
+        breadcrumb([{text: 'خانه', link: '/'}, {text: "فهرست الفبایی", link: '/list' }, {text: 'حرف ' + letter, link: '/' + letter }, {text: word, link: ''}])
+      }}
+      <hgroup>
+        <h1>{{translation}}</h1>
+        <h2>{{word}}</h2>
+      </hgroup>
+
+      <section id='word-actions'>
+        <span x-data @click="copyTranslation" @contextmenu="copyWord" data-tooltip="کپی کردن: ترجمه (کلیک) /  لغت (راست کلیک)">{% svg "copy" %}</span>
+        <span x-data @click="shareWordPage" data-tooltip="اشتراک‌گذاری">{% svg "share" %}</span>
+        <span x-data @click="() => window.print()" data-tooltip="چاپ">{% svg "print" %}</span>
+      </section>
+    </header>
+
+    <article>
+      <section id='description'>
+        <h3>تعریف</h3>
+        <p>{{content | safe}}</p>
+      </section>
+      <section id='options'>
+        <div id="info">
+          <div id="fast-nav">
+            {% if previousPost %}
+              <a href="{{previousPost.url}}" class="prev">
+                <span class="icon">{% svg "arrow-left-small" %}</span>
+              قبلی</a>
+            {% endif %}
+
+            {% if nextPost %}
+              <a href="{{nextPost.url}}" class="next">
+                <span class="icon">{% svg "arrow-left-small" %}</span>
+              بعدی</a>
+            {% endif %}
+          </div>
+          <div id="shortlink"></div>
+          <div id="info-details">
+            <p class="info-details__edit info">
+              <span class="info-details__info">آخرین ویرایش: <span class="info-details__value">
+                  {% set lastBlame = blameAllData | last %}
+                  {{ lastBlame.time | formatTime | toFaDigits }}
+                </span>
+              </span>
+
+              <span class="info-details__info">
+                {# **** Using Async Shortcode **** #}
+                {# {% getFileContributorsAPI page.inputPath %} #}
+
+                {# **** Using Async Filter **** #}
+                <ul id="contributors">
+                  {%- for blame in blameAllData -%}
+                    {% set userData = blame.email | getUserData %}
+                    <li>
+                      <a href="{{userData.url}}" target="_blank" rel="noreferrer">
+                        <img src="{{userData.avatar_url}}"/>
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </span>
+            </p>
+            <p class="info-details__edit link">
+              <a href="https://github.com/{{repo.user}}/{{repo.name}}/blob/{{repo.branch}}/words/{{letter}}/{{page.fileSlug}}.md">
+                {% svg "github" %}
+                ویرایش این ترجمه
+              </a>
+            </p>
+
+          </div>
+        </div>
+      </section>
+    </article>
+
+    {% include "footer.njk" %}
+  </section>
+{% endblock %}

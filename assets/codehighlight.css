@@ -1,0 +1,138 @@
+/**
+ * MlGlossary Prismjs theme
+ * Loosely based on [VSCode theme monochrome](//github.com/anotherglitchinthematrix/monochrome)
+ * converted using `//prism.dotenv.dev`
+ * @author Mohammad H. Sattarian
+ */
+code[class*='language-'],
+pre[class*='language-'] {
+  color: #b3b3b3;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre[class*='language-']::-moz-selection,
+pre[class*='language-'] ::-moz-selection,
+code[class*='language-']::-moz-selection,
+code[class*='language-'] ::-moz-selection {
+  text-shadow: none;
+  background: #000000;
+}
+
+pre[class*='language-']::selection,
+pre[class*='language-'] ::selection,
+code[class*='language-']::selection,
+code[class*='language-'] ::selection {
+  text-shadow: none;
+  background: #000000;
+}
+
+@media print {
+  code[class*='language-'],
+  pre[class*='language-'] {
+    text-shadow: none;
+  }
+}
+
+/* Code blocks */
+pre[class*='language-'] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  color: white;
+  background: #000000;
+}
+
+:not(pre) > code[class*='language-'] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.token.variable {
+  color: #b3b3b3;
+}
+
+.token.operator {
+  color: #b3b3b3;
+}
+
+.token.keyword {
+  color: #919191;
+}
+
+.token.number {
+  color: #919191;
+}
+
+.token.constant {
+  color: #919191;
+}
+
+.token.attr-name {
+  color: #919191;
+}
+
+.token.builtin {
+  color: #808080;
+}
+
+.token.regex {
+  color: #808080;
+}
+
+.token.char {
+  color: #808080;
+}
+
+.token.tag {
+  color: #707070;
+}
+
+.token.deleted {
+  color: #707070;
+}
+
+.token.selector {
+  color: #6b6b6b;
+}
+
+.token.changed {
+  color: #6b6b6b;
+}
+
+.token.inserted {
+  color: #8a8a8a;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+pre *::selection {
+  color: black;
+  background-color: white;
+}

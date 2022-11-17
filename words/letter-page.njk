@@ -1,0 +1,75 @@
+---
+pagination:
+  data: alphabet
+  size: 1
+  alias: letter
+permalink: "{{ letter }}/"
+---
+
+{%- from "macros.njk" import breadcrumb -%}
+{% extends "base.njk" %}
+
+{% block links %}
+  <link rel="stylesheet" href="/assets/letter.css"/>
+  <script>
+    function rowClick(row) {
+      const {link} = row.dataset;
+      window.location = link;
+    }
+  </script>
+{% endblock %}
+
+{% set title = 'حرف ' + letter %}
+
+{% block body %}
+  <section class="letter">
+    <header>
+      {{
+        breadcrumb([{text: 'خانه', link: '/'}, {text: "فهرست الفبایی", link: '/list' }, {text: 'حرف ' + letter, link: '' }])
+      }}
+      <section id="titles">
+        <strong>
+          <span>{{letter}}</span></strong>
+        <hgroup>
+          <h1>حرف {{letter}}</h1>
+          <h2>
+            Letter
+            <strong>{{letter}}</strong>
+          </h2>
+        </hgroup>
+      </section>
+    </header>
+
+    <article>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>کلمات</th>
+              <th>توضیح</th>
+            </tr>
+          </thead>
+          <tbody>
+            {%- for word in collections[letter] -%}
+              <tr x-data @click="rowClick($event.currentTarget)" data-link="{{word.url}}">
+                <td>
+                  {{loop.index | toFaDigits}}
+                </td>
+                <td>
+                  {{ word.data.word }}
+                </td>
+                <td>
+                  <p class="description">{{word.templateContent | striptags(true) | escape | truncate(200) | safe}}</p>
+                  {# {{word.templateContent | truncate(100) | safe}} #}
+                </td>
+              </tr>
+            {%- endfor -%}
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    {% include "footer.njk" %}
+  </section>
+{% endblock %}

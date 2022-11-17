@@ -1,0 +1,28 @@
+{% macro breadcrumb(leads) %}
+  <nav id='breadcrumb'>
+    {% for l in leads -%}
+      <a href="{{ l.link }}">{{ l.text }}</a>
+      {% if loop.revindex0 !== 0 %}
+        {% svg "breadcrumb-seperator" %}
+      {% endif %}
+    {%- endfor %}
+  </nav>
+{% endmacro %}
+
+{# {% macro fileContributors(filePath) %}
+  {% set authors = filePath | getFileContributors %}
+  {{ authors | log}}
+  {% if authors.length %}
+    <ul id='contributors'>
+      {% for a in authors -%}
+        <li>
+          <a href="{{ a.url }}">
+            <img src="{{a.avatar_url}}"/>
+          </a>
+        </li>
+      {%- endfor %}
+    </ul>
+  {% else %}
+    "###"
+  {% endif %}
+{% endmacro %} #}

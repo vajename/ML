@@ -2,9 +2,6 @@
 layout: word
 word: Demographic Parity
 translation: برابری جمعیتی
-tags:
-  - word
-  - D
 ---
 
 یک معیار [سنجش برابری](/f/fairness_metric) است برای زمانی که پاسخ مدل به یک [ویژگی حساس ](/s/sensitive_attribute)وابسته نباشد.

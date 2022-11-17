@@ -1,0 +1,237 @@
+main > section.letter {
+  width: 100%;
+  min-height: 100%;
+  display: grid;
+  grid-template: 23em 1fr auto / 1fr;
+  grid-template-areas:
+    'header'
+    'article'
+    'footer';
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+/************************* Header *************************/
+
+main > section.letter > header {
+  grid-area: header;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template: 4em 1fr / 1fr;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2em 6em;
+  padding-bottom: 0;
+  margin: 0 auto 0;
+  background-color: black;
+  color: white;
+  direction: rtl;
+}
+
+main > section.letter > header section#titles {
+  width: 100%;
+  height: 100%;
+  flex-grow: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1em;
+  overflow: hidden;
+}
+
+main > section.letter > header section#titles > strong {
+  display: inline-block;
+}
+
+main > section.letter > header section#titles > strong span {
+  display: inline-block;
+  align-self: flex-end;
+  font-weight: 900;
+  font-size: 23em;
+  line-height: 1;
+  vertical-align: bottom;
+  text-anchor: end;
+  text-transform: capitalize;
+}
+
+main > section.letter > header section#titles hgroup {
+  transform: translateY(50%);
+}
+
+h1 {
+  margin: 0;
+  font-size: 4em;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.8em;
+  font-weight: 100;
+}
+
+main > section.letter > header section#titles hgroup h2 strong {
+  font-weight: bold;
+}
+
+hgroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+/************************* Article *************************/
+
+main > section.letter > article {
+  grid-area: article;
+  width: 100%;
+  min-height: 100%;
+  overflow-y: auto;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 3em 6em;
+  margin: 0 auto;
+  box-shadow: 0 0 25px -20px #607d8b;
+}
+
+main > section.letter > article > section:not(:last-child) {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+p {
+  direction: rtl;
+  text-align: start;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+p a {
+  color: var(--c-secondary);
+  text-decoration-color: #ccc;
+  text-decoration-line: underline;
+}
+
+img {
+  max-width: 400px;
+}
+
+ol {
+  list-style: persian;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+table > tbody {
+  width: 100%;
+}
+
+table > thead th {
+  font-size: 1.2em;
+  text-align: start;
+}
+
+table > tbody tr:hover {
+  font-weight: bold;
+}
+
+/* table > tbody tr:hover:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #0000000d;
+  inset: 0;
+  z-index: -1;
+} */
+
+table > tbody tr {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+table :is(th, td) {
+  padding: 1em;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+table tr td:nth-child(2) {
+  white-space: nowrap;
+  width: 20ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+table :is(th, td):first-child {
+  width: 10ch;
+}
+
+table > tbody p.description {
+  white-space: nowrap;
+  /* calc: viewport - sidebar - article padding - 1st col - 2nd col - col pads - current padd */
+  max-width: calc(100vw - 4.5rem - 12rem - 10ch - 20ch - 4em - 3em);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/***** Print Styles *****/
+
+@media print {
+  body {
+    grid-template: 1fr / 1fr;
+    grid-template-areas: 'main';
+  }
+
+  body > main {
+    overflow: unset !important;
+  }
+
+  body > aside,
+  section#search {
+    display: none;
+  }
+
+  main > section.letter {
+    grid-template: 14em 1fr / 1fr;
+    grid-template-areas:
+      'header'
+      'article';
+  }
+
+  main > section.letter article {
+    display: block;
+  }
+
+  main > section.letter header {
+    background: var(--c-accent-gray);
+    color: black !important;
+    grid-template: 1fr / 1fr;
+  }
+
+  main > section.letter table tr > *:nth-child(3) {
+    display: none;
+  }
+
+  main > section.letter :is(article #options, header nav) {
+    display: none !important;
+  }
+
+  section.letter > :is(nav, footer) {
+    display: none !important;
+  }
+}

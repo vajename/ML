@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+      <title>{{title}}</title>
+    {% else %}
+      <title>الفبای یادگیری ماشین - ML Glossary</title>
+    {% endif %}
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="search" type="application/opensearchdescription+xml" title="ML Glossary" href="/opensearch.xml"/>
+    <link rel="stylesheet" href="/assets/s/modern-normalize.css"/>
+    <link rel="stylesheet" href="/assets/base.css"/>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
+    <script async src="https://cdn.splitbee.io/sb.js"></script>
+    <script type="module" src="/assets/tooltip.js"></script>
+    {% block links %}{% endblock %}
+  </head>
+  <body x-data @keyup.escape="$store.search.open = false" @keyup="if ($event.key === '/') $store.search.open = true; $event.stopPropagation()">
+    <aside>
+      <button id="open-search" x-data :class="$store.search.disable && 'disable'" @click="$store.search.toggle()" data-tippy-placement="left" data-tippy-allowHTML="true">
+        <template x-if="!$store.search.open">
+          <span class="icon" >
+            {% svg "search" %}
+          </span>
+        </template>
+        <template x-if="$store.search.open">
+          <span class="icon">
+            {% svg "close" %}
+          </span>
+        </template>
+      </button>
+      <a id='link-home-page' href='/'>
+        <span id='link-home-page__fa'>الفبای یادگیری ماشین</span>
+        <span id='link-home-page__en'>ML Glossary</span>
+      </a>
+    </aside>
+
+    <main x-data :class="$store.search.open ? 'no-scroll' : ''">
+      {% svgsprite %}
+
+      <section id='search' x-data :class="$store.search.open ? 'open' : ''" x-cloak>
+        <header>جست‌وجو</header>
+        <section x-data="searchResults">
+          <section id="search-input-section">
+            <div id="input-wrapper">
+              <input id="searchField" type="search" placeholder="accuracy، bias یا..."  :value="searchInput" @input.debounce="setSearchInput($event.target.value)" x-init="$watch('$store.search.open', value => {if (value) $el.focus()})"/>
+              <button>
+                <span class="icon">{% svg "search" %}</span>
+              </button>
+            </div>
+            <div id='search-options-wrapper'>
+
+              <ul id='search-options'>
+                <li>
+                  <a href="/">خانه</a>
+                </li>
+                <li>
+                  <a href="/list">فهرست</a>
+                </li>
+                <template x-for="l in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'" :key="l">
+                  <li x-text="l" @click="setSearchInput(l)"></li>
+                </template>
+              </ul>
+            </div>
+          </section>
+
+          <div id="search-result-wrapper">
+            <strong x-show="searchInput.length === 1 && 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.includes(searchInput.toUpperCase()) ">
+              <a :href="`/${searchInput.toUpperCase()}`" x-text="`حرف ${searchInput.toUpperCase()}`"></a>
+            </strong>
+            <ol id="searchresults">
+              <template x-for="result in results" :key="result.ref" >
+                <li>
+                  <a :href="result.ref">
+                    <strong x-text="result.doc.word"></strong>
+                    <span x-text="` - ${result.doc.translation.trim()}`"></span>
+                  </a>
+                </li>
+              </template>
+            </ol>
+            <p id="noResultsFound" x-show="!results.length && searchInput.length" x-text="$store.search.loading ? 
+            'درحال دریافت لیست کلمات...' : 'نتیجه‌ای پیدا نشد.'" x-transition></p>
+          </div>
+        </section>
+      </section>
+
+      {% block body %}
+        {{ content | safe }}
+      {% endblock %}
+
+    </main>
+
+    {% block scripts %}{% endblock %}
+    <script>
+      (function (window, document) {
+        "use strict";
+
+        const {q} = Object.fromEntries(new URLSearchParams(window.location.search));
+
+        document.addEventListener('alpine:init', () => {
+          Alpine.data('searchResults', () => ({
+            searchInput: q ?? '',
+            results: [],
+            init() {
+              this.$watch('searchInput', this.dosearch.bind(this));
+              this.$watch('$store.search.loading', this.dosearch.bind(this));
+              this.$watch('$store.search.open', (open) => {
+                if (!open) 
+                  this.searchInput = '';
+                window
+                  .openSearchButtonTippy
+                  .setContent(
+                    open
+                    ? '<kbd>ESC</kbd>'
+                    : '<kbd>/</kbd>');
+              });
+              // remove query params
+              window
+                .history
+                .pushState({}, document.title, window.location.pathname);
+            },
+            setSearchInput(value) {
+              this.searchInput = value;
+            },
+            dosearch(text) {
+              const results = window
+                .searchIndex
+                .search(this.searchInput, {
+                  fields: {
+                    word: {
+                      boost: 2
+                    },
+                    translation: {
+                      boost: 1
+                    }
+                  },
+                  boolean: "OR",
+                  expand: true
+                });
+              if (this.searchInput.length > 1) 
+                this.results = results;
+              else 
+                this.results = results.filter(i => i.doc.word.startsWith(this.searchInput));
+              }
+            }));
+
+          Alpine.store('search', {
+            open: Boolean(q),
+            disable: true,
+            loading: true,
+            toggle() {
+              this.open = !this.open
+            }
+          });
+
+          Alpine.effect(() => {
+            const searchLoading = Alpine
+              .store('search')
+              .loading;
+
+            // Now do something with `count`...
+          })
+
+          fetch("/search-index.json").then((response) => response.json().then((rawIndex) => {
+            elasticlunr.clearStopWords();
+            window.searchIndex = elasticlunr
+              .Index
+              .load(rawIndex);
+            Alpine
+              .store('search')
+              .disable = false
+            Alpine
+              .store('search')
+              .loading = false
+          }).catch(err => {
+            console.error(err);
+            Alpine
+              .store('search')
+              .loading = false
+          }));
+        });
+      })(window, document);
+    </script>
+  </body>
+</html>
