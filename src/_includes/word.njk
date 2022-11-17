@@ -2,9 +2,20 @@
 
 {% extends "base.njk" %}
 
+{% set title = word + ' - ' + translation %}
+{% set letter = page.url[1] %}
+{# {% set letter = word[0] %} #}
+
 {% block links %}
   <link rel="stylesheet" href="/assets/word.css"/>
   <link href="/assets/codehighlight.css" rel="stylesheet">
+  <meta property="og:title" content="الفبای یادگیری ماشین"/>
+  <meta property="og:description" 
+  content="{{title}}"/>
+  <meta property="og:determiner" content="the"/>
+  <meta property="og:locale" content="fa_IR"/>
+  <meta property="og:image" content="/og/{{word}}.svg"/>
+
   <script>
     const shareData = {
       title: "الفبای یادگیری ماشین",
@@ -36,10 +47,6 @@
     }
   </script>
 {% endblock %}
-
-{% set title = word + ' - ' + translation %}
-{% set letter = page.url[1] %}
-{# {% set letter = word[0] %} #}
 
 {% set previousPost = collections[letter] | getPreviousCollectionItem(page) %}
 {% set nextPost = collections[letter] | getNextCollectionItem(page) %}
@@ -86,7 +93,9 @@
     <article>
       <section id='description'>
         <h3>تعریف</h3>
+
         <p>{{content | safe}}</p>
+
       </section>
       <section id='options'>
         <div id="info">
