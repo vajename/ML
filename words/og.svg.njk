@@ -3,7 +3,7 @@ pagination:
   data: collections.words
   size: 1
   alias: word
-permalink: "og/{{ word.fileSlug }}.svg"
+permalink: "og/{{ word.fileSlug | safe }}.svg"
 ---
 
 <svg width="1201" height="600" viewBox="0 0 1201 600" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
